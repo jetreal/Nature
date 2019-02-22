@@ -1,0 +1,55 @@
+
+
+=greyBG()
+	background-color: grey
+
+=forBGI()
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+
+=bord()
+	border: 1px solid red
+
+=borders($color)
+	border: 1px solid $color
+=out($color)
+	outline: 1px solid $color
+=center()
+	display: grid
+	align-content: center
+	justify-content: center
+=left()
+	display: grid
+	align-content: center
+	justify-content: start
+=bottom()
+	display: grid
+	align-content: end
+	justify-content: start
+=sb()
+	display: grid
+	align-content: center
+	justify-content: space-between
+=se()
+	display: grid
+	align-content: center
+	justify-content: space-evenly
+=initial()
+	margin: initial
+	padding: initial
+	margin-top: initial
+	margin-bottom: initial
+	margin-left: initial
+	margin-right: initial
+	padding-top: initial
+	padding-bottom: initial
+	padding-left: initial
+	padding-right: initial
+
+=gc($columns)
+	display: grid
+	grid-template-columns: repeat($columns, auto)
+=gr($rows)
+	display: grid
+	grid-template-rows: repeat($rows, auto)

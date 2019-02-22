@@ -1,0 +1,3544 @@
+@import "vars"
+@import "mixins"
+// @import "normalize"
+@import "fonts"
+@import "header"
+@import "libs"
+// @import "magnific-popup"
+@import "base"
+
+///////////////////////////////////////////////////////////////////
+// afterFirst duck
+.afterFirst
+	+initial
+	background-image: url('/img/images/brokenDisp2.png')
+	background-position: 0 250px
+	width: 90%
+	margin: 0 5%
+	height: auto
+	position: relative
+	border: 1px solid gray
+
+// wrap duck
+.wrapDuckSec2
+	position: relative
+	width: calc(100% - 40px)
+	padding: 10px 0
+	margin: 0 20px
+	// border: 1px solid white
+	overflow: visible
+	border-radius: 20px
+	transition: opacity .5s
+// row duck
+.rowDuck
+	will-change: opacity
+	+initial
+	width: 100%
+	padding: 10px 0
+	position: relative
+// wrap sides img
+.wrapDuck
+	width: 100%
+	padding: initial
+	min-width: 200px
+	max-width: 200px
+	height: 140px
+// duck imgs
+.duck
+	cursor: pointer
+	width: 200px
+	height: 140px
+	border-radius: 4px
+	border: 1px solid gray
+.duck2
+	cursor: pointer
+	width: 200px
+	height: 140px
+	border-radius: 4px
+	border: 1px solid gray
+// duck text
+// .duckText
+// 	+initial
+.duckText 
+	display: grid
+	align-content: center
+	background-color: #393939
+	font-size: .75em
+	color: #CBBEAE
+	width: 100%
+	min-width: 200px
+	min-height: 140px
+	text-align: center
+	border: 1px solid gray
+	border-radius: 4px
+	font-size: 3.5em
+	text-shadow: 1px 1px 5px #0A1D0D
+	+initial
+	& p
+		+initial
+		color: #CBBEAE
+		&:before
+			display: block
+			position: absolute
+			content: url('/img/images/lines.png')
+			top: 0px
+			left: calc(50% - 51px)
+		&:after
+			display: block
+			position: absolute
+			content: url('/img/images/lines.png')
+			bottom: -7px
+			left: calc(50% - 51px)
+			transform: rotate(180deg)
+
+// modal text
+#angleLabelText
+	position: absolute
+	font-size: 16px
+	text-indent: 5px
+	font-family: "Exo 2"
+	color: #CBBEAE
+	padding-left: 3px
+#angleLabelText2
+	position: absolute
+	font-size: 16px
+	text-indent: 5px
+	font-family: "Exo 2"
+	color: #CBBEAE
+	padding-left: 3px
+#angleLabelText3
+	position: absolute
+	font-size: 16px
+	text-indent: 5px
+	font-family: "Exo 2"
+	color: #CBBEAE
+	padding-left: 3px
+#textDuckModal
+	margin: 5%
+	padding: 20px
+	text-align: center
+	color: gray
+	z-index: 1	
+.someText1
+	display: none
+	padding: $gutter
+	line-height: 1.25em
+	position: relative
+	color: #fff
+	width: auto
+	font-size: .75em
+
+//////////////////////////////////////////////////////////////////
+// forest section
+// wrap all and text class
+.forest
+	border: 1px solid #7F7F7F
+	padding: $gutter
+	position: relative
+	background-image: url('/img/images/forest.jpg')
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	width: 90%
+	min-height: 320px
+	height: auto
+	margin: 0 5%
+.theLostRiverText
+	pointer-events: none
+	margin: 0px 8% 10px
+	position: relative
+	top: 10px
+	width: 84%
+	height: 30px
+	color: $textColor
+	background-color: rgba(40,40,40,.7)
+	font-family: "Exo 2"
+	border-radius: 10px
+	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
+.theLostRiverText2
+	border: 1px solid gray
+	padding: 10px 25px
+	margin: 8px 8% 0px
+	position: relative
+	bottom: 8px
+	width: 84%
+	height: 140px
+	background-color: rgba(40,40,40,.7)
+	border-radius: 10px
+	text-align: center
+	overflow: hidden
+
+.theLostRiverText3
+	display: block
+	position: relative
+	border: 1px solid gray
+	margin: 0 auto 3px
+	width: 58px
+	height: 6px
+	bottom: 8px
+	left: -3px
+	box-shadow: 1px 1px 1px #FDA300 inset, -1px -1px 1px #FDA300 inset
+#forestTextContainer
+	+center
+	pointer-events: none
+	color: $textColor
+	height: auto
+	overflow-y: hidden
+	text-align: center
+	font-family: "Exo 2"
+// wrap center section
+.wrapperAll
+	display: grid
+	grid-template-columns: 400px 300px 400px
+	justify-content: center
+	align-items: center
+	width: 100%
+	min-width: 320px
+	min-height: 300px
+// left
+.leftItem
+	width: 100%
+	height: 300px
+	position: relative
+	overflow: visible
+	display: grid
+	align-content: start
+	justify-content: center
+#headerLeftSection
+	+center
+	pointer-events: none
+	border: 1px solid gray
+	border-radius: 4px
+	width: 146px
+	height: 30px
+	text-align: center
+	position: relative
+	background-color: $bgColor
+	left: 221px
+	top: -4px
+	font-family: "Exo 2"
+	z-index: 1
+#headerLeftSection p
+	position: relative
+	top: initial
+	bottom: 0
+	margin: initial
+	padding: initial
+	max-height: initial
+	margin-top: initial
+	padding-top: initial
+	line-height: initial
+	width: 100%
+	height: initial
+	// margin-top: 10px
+	color: $textColor
+.galleryDeg1Left
+	pointer-events: none
+	position: absolute
+	transform: rotate(300deg)
+	height: 400px
+	width: 460px
+	left: -45px
+	top: -52px
+	overflow: hidden
+.galleryDeg2Left
+	pointer-events: none
+	position: absolute
+	transform: rotate(-60deg)
+	height: 400px
+	width: 460px
+	overflow: hidden
+	left: 0
+	top: 0
+.galleryLeft
+	pointer-events: auto
+	position: absolute
+	width: 463px
+	height: 300px
+	margin: 0 auto
+	z-index: 0
+	border-top: 1px solid gray
+	border-bottom: 1px solid gray
+	transform: rotate(120deg)
+	left: 0px
+	top: 50px
+	overflow: hidden
+//center
+.wrapVItem
+	margin: 0 auto
+	width: 100px
+	height: 100px
+	position: relative
+.into31:first-child
+	cursor: pointer
+.v1
+	width: .1px
+	height: .1px
+	position: absolute
+	left: 23px
+	top: -27px
+	z-index: 1
+.bgImage1
+	width: 116px
+	height: 100px
+	transform: rotate(120deg)
+	background-image: url("/img/images/rivers/6mini.png")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	transition: box-shadow 1s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.4)
+.bgImage1no
+	&:before
+		background-color: rgba(2,2,2,.0)
+.bgImage1:hover
+	box-shadow: 3px 3px 6px #FDA300 inset, -3px -3px 6px #FDA300 inset, -3px 3px 6px #FDA300 inset, 3px -3px 6px #FDA300 inset
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.0)
+.v2
+	width: .1px
+	height: .1px
+	position: absolute
+	left: 24px
+	top: 84px
+	z-index: 2
+.bgImage2
+	width: 116px
+	height: 100px
+	// border: .1px solid blue
+	transform: rotate(120deg)
+	background-image: url("/img/images/mountain/6mini.png")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	transition: box-shadow 1s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.4)
+.bgImage2no
+	&:before
+		background-color: rgba(2,2,2,.0)
+.bgImage2:hover
+	box-shadow: 3px 3px 6px #FDA300 inset, -3px -3px 6px #FDA300 inset, -3px 3px 6px #FDA300 inset, 3px -3px 6px #FDA300 inset
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.0)
+.v3
+	// margin: 0 auto
+	width: .1px
+	height: .1px
+	position: absolute
+	left: -70px
+	top: 29px
+	z-index: 10
+.bgImage3
+	width: 116px
+	height: 100px
+	// border: .1px solid blue
+	transform: rotate(120deg)
+	background-image: url("/img/images/fields/6mini.png")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	transition: box-shadow 1s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.4)
+.bgImage3no
+	&:before
+		background-color: rgba(2,2,2,.0)
+.bgImage3:hover
+	box-shadow: 3px 3px 6px #FDA300 inset, -3px -3px 6px #FDA300 inset, -3px 3px 6px #FDA300 inset, 3px -3px 6px #FDA300 inset
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.0)
+.v4
+	width: .1px
+	height: .1px
+	position: absolute
+	left: -164px
+	top: -26px
+	z-index: 5
+.bgImage4
+	width: 116px
+	height: 100px
+	// border: .1px solid blue
+	transform: rotate(120deg)
+	background-image: url("/img/images/seas/6mini.png")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	transition: box-shadow 1s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.4)
+.bgImage4no
+	&:before
+		background-color: rgba(2,2,2,.0)
+.bgImage4:hover
+	box-shadow: 3px 3px 6px #FDA300 inset, -3px -3px 6px #FDA300 inset, -3px 3px 6px #FDA300 inset, 3px -3px 6px #FDA300 inset
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.0)
+.v5
+	width: .1px
+	height: .1px
+	position: absolute
+	left: -163px
+	top: 85px
+	z-index: 11
+.bgImage5
+	width: 116px
+	height: 100px
+	// border: .1px solid blue
+	transform: rotate(120deg)
+	background-image: url("/img/images/deserts/6mini.png")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	transition: box-shadow 1s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.4)
+.bgImage5no
+	&:before
+		background-color: rgba(2,2,2,.0)
+.bgImage5:hover
+	box-shadow: 3px 3px 6px #FDA300 inset, -3px -3px 6px #FDA300 inset, -3px 3px 6px #FDA300 inset, 3px -3px 6px #FDA300 inset
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.0)
+.v6
+	width: .1px
+	height: .1px
+	position: absolute
+	left: -71px
+	top: -81px
+	z-index: 11
+.bgImage6
+	width: 116px
+	height: 100px
+	// border: .1px solid blue
+	transform: rotate(120deg)
+	background-image: url("/img/images/jungles/6mini.png")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	transition: box-shadow 1s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.4)
+.bgImage6no
+	&:before
+		background-color: rgba(2,2,2,.0)
+.bgImage6:hover
+	box-shadow: 3px 3px 6px #FDA300 inset, -3px -3px 6px #FDA300 inset, -3px 3px 6px #FDA300 inset, 3px -3px 6px #FDA300 inset
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.0)
+.v7
+	width: .1px
+	height: .1px
+	position: absolute
+	left: -69px
+	top: 140px
+	z-index: 11
+.bgImage7
+	width: 116px
+	height: 100px
+	// border: .1px solid blue
+	transform: rotate(120deg)
+	background-image: url("/img/images/forest/6mini.png")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	transition: box-shadow 1s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.4)
+.bgImage7no
+	&:before
+		background-color: rgba(2,2,2,.0)
+.bgImage7:hover
+	box-shadow: 3px 3px 6px #FDA300 inset, -3px -3px 6px #FDA300 inset, -3px 3px 6px #FDA300 inset, 3px -3px 6px #FDA300 inset
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.0)
+///////////////////////////////////////
+// common cut class
+.into30 // wrap
+	position: relative
+	left: 60px
+	bottom: 30px
+	width: 116px
+	height: 100px
+	// border: .1px solid red
+	transform: rotate(300deg)
+	overflow: hidden
+	pointer-events: none
+.into31
+	pointer-events: auto
+	width: 116px
+	height: 100px
+	// border: .1px solid yellow
+	transform: rotate(-60deg)
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+.into32 // bg image 1 - 7
+	pointer-events: auto
+	width: 116px
+	height: 100px
+	// border: .1px solid blue
+	transform: rotate(120deg)
+	background-image: url("/img/images/ej.jpg")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute
+	top: 0
+	left: 0
+	text-align: center
+	transition: all 1s
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.4)
+		transition: all 1s
+.into32:hover
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.0)
+.into33
+	width: 116px
+	height: 100px
+	// border: .1px solid green
+	transform: rotate(240deg)
+	position: absolute
+	top: 0
+	left: 0
+	transition: box-shadow 1s
+.into34
+	width: 116px
+	height: 100px
+	// border: .1px solid aqua
+	transform: rotate(60deg)
+	position: absolute
+	top: 0
+	left: 0
+	transition: box-shadow 1s
+.into32:hover, .into33:hover, .into34:hover,
+	box-shadow: 3px 3px 6px #FDA300 inset, -3px -3px 6px #FDA300 inset
+//////////////////////////////////////
+// img common
+.galleryImgContentLeft, .galleryImgContent
+	color: #fff
+	text-align: center
+
+#imgContent
+	width: 100%
+	height: auto
+	max-height: initial
+#imgContent2
+	width: 100%
+	height: auto
+	max-height: initial
+.wrapGallery
+	margin: 0 auto
+	width: 100%
+	height: 300px
+	overflow: visible
+	position: relative
+.galleryDeg1
+	pointer-events: none
+	position: absolute
+	transform: rotate(300deg)
+	height: 400px
+	width: 460px
+	left: -20px
+	top: -52px
+	overflow: hidden
+.galleryDeg2
+	pointer-events: none
+	position: absolute
+	transform: rotate(-60deg)
+	height: 400px
+	width: 460px
+	overflow: hidden
+	left: 0
+	top: 0
+.gallery
+	pointer-events: auto
+	position: absolute
+	width: 461px
+	height: 300px
+	margin: 0 auto
+	z-index: 1
+	border-top: 1px solid gray
+	border-bottom: 1px solid gray
+	transform: rotate(120deg)
+	left: 0px
+	top: 50px
+	overflow: hidden
+	background-color: $bgColor
+// arrow and number
+.arrowLeft
+	padding: 0
+	margin: 0
+	width: 19px
+	height: 19px
+	display: grid
+	align-content: center
+	justify-content: center
+	background-image: url('/img/favicon/left.png')
+	+forBGI
+	position: absolute
+	top: 30px
+	z-index: 1
+	// +bord
+	border-radius: 100%
+	transition: box-shadow 1s
+	&:active
+		transform: scale(.9,.9)
+	&:hover
+		box-shadow: 1px 1px 1px #19B9F5, -1px -1px 1px #19B9F5, -1px 1px 1px #19B9F5, 1px -1px 1px #19B9F5
+.arrowRight
+	padding: 0
+	margin: 0
+	width: 19px
+	height: 19px
+	display: grid
+	align-content: center
+	justify-content: center
+	position: absolute
+	background-image: url('/img/favicon/right.png')
+	+forBGI
+	top: 30px
+	left: 400px
+	z-index: 1
+	// +bord
+	border-radius: 100%
+	transition: box-shadow 1s
+	&:active
+		transform: scale(.9,.9)
+	&:hover
+		box-shadow: 1px 1px 1px #19B9F5, -1px -1px 1px #19B9F5, -1px 1px 1px #19B9F5, 1px -1px 1px #19B9F5	
+.showNumber
+	display: block
+	position: absolute
+	left: 400px
+	top: 240px
+	z-index: 1
+// end section section
+.endSectionText
+	width: 100%
+///////////////////////////////////////////////////////////////////
+
+// afterForest section
+.afterForest
+	background-image: url("/img/images/brokenDisp2.png")
+	width: 90%
+	margin: 0 5%
+	padding: 10px 0
+	height: auto
+	position: relative
+	// +borders(#686868)
+	border: 1px solid gray
+//ej
+// wrapper
+.conEj
+	will-change: opacity
+	width: calc(100% - 40px)
+	min-height: 140px
+	padding: 10px 0
+	overflow: visible
+	transition: opacity .5s
+// wrap content
+.rowEj
+	+initial
+	position: relative
+	width: 100%
+	min-height: 140px
+	color: #fff
+	font-size: .75em
+
+// text and modal text
+.textEj
+	display: grid
+	align-content: center
+	position: relative
+	background-color: #393939
+	max-width: 100%
+	min-width: 200px
+	overflow: hidden
+	max-height: 140px
+	text-align: center
+	border: 1px solid gray
+	border-radius: 4px
+	+initial
+	font-size: 3.8em
+	// color: #CBBEAE
+
+.textEj p
+	text-shadow: 1px 1px 5px #0A1D0D
+	+initial
+	+center
+	height: 90px
+	color: #CBBEAE
+	overflow-y: hidden
+	position: relative
+	&:before
+		display: block
+		position: absolute
+		content: url('/img/images/lines.png')
+		top: -28px
+		left: calc(50% - 51px)
+	&:after
+		display: block
+		position: absolute
+		content: url('/img/images/lines.png')
+		bottom: -31px
+		left: calc(50% - 51px)
+		transform: rotate(180deg)
+#textEjModal
+	margin: 5%
+	padding: 20px
+	text-align: center
+	color: gray
+	z-index: 1
+// wrap sides img
+.ejDiv
+	padding: initial
+	max-width: 200px
+	text-align: center
+	// z-index: 1
+// imgs
+.ej
+	cursor: pointer
+	width: 200px
+	height: 140px
+	border-radius: 4px
+	border: 1px solid gray
+.ej2
+	cursor: pointer
+	width: 200px
+	height: 140px	
+	border-radius: 4px
+	border: 1px solid gray
+//////////////////////////////////////////////////////////////////
+
+// palm section wrap
+.palmBg
+	border: 1px solid #7F7F7F
+	position: relative
+	background-image: url("/img/images/palmBg2.jpg")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	padding: $gutter
+	width: 90%
+	margin: 0 5%
+	height: auto
+	& > a:hover
+		text-decoration: none
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.2)
+// header text
+.txtBestAnimal
+	display: grid
+	align-content: center
+	z-index: 1
+	margin: $gutter
+	justify-content: center
+	color: white
+	background-color: $bgColor
+	font-family: "Titillium_Web"
+	height: 60px
+	min-width: 150px
+	letter-spacing: 2px
+	font-size: 150%
+	border-radius: 4px
+	border: 1px solid gray
+.txtBestAnimal p
+	margin: 0
+	padding: 0
+	position: relative
+	color: $textColor
+// link text
+.palmBg a p
+	z-index: 1
+	position: relative
+	margin: 0
+	text-decoration: none
+// common animal imgCard class
+.animal
+	&::before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(0, 0, 0, .4)
+		transition: 1s
+		border-radius: 4px
+.animal
+	display: grid
+	align-content: end
+	justify-content: center
+	position: relative
+	padding: $gutter
+	margin: 0 0 10px 0
+	background-size: cover
+	width: 220px
+	height: 180px
+	top: 0
+	transition: all .3s
+	border-radius: 4px
+	&:hover
+		top: 10px
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			background-color: rgba(0, 0, 0, 0)
+// border inset
+.cardShadow
+	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
+	border-radius: 4px
+	& p
+		color: $textColor
+a.test-popup-link
+	text-decoration: none
+		
+// animal Url
+
+.tiger
+	background-image: url("/img/images/animalMini/tigerMini.jpg")
+	color: $textColor
+.panthera
+	background-image: url("/img/images/animalMini/panteraMini.jpg")
+	// background-position: 	-20px 0
+.puma
+	background-image: url("/img/images/animalMini/pumaMini.jpg")
+.snowBars
+	background-image: url("/img/images/animalMini/snowBarsMini.jpg")
+.lion
+	background-image: url("/img/images/animalMini/levMini.jpg")
+	// background-position: 	-40px 0
+.jaguar
+	background-image: url("/img/images/animalMini/jaguarMini.jpg")
+// text card Animal
+.textAnimal
+	display: grid
+	align-content: center
+	width: 220px
+	height: 120px
+	color: #CBBEAE
+	position: relative
+	padding: 0 4%
+	font-size: .75em
+	background-color: rgba(40,40,40,.9)
+	font-size: .7em
+	line-height: 1.2em
+	text-indent: 10px
+	text-align: center
+	font-family: 'RobotoRegular'
+	border-radius: 4px
+	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
+// end animal section
+//////////////////////////////////////////////////////////////////////
+//after animal
+// wrapper
+.afterBeach
+	// display: none
+	background-image: url("/img/images/brokenDisp2.png")
+	background-position: 0 200px
+	width: 90%
+	margin: 0 5%
+	padding: 10px 0
+	height: auto
+	border: 1px solid gray
+	position: relative
+	// overflow: hidden
+.wrapCats
+	will-change: opacity
+	font-size: 1em
+	transition: opacity 1s
+	border-radius: 20px
+	width: calc(100% - 40px)
+	padding: 10px 0
+	position: relative
+	color: #fff
+.rowCat
+	+initial
+	width: 100%
+// wrap and imgs
+.divCat
+	+initial
+	min-width: 200px
+	max-width: 140px
+	border-radius: 4px
+.divCat2
+	+initial
+	position: relative
+	min-width: 200px
+	max-width: 140px
+	border-radius: 4px
+.catsImg
+	cursor: pointer
+	position: relative
+	padding: initial
+	width: 200px
+	height: 140px
+	border-radius: 4px
+	border: 1px solid gray
+.catsImg2
+	cursor: pointer
+	padding: initial
+	width: 200px
+	height: 140px
+	border-radius: 4px
+	border: 1px solid gray
+// text and text modal
+.catText
+	display: grid
+	align-content: center
+	width: 100%
+	min-width: 200px
+	min-height: 140px
+	text-align: center
+	background-color: #393939
+	border-radius: 4px
+	border: 1px solid gray
+	margin: initial
+	& p
+		color: #CBBEAE
+		font-size: 3.5em
+		position: relative
+		+initial
+		&:before
+			display: block
+			position: absolute
+			content: url('/img/images/lines.png')
+			top: -27px
+			left: calc(50% - 51px)
+		&:after
+			display: block
+			position: absolute
+			content: url('/img/images/lines.png')
+			bottom: -36px
+			left: calc(50% - 51px)
+			transform: rotate(180deg)
+		// color: #CBBEAE
+#textCatModal
+	margin: 5%
+	padding: 20px
+	text-align: center
+	color: gray
+	z-index: 1
+
+
+
+// Glaser section
+// header text
+.textGlacier
+	position: absolute
+	margin: 10px 0 0 0
+	left: 13%
+	right: 13%
+	width: 74%
+	height: 40px
+	display: grid
+	justify-content: center
+	text-align: center
+	background-color: rgba(62, 181, 241, 0.2)
+	font-family: "Comfortaa"
+	font-size: 150%
+	white-space: nowrap
+	border-radius: 6px
+.textGlacier p
+	position: relative
+	display: block
+	color: #b9eaa8
+	margin: auto 0
+// back ground
+.glacier
+	border: 1px solid #7F7F7F
+	background-image: url("/img/images/Glaser.jpg")
+	+forBGI
+	width: 90%
+	min-height: 350px
+	max-height: 350px
+	margin: 0 5%
+	position: relative
+	overflow: hidden
+	& div
+		pointer-events: none
+
+.glacierBack
+	background-image: url("/img/images/GlaserBack.png")
+	+forBGI
+	width: 100%
+	min-height: 350px
+	margin: 0
+	position: absolute
+	z-index: 2
+.glacierBack2
+	background-image: url("/img/images/GlaserBack2.png")
+	+forBGI
+	width: 100%
+	min-height: 350px
+	margin: 0 
+	position: absolute
+	z-index: 4
+// wrap side pictures
+.wrapPicture
+	display: grid
+	grid-template-columns: 200px 200px
+	justify-content: space-between
+	width: 100%
+	height: auto
+	position: relative
+	z-index: 0
+	perspective: 80px
+.pictureLeft
+	width: 170px
+	max-width: 170px
+	height: 120px
+	transform: rotateY(25deg)
+	background-image: url("../img/images/glacierLeft.jpg")
+	+forBGI
+	position: relative
+	left: 20px
+	border-radius: 0 15px 0 0
+.pictureRight
+	display: block
+	width: 170px
+	max-width: 170px
+	height: 120px
+	transform: rotateY(-25deg)
+	background-image: url("../img/images/glacierRight.jpg")
+	+forBGI
+	position: relative
+	right: -5px
+	border-radius: 15px 0 0 0
+// front pictures
+.wrapRombs
+	display: grid
+	grid-template-columns: auto auto auto
+	justify-content: center
+	align-content: end
+	width: 100%
+	perspective: 150px
+	z-index: 3
+	position: relative
+	bottom: 38px
+.rombCenter
+	// max-width: 170px
+	// display: block
+	width: 230px
+	height: 170px
+	transform: rotateX(40deg)
+	background-image: url("../img/images/glacierItem3.jpg")
+	+forBGI
+	margin: 0 auto
+	+borders(gray)
+.rombLeft
+	width: 200px
+	height: 100px
+	background-image: url("../img/images/lednik_4.jpg")
+	+forBGI
+	transform: skewX(-33deg)
+	position: relative
+	top: 60px
+	z-index: 2
+	+borders(gray)
+	border-radius: 20px 0 0 0
+.rombRight
+	width: 200px
+	height: 100px
+	background-image: url("../img/images/lednik_5.jpg")
+	+forBGI
+	z-index: 2
+	transform: skewX(33deg)
+	position: relative
+	top: 60px
+	+borders(gray)
+	border-radius: 0 20px 0 0
+// fire ball
+.glacierLogo
+	margin: 0 auto
+	position: relative
+	top: 60px
+	left: 30px
+	width: 150px
+	height: 100px
+	z-index: 0
+// 	animation: fireBall 5s ease-in-out 1 30s
+// .fireBall
+// 	max-width: 200px
+// 	max-height: 150px
+// 	transform: rotate(90deg)
+// 	// box-shadow: 5px 5px 15px red
+// // animate fire ball
+// @keyframes fireBall
+// 	0%
+// 		// opacity: .3
+// 		left: 0
+// 		transform: rotateY(0deg)
+// 		// transform: rotateX(90deg)
+// 	25% //25
+// 		transform: rotateY(90deg)
+// 		left: -180px
+// 		z-index: 1
+// 	50%
+// 		// opacity: 1
+// 		z-index: 3
+// 	75% // 73
+// 		transform: rotateY(270deg)
+// 		z-index: 3
+// 		left: 190px
+// 	78% 
+// 		z-index: 1
+// 	100%
+// 		transform: rotateY(360deg)
+// 		// transform: rotateX(50deg)
+// 		left: 0px
+// 		z-index: 0
+// 		// opacity: .3
+
+// ?? may be class
+// .glacierTxt2
+// 	width: 90%
+// 	margin: 0 5%
+// 	height: 40px
+// 	background-color: $bgColor
+// 	position: relative
+// 	color: $textColor
+// 	text-align: center
+// end Galser
+///////////////////////////////////////////////////////////////////
+
+// afterGlacier section
+// wrapper
+.ownFriends
+	padding: 20px $gutter
+	width: 90%
+	margin: 0 5%
+	height: 100%
+	position: relative
+	border: 1px solid gray
+// head text
+.wrapAfterGlacierHead
+	display: grid
+	grid-template-columns: 120px auto 120px
+	grid-column-gap: 35px
+	align-content: center
+	justify-content: center
+.afterGlacierHead
+	border: 1px solid #011A1C
+	display: grid
+	grid-column-gap: $gutter
+	grid-template-columns: auto
+	align-content: center
+	justify-content: center
+	background: linear-gradient(#596269,#3B434B)
+	width: 310px
+	height: 50px
+	text-align: center
+	font-family: "Open Sans"
+	border-radius: 20px
+	z-index: 2
+	// cursor: pointer
+.lb
+	position: relative
+	top: 10px
+	border: 1px solid #011A1C
+	background-image: url('/img/favicon/btnUp.png')
+	border-radius: 8px
+	+forBGI
+	cursor: pointer
+	z-index: 10
+.afterGlacierHead h2
+	color: #CBBEAE
+	margin: initial
+.rb
+	z-index: 10
+	position: relative
+	top: 10px
+	border: 1px solid #011A1C
+	background-image: url('/img/favicon/btnUp.png')
+	border-radius: 8px
+	+forBGI
+	cursor: pointer
+.angle12Left
+	width: 150px
+	height: 150px
+	transform: rotate(30deg)
+	background-image: url("/img/images/ownFriends/eagle.jpg")
+	background-position: -30px 0
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute 
+	transition: box-shadow .3s
+	top: 0
+	left: 0  // change it for bg latter
+.angle12Center
+	width: 150px
+	height: 150px
+	transform: rotate(30deg)
+	background-image: url("/img/images/ownFriends/bear.jpg")
+	background-position: 0 0
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute 
+	transition: box-shadow .3s
+	top: 0
+	left: 0  // change it for bg latter
+.angle12Right
+	width: 150px
+	height: 150px
+	// border: 1px solid blue
+	transform: rotate(30deg)
+	background-image: url("/img/images/ownFriends/wolf.jpg")
+	background-position: -20px 0px
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute 
+	transition: box-shadow .3s
+	top: 0
+	left: 0  // change it for bg latter
+// wrapper grid body
+.wrapCardBoot
+	// +borders(yellow)
+	width: 100%
+	margin: 10 auto
+	display: grid
+	grid-template-columns: 300px 300px 300px
+	justify-content: center
+	grid-column-gap: 30px
+	text-align: center
+	padding: $gutter
+// wrCard and display
+.wrapCard
+	position: relative
+	transition: all .2s
+
+.wrMiniDisLeft, .wrMiniDisRight
+	// display: none
+	position: absolute
+	z-index: 1
+.wrMiniDisLeft
+	left: 155px
+.wrMiniDisRight
+	left: -5px
+.inImgLeft
+	background-image: url("/img/images/ownFriends/bear/1.jpg")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	width: 150px
+	height: 100px
+	transform: rotate(-45deg)
+	position: absolute
+	left: 0px
+	top: 25px
+	// transition: all 1s
+	box-shadow: 3px 3px 6px #6B95C7 inset, -3px -3px 6px #6B95C7 inset
+.inImgRight
+	background-image: url("/img/images/ownFriends/bear2/1.jpg")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	width: 150px
+	height: 100px
+	background-color: light-blue
+	transform: rotate(-45deg)
+	position: absolute
+	left: 0px
+	top: 25px
+	// transition: all 1s
+	box-shadow: 3px 3px 6px #6B95C7 inset, -3px -3px 6px #6B95C7 inset
+#numLeft
+	position: relative
+	top: 10px
+	display: block
+	max-width: 100%
+	height: inherit
+	margin: 0 auto
+#numRight
+	position: relative
+	top: 10px
+	display: block
+	max-width: 100%
+	height: auto
+	margin: 0 auto
+//////////////////
+// conteiner minDisplays
+.into10
+	margin: auto
+	width: 150px
+	height: 150px
+	// border: 1px solid red
+	transform: rotate(45deg)
+	overflow: hidden
+.into11
+	background-image: url("/img/images/ej.jpg")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	width: 150px
+	height: 100px
+	// border: 1px solid yellow
+	background-color: light-blue
+	transform: rotate(-45deg)
+	position: absolute
+	left: 0px
+	top: 25px
+	// transition: all 1s
+	box-shadow: 3px 3px 6px #6B95C7 inset, -3px -3px 6px #6B95C7 inset
+.into12
+	width: 150px
+	height: 150px
+	transform: rotate(45deg)
+	position: absolute
+	left: 0px
+	top: -25px
+	box-shadow: 3px 3px 6px #6B95C7 inset, -3px -3px 6px #6B95C7 inset
+	// transition: all 1s
+
+//////////////////
+// 1 item
+.TheCard1
+	margin: initial
+	width: 300px
+	height: 150px
+	position: relative
+	padding-left: 95px
+	border: 2px double
+	border-radius: 100px 30px 30px 100px
+	border-style: double
+	font-family: "Wide_Latin"
+.cardTextHead1
+	+borders(gray)
+	display: grid
+	width: 100%
+	height: 30px
+	padding-left: 34px
+	margin: initial
+	color: #fff
+	font-size: .9em
+	text-align: center
+	border-radius: 0 20px 0 0 
+	justify-content: center
+	align-content: center
+	background-color: #015079
+.cardTextBody1
+	+borders(gray)
+	border-radius: 0 0 20px 0
+	display: grid
+	justify-content: center
+	align-content: center
+	width: 100%
+	height: 116px
+	color: #fff
+	padding: 0px 3px 0px 55px
+	font-size: .9em
+	font-family: "montserrat_italic"
+	background-image: linear-gradient(#1B1B19, #01527C, #1B1B19)
+// 2 item
+.TheCard2
+	margin: initial
+	width: 300px
+	height: 150px
+	position: relative
+	padding-left: 95px
+	border: 2px double
+	border-radius: 100px 30px 30px 100px
+	border-style: double
+	font-family: "Wide_Latin"
+	z-index: 1
+.cardTextHead2
+	+borders(gray)
+	display: grid
+	width: 100%
+	height: 30px
+	padding-left: 34px
+	margin: initial
+	color: #fff
+	font-size: .9em
+	text-align: center
+	border-radius: 0 20px 0 0 
+	justify-content: center
+	align-content: center
+	font-family: 'Exo 2'
+	background-color: #015079
+.cardTextBody2
+	+borders(gray)
+	border-radius: 0 0 20px 0
+	display: grid
+	justify-content: center
+	align-content: center
+	width: 100%
+	height: 116px
+	color: #fff
+	padding: 0px 3px 0px 55px
+	font-size: .9em
+	font-size: .9em
+	font-family: "montserrat_italic"
+	background-image: linear-gradient(#1B1B19, #01527C, #1B1B19)
+	// padding: 0 20px
+// 3 item
+.TheCard3
+	width: 300px
+	height: 150px
+	position: relative
+	padding-left: 95px
+	border: 2px double
+	border-radius: 100px 30px 30px 100px
+	border-style: double
+	font-family: "Wide_Latin"
+.cardTextHead3
+	+borders(gray)
+	display: grid
+	width: 100%
+	height: 30px
+	padding-left: 34px
+	margin: initial
+	color: #fff
+	font-size: .9em
+	text-align: center
+	border-radius: 0 20px 0 0 
+	justify-content: center
+	align-content: center
+	background-color: #015079
+.cardTextBody3
+	+borders(gray)
+	border-radius: 0 0 20px 0
+	display: grid
+	justify-content: center
+	align-content: center
+	width: 100%
+	height: 116px
+	color: #fff
+	padding: 0px 3px 0px 55px
+	font-size: .9em
+	background-image: linear-gradient(#1B1B19, #01527C, #1B1B19)
+	font-family: "montserrat_italic"
+/////////////////////////////
+// common cut class 
+.into20
+	position: absolute
+	top: -2px
+	left: -3px
+	width: 150px
+	height: 150px
+	// border: 1px solid red
+	transform: rotate(30deg)
+	overflow: hidden
+	transition: all .3s
+.into21
+	width: 150px
+	height: 150px
+	// border: 1px solid yellow
+	transform: rotate(-60deg)
+	overflow: hidden
+	position: absolute
+	transition: all .3s
+.into22
+	width: 150px
+	height: 150px
+	transform: rotate(30deg)
+	background-image: url("/img/images/ej.jpg")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute 
+	transition: all .3s
+	top: 0
+	left: 0
+	// text-align: center
+.into23
+	width: 150px
+	height: 150px
+	transform: rotate(-30deg)
+	overflow: visible
+	position: absolute
+	top: 0
+	left: 0
+	transition: all .3s
+.into24
+	width: 150px
+	height: 150px
+	transform: rotate(60deg)
+	overflow: visible
+	position: absolute
+	top: 0
+	left: 0
+	transition: all .3s
+.into22, .into23, .into24, .angle12Left, .angle12Center, .angle12Right
+	box-shadow: 3px 3px 6px #6B95C7 inset, -3px -3px 6px #6B95C7 inset
+.into22:hover, .into23:hover, .into24:hover, .angle12:hover, .angle12Left:hover, .angle12Center:hover, .angle12Right:hover
+	box-shadow: 3px 3px 6px lightgray inset, -3px -3px 6px lightgray inset
+///////////////////////////////////////////////////////////////////////
+
+// beach section
+.beach
+	border: 1px solid #7F7F7F
+	background-image: url("../img/images/beach.jpg")
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	width: 90%
+	height: 604px
+	margin: 0 5%
+	position: relative
+	display: grid
+	grid-template-columns: auto auto 110px
+	grid-template-rows: 7% 340px 100%
+	grid-gap: $gutter
+	padding: $gutter
+	align-content: space-between
+	text-align: center
+	&:before
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(2,2,2,.5)
+// items
+.item1
+	padding: initial
+	border-radius: 4px
+	background: linear-gradient(rgba(255,255,255,.1),rgba(0,0,0,.4))
+	grid-column: 1 / span 2
+	grid-row: 1
+	font-family: "Wide_Latin"
+	font-size: 150%
+	text-align: center
+	color: $textColor
+	position: relative
+	z-index: 1
+	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
+	+center
+	& p
+		+initial
+		color: #A9D9F2
+// right item menu
+.item3
+	border-radius: 4px
+	display: block
+	position: relative
+	background: linear-gradient(rgba(255,255,255,.1),rgba(0,0,0,.4))
+	grid-column: 3
+	grid-row: 1 / span 2
+	grid-gap: initial
+	width: 100%
+	height: 100%
+	// max-height: 590px
+	overflow-y: hidden
+	overflow-x: hidden
+	padding: 5px 0 3px
+	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
+	z-index: 1
+	padding: initial
+.wrapItem3
+	padding: 0 0 0
+	top: 5px
+	width: 100%
+	position: relative
+	height: 97.5%
+	overflow-y: hidden
+	overflow-x: hidden
+	& div
+		cursor: pointer
+.menuLabel
+	position: absolute
+	bottom: 4px 
+	left: 0px
+	padding: initial
+	margin: initial
+	+center
+	border: 1px solid #19B9F5
+	width: 91%
+	margin: 0 4.5%
+	height: 21px
+	border-radius: 4px
+	z-index: 1
+	background-color: #252B2E
+	& p
+		font-family: 'Comfortaa'
+		text-indent: 5px
+		letter-spacing: .3em
+		position: relative
+		padding: initial
+		margin: initial
+// item3 section items
+.maldivesMin0
+	margin: auto
+	position: relative
+	transform: rotate(45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	z-index: 1
+	transition: all .3s
+.maldivesMin1
+	transform: rotate(-45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	background-image: url("/img/images/beachMin/maldives1mini.jpg")
+	+forBGI
+	transition: all .3s
+	z-index: 1
+.maldivesMin2
+	position: relative
+	top: 0
+	left: 0
+	transform: rotate(45deg)
+	width: 100px
+	height: 100px
+	transition: all .3s
+	z-index: 1
+.maldivesMin1:hover, .maldivesMin2:hover
+	box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
+.dubayMin0
+	pointer-events: none
+	margin: auto
+	position: relative
+	transform: rotate(45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	// z-index: 1
+	transition: all .3s
+.dubayMin1
+	pointer-events: auto
+	transform: rotate(-45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	background-image: url("/img/images/beachMin/dubay1mini.jpg")
+	+forBGI
+	transition: all .3s
+.dubayMin2
+	pointer-events: auto
+	transform: rotate(45deg)
+	width: 100px
+	height: 100px
+	transition: all .3s
+.dubayMin1:hover, .dubayMin2:hover
+	box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
+.kanariMin0
+	pointer-events: none
+	margin: auto
+	position: relative
+	transform: rotate(45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	z-index: 1
+	transition: all .3s
+.kanariMin1
+	pointer-events: auto
+	transform: rotate(-45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	background-image: url("/img/images/beachMin/kanari1mini.jpg")
+	+forBGI
+	transition: all .3s
+.kanariMin2
+	pointer-events: auto
+	transform: rotate(45deg)
+	width: 100px
+	height: 100px
+	transition: all .3s
+.kanariMin1:hover, .kanariMin2:hover
+	box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
+.seysheliMin0
+	pointer-events: none
+	margin: auto
+	position: relative
+	transform: rotate(45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	z-index: 1
+	transition: all .3s
+.seysheliMin1
+	pointer-events: auto
+	transform: rotate(-45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	background-image: url("/img/images/beachMin/seysheli1mini.jpg")
+	+forBGI
+	transition: all .3s
+.seysheliMin2
+	pointer-events: auto
+	transform: rotate(45deg)
+	width: 100px
+	height: 100px
+	transition: all .3s
+.seysheliMin1:hover, .seysheliMin2:hover
+	box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
+.gavaiMin0
+	pointer-events: none
+	margin: auto
+	position: relative
+	transform: rotate(45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	z-index: 1
+	transition: all .3s
+.gavaiMin1
+	pointer-events: auto
+	transform: rotate(-45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	background-image: url("/img/images/beachMin/Gavai1mini.jpg")
+	+forBGI
+	transition: all .3s
+.gavaiMin2
+	pointer-events: auto
+	transform: rotate(45deg)
+	width: 100px
+	height: 100px
+	transition: all .3s
+.gavaiMin1:hover, .gavaiMin2:hover
+	box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
+.baliMin0
+	pointer-events: none
+	margin: 0 auto
+	transform: rotate(45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	z-index: 1
+	transition: all .3s
+.baliMin1
+	pointer-events: auto
+	position: absolute	
+	transform: rotate(-45deg)
+	overflow: hidden
+	width: 100px
+	height: 100px
+	background-image: url("/img/images/beachMin/bali1mini.jpg")
+	+forBGI
+	transition: all .3s
+.baliMin2
+	pointer-events: auto
+	position: absolute
+	transform: rotate(45deg)
+	width: 100px
+	height: 100px
+	transition: all .3s
+.baliMin1:hover, .baliMin2:hover
+	box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
+
+// image section
+.item4
+	position: relative
+	background: linear-gradient(rgba(255,255,255,.1),rgba(0,0,0,.4))
+	grid-column: 1 / span 2
+	grid-row: 2
+	color: black
+	border-radius: 4px
+	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
+// btn class
+.wrapMenuBtn
+	width: 100%
+	height: 0
+	overflow: visible
+	display: none
+.menuBtn
+	display: none
+	position: relative
+	width: 80px
+	height: 30px
+	background-color: $bgColor
+	z-index: 1
+	border-radius: 4px
+	cursor: pointer
+//img class
+.wrapContentImg
+	width: 100%
+	height: 100%
+	display: grid
+	grid-template-columns: 1fr 1fr
+	align-content: center
+	padding: 6%
+	margin: initial
+	justify-content: center
+.contentImg1
+	border-radius: 4px
+.contentImg2
+	border-radius: 4px
+.contentImg1 img
+	display: block
+	will-change: opacity
+	width: 100%
+	height: 230px
+	border-radius: 4px
+	border: 1px solid gray
+.contentImg2 img
+	display: block
+	border-radius: 4px
+	width: 100%
+	height: 230px
+	border: 1px solid gray
+
+// text container
+// wrap
+.item5
+	background-color: rgba(40,40,40,.9)
+	font-family: "Exo 2"
+	color: $textColor
+	grid-column: 1 / span 3
+	grid-row: 3
+	position: relative
+	overflow-y: auto
+	height: 180px
+	position: relative
+	border-radius: 4px
+	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
+	padding: 10px 30px 20px 30px
+	// +center
+
+// hide scroll
+.item5::-webkit-scrollbar 
+	width: 0
+.item5
+	-ms-overflow-style: none
+.item5
+	overflow: -moz-scrollbars-none
+#contentText
+	+initial
+	height: auto
+	color: $textColor
+
+.maldivesText
+	display: none
+.dubayText
+	display: none
+.kanariText
+	display: none
+.seysheliText
+	display: none
+.gavaiText
+	display: none
+.baliText
+	display: none
+.item6
+	display: none
+
+	// end beach
+///////////////////////////////////////////////////////////////////
+
+// afterBeach triangle section
+
+.angle3
+	// background-image: url("/img/images/fireHeader3.png")
+	+forBGI
+	width: 90%
+	margin: 0 5%
+	height: 180px
+	padding-top: 15px
+	position: relative
+	+borders(gray)
+
+.wu0
+	will-change: opacity
+	display: block
+	width: .1px
+	height: .1px
+	position: relative
+	left: -55px
+	top: -22px
+	margin: 0 auto
+	z-index: 4
+	// z-index: 20
+.w0
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: 0px
+	top: 142px
+	margin: 0 auto
+	z-index: 5
+	// z-index: 10
+.w-1
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: -185px
+	top: 142px
+	margin: 0 auto
+	z-index: 3
+.w1
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: 185px
+	top: 142px
+	margin: 0 auto
+	z-index: 7
+.w2
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: 369px
+	top: 142px
+	margin: 0 auto
+	z-index: 9
+.w-2
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: -371px
+	top: 142px
+	margin: 0 auto
+	z-index: 2
+.wu1
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: 130px
+	top: -23px
+	margin: 0 auto
+	z-index: 6
+.wu2
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: 315px
+	top: -23px
+	margin: 0 auto
+	z-index: 8
+.wu-1
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: -241px
+	top: -23px
+	margin: 0 auto
+	z-index: 2
+.wu-2
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: -426px
+	top: -23px
+	margin: 0 auto
+	z-index: 1
+.w-3
+	will-change: opacity
+	width: .1px
+	height: .1px
+	position: relative
+	left: -555px
+	top: 142px
+	margin: 0 auto
+	z-index: 1
+
+
+////////////////////////////////
+// comon cut class triangle
+.into60
+	margin: 0
+	bottom: 10px
+	left: 25px
+	width: 150px
+	height: 129px
+	transform: rotate(-120deg)
+	overflow: hidden
+.into61
+	width: 150px
+	height: 129px
+	// border: .1px solid yellow
+	transform: rotate(-120deg)
+	overflow: hidden
+	position: absolute
+	left: 18px
+	top: -32px
+.into62
+	width: 150px
+	height: 129px
+	transform: rotate(240deg)
+	background-image: url("/img/images/jaguar.jpg")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute 
+	top: -32px
+	left: 18px
+.into63
+	width: 150px
+	height: 129px
+	transform: rotate(-120deg)
+	overflow: visible
+	position: absolute
+	left: 18px
+	top: -32px
+	overflow: visible
+.into64
+	width: 150px
+	height: 129px
+	transform: rotate(-300deg)
+	overflow: visible
+	position: absolute
+	left: 18px
+	top: -32px
+.into62:hover,.into63:hover,.into64:hover
+	box-shadow: 2px 2px 2px grey inset, -2px -2px 2px grey inset
+////////////////////////////////
+
+////////////////////////////////
+.into70
+	margin: 0
+	position: absolute
+	bottom: -28px
+	left: 37px
+	width: 150px
+	height: 129px
+	transform: rotate(-60deg)
+	overflow: hidden
+.into71
+	width: 150px
+	height: 129px
+	transform: rotate(-60deg)
+	overflow: hidden
+	position: absolute
+	left: -18px
+	top: -31px
+.into72
+	width: 150px
+	height: 129px
+	transform: rotate(120deg)
+	background-image: url("/img/images/jaguar.jpg")
+	background-position: center
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	position: absolute 
+	top: 31px
+	left: 19px
+	// text-align: center
+.into73
+	width: 150px
+	height: 129px
+	transform: rotate(-120deg)
+	overflow: visible
+	position: absolute
+	left: -17.5px
+	top: 31px
+	overflow: visible
+.into74
+	width: 150px
+	height: 129px
+	transform: rotate(-300deg)
+	overflow: visible
+	position: absolute
+	left: -18px
+	top: 31px
+.into72:hover,.into73:hover,.into74:hover
+	box-shadow: 2px 2px 2px grey inset, -2px -2px 2px grey inset
+////////////////////////////////////////////////////////////////
+.bgBack1
+	background-image: url('/img/images/nature/1.jpg')
+.bgBack2
+	background-image: url('/img/images/nature/2.jpg')
+.bgBack3
+	background-image: url('/img/images/nature/3.jpg')
+.bgBack4
+	background-image: url('/img/images/nature/4.jpg')
+.bgBack5
+	background-image: url('/img/images/nature/5.jpg')
+.bgBack6
+	background-image: url('/img/images/nature/6.jpg')
+.bgBack7
+	background-image: url('/img/images/nature/7.jpg')
+.bgBack8
+	background-image: url('/img/images/nature/8.jpg')
+.bgBack9
+	background-image: url('/img/images/nature/9.jpg')
+.bgBack10
+	background-image: url('/img/images/nature/10.jpg')
+.bgBack11
+	background-image: url('/img/images/nature/11.jpg')
+// footer
+.footer
+	border: 1px solid #7F7F7F
+	background-image: url("/img/images/footer.jpg")
+	border-radius: 0 0 30px 72px
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center
+	width: 90%
+	height: 402px
+	margin: 0 5%
+	clear: both
+	position: relative
+	font-family: "Titillium_Web"
+
+.grid25
+	overflow: hidden
+
+	// transform: scale(1.2, 1.2)
+	width: 100%
+	display: grid
+	grid-template-columns: 200px auto 200px
+	overflow: visible
+	color: $textColor
+	height: 302px
+.grid2
+	position: relative
+	background-color: rgba(2,2,2,.1)
+	width: 100%
+	overflow: hidden
+	// box-shadow: -4px 0px 10px 0px rgba(2, 2, 2, 0.2)
+.f1Header
+	transition: opacity .1s cubic-bezier(0,.97,.81,1.01)
+	+center
+	// +bord
+	height: 40px
+	width: 100%
+	text-align: center
+	position: relative
+	top: 0
+	left: 0
+	opacity: 1
+	font-family: 'Open Sans'
+	color: #CBBEAE
+	&:before
+		display: block
+		position: absolute
+		content: url('/img/images/lines.png')
+		top: 5px
+		left: 55px
+	&:after
+		display: block
+		position: absolute
+		content: url('/img/images/lines.png')
+		bottom: -283px
+		left: 55px
+		transform: rotate(180deg)
+	& p.ht
+		position: relative
+		top: 0
+		left: 0
+		+initial
+		+center
+		transition: transform .15s ease-in-out
+.far.fa-caret-square-right
+	cursor: pointer
+	position: absolute
+	top: 20px
+	left: 20px
+	font-size: 1.3em
+	z-index: 10
+	transition: opacity .6s
+
+.f1Content
+	transition: opacity .7s cubic-bezier(0,.97,.81,1.01)
+	+center
+	width: 100%
+	height: 260px
+	padding: 15px
+	text-align: center
+	opacity: 1
+	font-family: "Exo 2"
+	& p.bt
+		transition: transform .15s ease-in-out
+		position: relative
+		top: 0
+		left: 0
+
+.footerRight
+	cursor: pointer
+	// +initial
+	display: grid
+	align-content: end
+	justify-content: center
+	+borders(#AA6524)
+	width: 100px
+	height: 100px
+	position: absolute
+	right: -50px
+	top: -50px
+	transform: rotate(45deg)
+	font-family: 'Comfortaa'
+	z-index: 20
+	// background-color: gray
+	& p 
+		+initial
+		position: relative
+		top: 3px
+		transition: color 1s
+
+.grid1
+	+gc(1)
+	width: 200px
+	background-color: rgba(2,2,2,.2)
+
+	// box-shadow: 2px -4px 10px 0px rgba(2, 2, 2, 0.4)
+	& > div
+
+
+
+#buttonLeft
+	width: 40px
+	height: 25px
+.someButifulText
+	position: absolute
+	+center
+	padding: 15px
+	// text-indent: 25px
+	text-align: center
+	width: auto
+	height: 100%
+	transition: opacity 1s
+	font-family: "Comfortaa"
+	& p
+		color: $colorBrown
+
+	// +initial
+.wrapBook
+	width: 100%
+	position: relative
+	height: 300px
+	margin: 0 auto
+	// perspective: 100px
+.wrapBook2
+	// position: absolute
+	perspective: initial
+	transition: all .5s
+	margin: 0 auto
+.closeBook
+	transform: rotateY(90deg)
+	pointer-events: none
+.centerLine
+	border: 1px solid transparent
+	border-image: url('/img/images/border3.png') 20 round
+	width: 1px
+	height: 240px
+	z-index: 3
+	position: absolute
+	left: 199px
+	+initial
+	// top: 50px
+.bookCover
+	cursor: col-resize
+	+center
+	+initial
+	color: $colorBrown
+	border: 7px solid transparent
+	border-image: url('/img/images/border3.png') 28 round
+	border-image-outset: 0px 7px 0px 7px
+	border-image-width: 10px
+	box-sizing: initial
+	z-index: 3
+	width: 200px
+	position: absolute
+	left: calc(50% - 108px)
+	height: 240px
+	transition: all .6s cubic-bezier(0,1.08,.81,1.01) 
+	top: 20px
+	background-image: url('/img/images/fon.jpg')
+	+forBGI
+	box-shadow: 0px 0px 12px 0px rgba(2, 2, 2, 1)
+	font-family: 'LLLisa'
+.appearance
+	transform: rotateZ(360deg) scale(0, 0)
+
+.grid3
+	width: 400px
+	height: 240px
+	+center
+	border: 7px solid transparent 
+	border-image: url('/img/images/border3.png') 28 round
+	border-image-width: 10px
+	box-sizing: initial
+	color: #fff
+	position: relative
+	top: 23px
+	// transform: rotateY(0deg)
+	overflow: visible
+	transition: transform .6s
+	box-shadow: 0px 0px 12px 0px rgba(2, 2, 2, 1)
+	margin: 0 auto
+	& span
+		position: absolute
+		display: inline-block
+		font-size: .9em
+		bottom: 0px
+	// margin: 0 auto
+	& p
+		+initial
+		width: 100%
+		height: 218px
+		+center
+		background-repeat: no-repeat
+		position: relative
+	
+		// opacity: inherit
+// .grid3Hover:hover
+// 	transform: rotateY(16deg)
+// 	transition: all .7s
+.wrapPages
+	background-color: rgba(10,10,10, .3)
+	+initial
+	width: 100%
+	height: 218px
+	opacity: 1
+	+forBGI
+	+center
+	+borders(#575B5B)
+	padding: $gutter
+	text-align: center
+	font-family: "Comfortaa"
+	// +center
+
+.firstDivSite
+
+.site01 > div
+	width: 100%
+	height: 239px
+.site02 > div
+	width: 100%
+	height: 239px
+	z-index: 3
+
+.site01
+	cursor: grab
+	opacity: 1
+	+gc(2)
+	width: 400px
+	height: 240px
+	position: absolute
+	transform: rotateY(0deg)
+	transition: transform 1s
+	overflow: visible
+	background-color: #282928
+	& p
+		background-position: 50% 50%
+		+forBGI
+		color: $colorBrown
+		z-index: 0
+	& div.fistDivSite
+		+borders(#575B5B)
+		color: $textColor
+		width: 200px
+		font-size: .9em
+		background-color: #282928
+		padding: 10px
+	& div.fistDivSite:nth-child(0)
+		transform: rotateY(0deg)
+		opacity: 0
+		position: absolute
+	& div.fistDivSite:nth-child(1)
+		transform: rotateY(0deg)
+		opacity: 0
+		position: absolute
+	& div.fistDivSite:nth-child(2)
+		//left page back
+		opacity: 1
+		transform: rotateY(0deg)
+		position: absolute
+		& span
+			left: 3px
+	& div.fistDivSite:nth-child(3)
+		// right page back
+		opacity: 1
+		position: absolute
+		left: 200px
+		transform: rotateY(0deg)
+		position: absolute
+		& span
+			position: absolute
+			right: 3px
+			z-index: 3
+	& div.fistDivSite:nth-child(4)
+		// border: 1px solid aqua
+		position: absolute
+		opacity: 0
+		left: 200px
+		transform: rotateY(0deg)
+		position: absolute
+		height: 100%
+.site02
+	// will-change: transform
+	cursor: grab
+	opacity: 1
+	width: 400px
+	height: 250px
+	z-index: 100 !important
+	position: absolute
+	transform: rotateY(180deg) skewY(0deg)
+	// transition: transform 1s linear
+	overflow: hidden
+	& p
+		background-position: 50% 50%
+		+forBGI
+	& div.fistDivSite
+		// will-change: transform
+		width: 200px
+		position: absolute
+		background-color: #282928 //#26211D
+		+borders(#575B5B)
+		z-index: 100 !important
+		color: $textColor
+		font-size: .9em
+		padding: 10px
+
+	& div.fistDivSite:nth-child(1)
+		// 2left up page
+		transform: rotateY(180deg)
+		opacity: 0
+		position: absolute
+		& span
+			left: 3px
+			z-index: 3
+		// transition: transform 2s
+	& div.fistDivSite:nth-child(2)
+		// 1right up page
+		opacity: 1
+		transform: rotateY(180deg)
+		position: absolute
+		& span
+			position: absolute
+			right: 3px
+			z-index: 3
+	& div.fistDivSite:nth-child(3)
+		position: absolute
+		left: 200px
+		transform: rotateY(180deg)
+		position: absolute
+		opacity: 0
+		border: none
+	& div.fistDivSite:nth-child(4)
+		position: absolute
+		opacity: 0
+		left: 200px
+		transform: rotateY(180deg)
+		// text-align: center
+		position: absolute
+// buttons Book
+#numberSite
+	position: absolute
+	background-color: #172528
+	bottom: 1px
+	width: 30px
+	height: 20px
+	right: 50%
+	margin-right: -20px 
+	width: 40px
+	z-index: 15
+	border: 1px solid grey
+	text-align: center
+input::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+input::-webkit-inner-spin-button 
+	-webkit-appearance: none
+	margin: 0
+#count
+	cursor: pointer
+	+center
+	position: absolute
+	background-color: #172528
+	top: -26px
+	right: -8px
+	z-index: 150
+	width: 20px
+	height: 20px
+	border-radius: 90%
+	// border: 1px solid grey
+	color: #AA6524
+#count2
+	cursor: pointer
+	position: absolute
+	background-color: #172528
+	bottom: 4px
+	height: 
+	left: calc(50% + 42px)
+	z-index: 15
+	width: 15px
+	height: 15px
+	border-radius: 90%
+	border: 1px solid grey
+#leftSlide
+	outline: none
+	border: 0px solid
+	position: absolute
+	background-color: #172528
+	width: 20px
+	height: 22px
+	right: calc(50% + 20px)
+	bottom: 0px
+	z-index: 15
+	clip-path: polygon(100% 100%, 0 50%, 100% 0)
+#rightSlide
+	outline: none
+	border: 0px solid 
+	position: absolute
+	background-color: #172528
+	width: 20px
+	height: 22px
+	right: calc(50% - 40px)
+	bottom: 0px
+	z-index: 15
+	clip-path: polygon(100% 50%, 0 100%, 0 0)
+#close
+	outline: none
+	border: 0px solid 
+	position: absolute
+	background-color: #172528
+	height: 24px
+	top: 0px
+	left: 50%
+	z-index: 15
+	margin-left: -20px
+	width: 40px
+	clip-path: polygon(50% 100%, 0 0, 100% 0)
+	font-size: .8em
+#close2
+	outline: none
+	border: 0px solid 
+	position: absolute
+	background-color: #172528
+	height: 22px
+	bottom: -10px
+	left: 50%
+	z-index: 15
+	margin-left: -20px
+	width: 40px
+	clip-path: polygon(100% 100%, 0 100%, 50% 0)
+#appearance
+	position: absolute
+	background-color: #172528
+	left: calc(50% - 80px)
+	z-index: 15
+	width: 160px
+	height: 20px
+	border-radius: 20%
+	bottom: 2px
+	border: .5px solid gray
+	color: $textColor
+	font-family: 'Open Sans'
+	font-size: .9em
+	line-height: 10px
+
+		// background-color: initial
+		// unicode-bidi: bidi-override
+#theD1
+	position: relative
+	left: 0
+	height: 80px
+	+borders(coral)
+	margin: 10px 0
+	background-color: grey
+	clip-path: polygon(50% 0, 0% 100%, 100% 100%)
+	&:hover
+		border: 3px solid coral
+#theD2
+	height: 80px
+	+borders(coral)
+	margin: 10px 0
+	background-color: grey
+
+#theD3
+	height: 80px
+	+borders(coral)
+	margin: 10px 0
+	background-color: grey
+#theD4
+	height: 80px
+	+borders(coral)
+	margin: 10px 0
+	background-color: grey
+#theD5
+	height: 80px
+	+borders(coral)
+	margin: 10px 0
+	background-color: grey
+#theD6
+	height: 80px
+	+borders(coral)
+	margin: 10px 0
+	background-color: grey
+.g1
+	height: 100px
+	z-index: 1
+	overflow: hidden
+.contacts
+	cursor: pointer
+	position: relative
+	display: grid
+	align-content: end
+	justify-content: center
+	left: -50px
+	top: -50px
+	border: 1px solid #AA6524
+	width: 100px
+	height: 100px
+	transform: rotate(-45deg)
+	font-family: 'Exo 2'
+	font-size: .94em
+	& p
+		transition: all .5s
+		// text-decoration: underline
+		+initial
+.g6
+	height: 117px
+	width: 200px
+	z-index: 1
+	overflow: hidden
+	position: relative
+	perspective: 100px
+	// +out(blue)
+.g6 i
+	+center
+	position: relative
+	font-size: 1.1em
+	// margin-left: -3px
+	transition: color 1s
+	transition: left 1s
+	left: -20px
+	z-index: 2
+.wrapHead
+	display: grid
+	grid-template-columns: 5px auto
+	& i
+		color: $colorBrown
+
+.headerThis
+	+initial
+	+center
+	overflow: visible
+	height: auto
+	position: relative
+	left: 20px
+	& p
+		+initial
+		position: relative
+		+center
+		// top: -1px
+		left: -165px
+		transition: all 1s
+		color: #CBBEAE
+.opacity
+	opacity: 1
+.g6Cont
+	position: absolute
+	transform: rotateX(10deg)
+	width: 100%
+	height: 120px
+	line-height: 1.2em
+	text-align: center
+	overflow: hidden
+	position: relative
+	left: -200px
+	transition: all 1s
+	& p
+		font-family: "Open Sans"
+		top: 180px
+		position: relative
+		left: 0px
+		font-size: .9em
+		// animation: textUp 20s linear infinite
+		padding: 3px
+		transition: all 1s
+		// opacity: 0
+@keyframes textUp
+	0%
+		top: 60px
+	100%
+		top: -140px
+.g7
+	width: 200px
+.g7 i
+	font-size: 1.3em
+	+center
+	color: $colorBrown
+	text-indent: 4px
+	transition: color .5s
+	transition: left 1s
+	// +out(yellow)
+.wrapperP
+	overflow: hidden
+	+center
+	left: 13px
+	& p
+		position: relative
+		left: -165px
+.ang
+	position: absolute
+	background-color: rgba(2,2,2,.2)
+	width: 55px
+	height: 16.0px
+	bottom: 82px
+.wrapG7
+	// background-color: $bgColor
+	height: auto
+	// margin: 5px
+	color: white
+	text-align: center
+	overflow: hidden
+	& header
+		color: $colorBrown
+		display: grid
+		grid-template-columns: 14% 86%
+		& p
+			transition: all .5s
+			+initial
+			display: inline-block
+			position: relative
+			left: -135px
+	& i
+		position: relative
+		font-size: 1.2em
+		left: -35px
+		z-index: 1
+		
+	& table
+		color: $colorBrown
+		position: relative
+		left: -200px
+		width: 100%
+		align-content: middle
+		// border: 1px solid green
+		font-size: .8em
+		transition: left .5s
+		z-index: 1
+
+	& tr th
+		// border: 1px solid green
+		text-align: center
+		// font-size: .7em
+.wrapG7 table td:first-child
+	width: 30%
+	color: $colorFooter
+.littleLeft
+	position: relative
+	left: -15px
+
+.wrapContactSection
+	height: 200px
+	width: 250px
+	position: relative
+	top: -122px
+	left: 8px
+	// border: 1px solid coral
+	transform: rotate(-45deg)
+	overflow: hidden
+.contactSection
+	transition: all 1s
+	transform: rotate(45deg)
+	// border: 1px solid green
+	z-index: 0
+	display: grid
+	grid-template-columns: 56px 120px
+	grid-template-rows: 25% 25% 25% 25%
+	position: relative
+	width: 56px
+	height: 122px
+	top: -62px
+	left: 65px
+	& > div
+		// border: 1px solid yellow
+		height: 30px
+		+center
+	& i
+		transition: color .5s
+		color: rgba(150, 150, 150, 1)
+.phone
+	z-index: 20
+	width: 28px
+	position: relative
+	left: 16px
+	font-size: 22px
+.phone2
+	z-index: 20
+	overflow: hidden
+	width: 125px
+	position: relative
+	+center
+	font-size: .8em
+	color: white
+	left: -18px
+	& p
+		+initial
+		position: relative
+		left: -110px
+		transition: left 1s
+		margin-left: -20px
+.skype
+	z-index: 2
+	width: 25px
+	position: relative
+	left: -15px
+.skype2
+	overflow: hidden
+	width: 125px
+	position: relative
+	+center
+	font-size: .9em
+	color: white
+	left: -49px
+	& p
+		position: relative
+		+initial
+		left: -110px
+		transition: left 1s
+		margin-left: -20px
+.gmail
+	z-index: 2
+	width: 25px
+	position: relative
+	left: -45px
+.gmail2
+	overflow: hidden
+	width: 180px
+	position: relative
+	+center
+	font-size: .9em
+	color: white
+	left: -77px
+	& p
+		position: relative
+		+initial
+		left: -170px
+		transition: left 1s
+		margin-left: -20px
+
+.bgText
+	background-color: rgba(62, 181, 241, 0.1)
+	height: 60px
+	width: 100%
+	text-align: center
+	position: relative
+	// float: left
+	font-size: .75em
+	border-radius: 4px
+.bgText p
+	margin: 0
+	color: #b9eaa8
+	font-size: 1.3em
+
+.skypeTextB
+	+initial
+	font-size: 1em
+	background-color: rgba(62, 181, 241, 0.1)
+	height: 60px
+	width: 100%
+	position: relative
+	color: #b9eaa8
+	border-radius: 4px
+.copyright
+	+center
+	grid-template-columns: auto auto
+	& i
+		+center
+		width: 23px
+		color: brown
+		font-size: 0.8em
+.copyright p
+	text-align: center
+	margin: 0 auto
+	position: relative
+	color: brown
+	top: 0
+	
+//////////////////////////
+// test containers
+// 16's angle
+.wrapCircleImg
+	height: 150px
+	position: relative
+	+center
+	overflow: visible
+	transform: scale(.7,.7)
+	border: initial
+.circleImg
+	width: 150px
+	height: 150px
+	cursor: pointer
+	border-radius: 100%
+	// background-image: url('/img/images/button2.png')
+	// +forBGI
+	box-shadow: 3px 3px 6px gray, -3px -3px 6px gray
+	z-index: 1
+	transform: scale(.7,.7)
+
+
+.into00
+	// border: 1px solid red
+	position: relative
+	transform: rotate(-45deg)
+	overflow: hidden
+	width: 150px
+	height: 150px
+	left: -2px
+
+.into01
+	// border: 1px solid green
+	transform: rotate(22.5deg)
+	overflow: hidden
+	width: 150px
+	height: 150px
+.into02
+	overflow: hidden
+	// border: 1px solid yellow
+	transform: rotate(45deg)
+	width: 150px
+	height: 150px
+	position: absolute
+	left: 0
+	right: 0
+.into03
+	background-image: url('/img/images/balls/ball8.png')
+	background-position: 
+	background-size: cover
+	background-repeat: no-repeat
+	overflow: hidden
+	// border: 1px solid blue
+	transform: rotate(-22.5deg)
+	width: 150px
+	height: 150px
+	transition: all 1s
+	position: absolute
+	left: 0
+	top: 0
+	text-align: center
+	box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset
+.into04
+	// border: 1px solid pink
+	transform: rotate(22.5deg)
+	overflow: hidden
+	width: 150px
+	height: 150px
+	transition: all 1s
+	position: absolute
+	left: 0
+	top: 0
+	box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset
+.into05
+	// border: 1px solid aqua
+	transform: rotate(45deg)
+	overflow: visible
+	width: 150px
+	height: 150px
+	transition: all 1s
+	position: absolute
+	left: 0
+	top: 0
+	box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset
+.into06
+	// border: 3px solid gold
+	transform: rotate(67.5deg)
+	overflow: visible
+	width: 150px
+	height: 150px
+	transition: all 1s
+	position: absolute
+	left: 0
+	top: 0
+	box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset
+// .into06:hover, .into05:hover, .into04:hover, .into03:hover
+// 	box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
+// square without angle
+
+
+// 5 angle
+.intoWr
+	position: absolute
+	width: 100px
+	height: 100px
+	// background-color: $bgColor
+	top: 300px
+	left: -1px
+	// transform: rotate(-15deg)
+.into40
+	pointer-events: auto
+	width: 100px
+	height: 100px
+	// border: .1px solid red
+	transform: rotate(72deg)
+	overflow: visible
+	top: 8px
+	left: -3px
+	position: absolute
+	box-shadow: 2px 2px 1px grey inset, -2px -2px 1px grey inset
+.into41
+	pointer-events: auto
+	width: 100px
+	height: 100px
+	// border: .1px solid red
+	transform: rotate(72deg)
+	overflow: visible // visible ---> crystal effect
+	position: absolute
+	top: 11px
+	left: -7px
+	text-align: center
+	box-shadow: 2px 2px 1px grey inset, -2px -2px 1px grey inset
+.into42
+	pointer-events: auto
+	// margin-left: -1000px
+	width: 100px
+	height: 100px
+	// border: .1px solid red
+	transform: rotate(72deg)
+	overflow: visible
+	top: 7px
+	left: -7px
+	position: absolute
+	box-shadow: 2px 2px 1px grey inset, -2px -2px 1px grey inset
+.into43
+	pointer-events: auto
+	// margin-left: -1000px
+	width: 100px
+	height: 100px
+	// border: .1px solid red
+	transform: rotate(72deg)
+	overflow: visible
+	top: 6px
+	left: -7px
+	position: absolute
+	box-shadow: 2px 2px 1px grey inset, -2px -2px 1px grey inset
+.into45
+	pointer-events: auto
+	width: 100px
+	height: 100px
+	// border: .1px solid green
+	transform: rotate(72deg)
+	overflow: hidden
+	position: absolute
+	top: 9px
+	left: -5px
+.into46
+	pointer-events: none
+	width: 100px
+	height: 100px
+	// border: .1px solid pink
+	transform: rotate(72deg)
+	overflow: hidden
+	position: absolute
+	top: 9px
+	left: -7px
+.into47
+	pointer-events: none
+	width: 100px
+	height: 100px
+	// border: .1px solid aqua
+	transform: rotate(72deg)
+	position: absolute
+	top: 8px
+	left: -7px
+	overflow: hidden
+.into48
+	pointer-events: none
+	width: 100px
+	height: 100px
+	// border: .1px solid yellow
+	transform: rotate(72deg)
+	overflow: hidden
+	position: absolute
+	top: 7px
+	left: -7px
+.into49
+	width: 100px
+	height: 100px
+	// border: .1px solid aqua
+	transform: rotate(72deg)
+	position: absolute
+	overflow: hidden
+	top: 7px
+	left: -5px
+	background-image: url("/img/images/jewel.jpg")
+	background-position: -32px 2px
+	background-size: cover
+	background-repeat: no-repeat
+	box-shadow: 2px 2px 1px grey inset, -2px -2px 1px grey inset
+.into40:hover,.into41:hover,.into42:hover,.into43:hover,.into49:hover
+	box-shadow: 2px 2px 3px #19B9F5 inset, -2px -2px 3px #19B9F5 inset
+// end footer
+
+.balls
+	position: fixed
+	width: 100%
+	max-width: 1366px
+	height: 0.1px
+	display: grid
+	grid-template-columns: auto auto auto auto auto auto auto
+	overflow: visible
+	margin-top: 0px
+.ball1
+	opacity: 0
+	position: relative
+	overflow: visible
+	background-repeat: no-repeat
+	// background-image: url('/img/images/balls/ball1.png')
+	background-position: 0 -30px
+	width: 100%
+	height: auto
+	top: -230px
+	animation: myBall1 30s ease-in-out 15s infinite 
+@keyframes myBall1
+	0%
+		opacity: 1
+		top: 5050px
+	100%
+		opacity: 1
+		top: -200px
+
+.ball2
+	opacity: 0
+	position: relative
+	width: 100%
+	height: auto
+	overflow: visible
+	top: -230px
+	// background-image: url('/img/images/balls/ball2.png')
+	background-position: 0 -30px
+	// background-size: cover
+	background-repeat: no-repeat
+	animation: myBall2 30s ease-in-out 14s infinite 
+@keyframes myBall2
+	0%
+		opacity: 1
+		top: 5050px
+	100%
+		opacity: 1
+		top: -200px
+.ball3
+	opacity: 0
+	position: relative
+	width: 100%
+	height: auto
+	overflow: visible
+	top: -230px
+	// background-image: url('/img/images/balls/ball3.png')
+	background-position: 0 -30px
+	// background-size: cover
+	background-repeat: no-repeat
+	animation: myBall3 30s ease-in-out 12s infinite 
+@keyframes myBall3
+	0%
+		opacity: 1
+		top: 5050px
+	100%
+		opacity: 1
+		top: -200px
+
+.ball4
+	opacity: 0
+	position: relative
+	width: 100%
+	height: auto
+	overflow: visible
+	top: -230px
+	// background-image: url('/img/images/balls/ball4.png')
+	background-position: 0 -30px
+	// background-size: cover
+	background-repeat: no-repeat
+	animation: myBall4 30s ease-in-out 6s infinite 
+@keyframes myBall4
+	0%
+		opacity: 1
+		top: 5050px
+	100%
+		opacity: 1
+		top: -200px
+.ball5
+	opacity: 0
+	position: relative
+	width: 100%
+	height: auto
+	overflow: visible
+	top: -230px
+	// background-image: url('/img/images/balls/ball5.png')
+	background-position: 0 -30px
+	// background-size: cover
+	background-repeat: no-repeat
+	animation: myBall5 30s ease-in-out 4s infinite 
+@keyframes myBall5
+	0%
+		opacity: 1
+		top: 5050px
+	100%
+		opacity: 1
+		top: -200px
+.ball6
+	opacity: 0
+	position: relative
+	width: 100%
+	height: auto
+	overflow: visible
+	top: -230px
+	// background-image: url('/img/images/balls/ball5.png')
+	background-position: 0 -30px
+	// background-size: cover
+	background-repeat: no-repeat
+	animation: myBall6 30s ease-in-out 8s infinite 
+@keyframes myBall6
+	0%
+		opacity: 1
+		top: 5050px
+	100%
+		opacity: 1
+		top: -200px
+.ball7
+	opacity: 0
+	width: 100%
+	height: auto
+	overflow: visible
+	position: relative
+	top: -230px
+	// background-image: url('/img/images/balls/ball5.png')
+	background-position: 0 -30px
+	// background-size: cover
+	background-repeat: no-repeat
+	top: 0
+	animation: myBall7 30s ease-in-out infinite
+@keyframes myBall7
+	0%
+		top: 5050px
+	100%
+		top: -200px
+
+.bottomFooter
+	+gc(5)
+	+gr(2)
+	+se
+	width: calc(100% - 54px)
+	height: 95px
+	margin: 0px 0px 0px 55px
+	border-radius: 2px 0px 28px 0px
+	border-top: 1px solid gray
+	background-color: rgba(128, 128, 128, 0.1)
+	padding: 0 0px 0 30px
+	& > img
+		z-index: 1
+		&:hover
+			transform: scale(.99,.99)
+	// & div[class^=line]:nth-child(even)
+	// 	animation: myFlicker 1s ease-in-out infinite
+	// & div[class^=line]:nth-child(odd)
+	// 	animation: myFlicker2 1s ease-in-out infinite
+	& div
+		pointer-events: none
+
+.panda
+	+center
+	// max-width: 48%
+	margin: 0 auto
+	height: auto
+	max-height: 80px
+.greenPeace
+	+center
+	// max-width: 65%
+	margin: 0 auto
+	height: auto
+	max-height: 80px
+.wrapFoo
+	+center
+.wrapFoo img
+	max-width: 90%
+.uicn
+	+center
+	// max-width: 70%
+	margin: 0 auto
+	height: auto
+	max-height: 80px
+.wap
+	+center
+	// max-width: 65%
+	margin: 0 auto
+	height: auto
+	max-height: 80px
+.wcs
+	+center
+	// max-width: 65%
+	margin: 0 auto
+	height: auto
+	max-height: 80px
+.line-1
+	width: calc(100% - 87px)
+	+borders(gray)
+	position: absolute
+	bottom: 52px
+	right: -0px
+	opacity: .3
+.line-2
+	width: calc(100% - 82px)
+	+borders(black)
+	position: absolute
+	bottom: 58px
+	right: -0px
+	opacity: .1
+.line-3
+	width: calc(100% - 78px)
+	+borders(gray)
+	position: absolute
+	bottom: 64px
+	right: -0px
+	opacity: .3
+.line-4
+	width: calc(100% - 72px)
+	+borders(black)
+	position: absolute
+	bottom: 70px
+	right: -0px
+	opacity: .1
+.line-5
+	width: calc(100% - 68px)
+	+borders(gray)
+	position: absolute
+	bottom: 76px
+	right: -0px
+	opacity: .2
+.line-6
+	width: calc(100% - 64px)
+	+borders(black)
+	position: absolute
+	bottom: 82px
+	right: -0px
+	opacity: .15
+.line-7
+	width: calc(100% - 59px)
+	+borders(gray)
+	position: absolute
+	bottom: 88px
+	right: -0px
+	opacity: .1
+.line0
+	width: calc(100% - 90px)
+	+borders(black)
+	position: absolute
+	bottom: 46px
+	right: 0px
+	opacity: .2
+.line1
+	width: calc(100% - 83px)
+	+borders(gray)
+	position: absolute
+	bottom: 40px
+	right: -0px
+	opacity: .2
+.line2
+	width: calc(100% - 81px)
+	+borders(black)
+	position: absolute
+	bottom: 34px
+	right: -0px
+	opacity: .25
+.line3
+	width: calc(100% - 77px)
+	+borders(gray)
+	position: absolute
+	bottom: 28px
+	right: -0px
+	opacity: .1
+.line4
+	width: calc(100% - 72px)
+	+borders(black)
+	position: absolute
+	bottom: 22px
+	right: -0px
+	opacity: .2
+.line5
+	width: calc(100% - 70px)
+	+borders(gray)
+	position: absolute
+	bottom: 16px
+	right: 2px
+	opacity: .2
+.line6
+	width: calc(100% - 70px)
+	+borders(black)
+	position: absolute
+	bottom: 10px
+	right: 6px
+	opacity: .15
+.line7
+	width: calc(100% - 72px)
+	+borders(gray)
+	position: absolute
+	bottom: 4px
+	right: 12px
+	opacity: .3
+	// animation: myFlicker 1s ease-in-out infinite
+	transition: opacity 1s
+.animFlicker
+	animation: myFlicker 2s ease-in-out infinite
+.animFlicker2
+	animation: myFlicker2 1s ease-in-out infinite
+@keyframes myFlicker
+	0%
+		opacity: .1
+	50%
+		opacity: .5
+	100%
+		opacity: .1
+@keyframes myFlicker2
+	0%
+		opacity: .5
+	50%
+		opacity: .1
+	100%
+		opacity: .5
+@import "media"
+

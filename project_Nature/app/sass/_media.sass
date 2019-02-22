@@ -1,0 +1,780 @@
+/*==========  Desktop First Method  ==========*/
+@media (max-width: 1365px)
+	.headText
+		left: 0
+		padding-left: 35px
+		width: 100%
+	.wrapperAll
+		grid-template-columns: 300px 300px 300px
+	#headerLeftSection
+		width: 206px
+		left: 3px
+		top: 10px
+
+	.galleryDeg1Left
+		width: 330px
+		height: 286.92px
+		left: -12px
+		top: 7px
+	.galleryDeg2Left
+		width: 330px
+		height: 286.92px
+		left: 0
+		top: 0
+	.galleryLeft
+		width: 332px
+		height: 214px
+		left: 2px
+		top: 38px
+
+	.galleryDeg1
+		width: 330px
+		height: 286.92px
+		left: -20px
+		top: 5px
+	.galleryDeg2
+		width: 330px
+		height: 286.92px
+		left: 0
+		top: 0
+	.gallery
+		width: 332px
+		height: 214px
+		left: 2px
+		top: 38px
+	.arrowLeft
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		top: 30px
+		z-index: 1
+	.arrowRight
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		top: 30px
+		left: 280px
+		z-index: 1
+	.showNumber
+		display: block
+		position: absolute
+		left: 280px
+		top: 228px
+		z-index: 1
+/////////////////////////////////////////
+// animate own Friends	
+@media (max-width: 1150px)
+	.afterGlacierHead
+		cursor: pointer
+	.TheCard3
+		opacity: 0
+		position: relative
+		animation: slideLeft3 2s ease-out
+	@keyframes slideLeft3
+		0%
+			opacity: 1
+			right: 0px
+		100%
+			opacity: 0
+			right: 330px
+			visibility: hidden
+			display: none
+	.TheCard1
+		opacity: 0
+		position: relative
+		animation: slideRight1 2s ease-out
+	@keyframes slideRight1
+		0%
+			opacity: 1
+			left: 0px
+		100%
+			opacity: 0
+			left: 330px
+			visibility: hidden
+			display: block
+	.wrMiniDisLeft, .wrMiniDisRight
+		animation: dispShow 2s
+		display: block
+	@keyframes dispShow
+		0%
+			opacity: 0
+			display: none
+		100%
+			opacity: 1
+			display: block
+
+///////////////////////////////////////////	
+
+
+@media (min-width: 1150px)
+
+	.TheCard3
+		opacity: 1
+		animation: slideRight3 2s ease-out
+	@keyframes slideRight3
+		0%
+			opacity: 0
+			right: 330px
+		100%
+			right: 0
+			opacity: 1
+			visibility: visible
+			display: block
+	.TheCard1
+		opacity: 3
+		position: relative
+		animation: slideLeft1 2s ease-out
+	@keyframes slideLeft1
+		0%
+			opacity: 0
+			left: 330px
+		100%
+			opacity: 1
+			left: 0px
+			display: block
+	.wrMiniDisLeft, .wrMiniDisRight
+		animation: dispHide 2s
+		visibility: hidden
+	@keyframes dispHide
+		0%
+			opacity: 1
+			visibility: visible
+			display: block
+		100%
+			opacity: 0
+			visibility: hidden
+			display: none
+
+/////////////////////////////////////////////////////			
+@media (max-width: 1065px)
+	// .headText
+	// 	font-size: 1em
+	// 	position: relative
+	// 	left: -20px
+	.wrapperAll
+		grid-template-columns: 300px 260px 300px
+	#headerLeftSection
+		width: 186px
+		left: -2px
+		top: 21px
+
+	.galleryDeg1Left
+		width: 300px
+		height: 260.86px
+		left: -2px
+		top: 20px
+	.galleryDeg2Left
+		width: 300px
+		height: 260.86px
+		left: 0
+		top: 0
+	.galleryLeft
+		width: 302px
+		height: 196px
+		left: 0px
+		top: 33px
+
+	.galleryDeg1
+		width: 300px
+		height: 260.86px
+		left: -2px
+		top: 18px
+	.galleryDeg2
+		width: 300px
+		height: 260.86px
+		left: 0
+		top: 0
+	.gallery
+		width: 302px
+		height: 196px
+		left: 0px
+		top: 33px
+	.arrowLeft
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		left: 18px
+		top: 43px
+		z-index: 1
+	.arrowRight
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		top: 43px
+		left: 260px
+		z-index: 1
+	.showNumber
+		display: block
+		position: absolute
+		left: 265px
+		top: 220px
+		z-index: 1
+	////////////////////////////	
+
+	
+/* Large Devices, Wide Screens */
+@media (max-width: 1200px)
+	.wrapCenterHeaderDiv
+		grid-column-gap: 17px
+	.headText
+		left: 0
+		padding-left: 10px
+		width: 100%
+	 
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+
+	.wrapCenterHeaderDiv
+		grid-column-gap: 16px
+	.theLostRiverText2
+		margin: 8px 8% 8px
+	#headerLeftSection
+		width: 210px
+		left: 40px
+		top: 252px
+		z-index: 2
+	.wrapContentImg
+		display: grid
+		grid-template-columns: 1fr
+		align-content: center
+		padding: 10%
+	.item4
+		// grid-template-columns: 1fr
+		// grid-gap: 30px
+	.contentImg2 img
+		display: none
+	// 	margin: 0 
+	// 	padding: 0
+	// 	height: 260px
+	// 	width: 100%
+	.wrapperAll
+		grid-template-columns: 300px 300px
+
+	.leftItem
+		display: none
+	.galleryDeg1
+		width: 330px
+		height: 286.92px
+		left: -20px
+		top: 5px
+	.galleryDeg2
+		width: 330px
+		height: 286.92px
+		left: 0
+		top: 0
+	.gallery
+		width: 332px
+		height: 214px
+		left: 2px
+		top: 38px
+	.arrowLeft
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		left: 0px
+		top: 37px
+		z-index: 1
+	.arrowRight
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		top: 37px
+		left: 268px
+		z-index: 1
+	.showNumber
+		display: block
+		position: absolute
+		left: 265px
+		top: 230px
+		z-index: 1
+@media only screen and (max-width: 925px)
+	.bookCover, .wrapBook2
+		opacity: 0
+		// display: none
+@media only screen and (max-width: 920px)
+	.bookCover, .wrapBook2
+		display: none
+	.someButifulText
+		opacity: 1
+@media only screen and (max-width: 900px)
+	.wrapCenterHeaderDiv
+		grid-column-gap: 15px
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1149px)
+	.lb, .rb, .wrMiniDisLeft, .wrMiniDisRight, .rombLeft, .rombRight
+		animation: dispShows 2s
+		display: block
+	@keyframes dispShows
+		0%
+			opacity: 0
+			display: none
+		100%
+			opacity: 1
+			display: block
+	// show button disp and rombPct
+@media only screen and (max-width: 860px)
+	.duckText
+		font-size: 3em
+@media only screen and (max-width: 810px)
+	.duckText
+		font-size: 2.5em
+@media only screen and (max-width: 768px)
+	.top_header, .lDiv p
+		pointer-events: none
+	.someButifulText
+		opacity: 0
+	.textEj p
+		font-size: .9em
+	.duckText p
+		font-size: 1em
+@media only screen and (max-width: 748px)
+	.someButifulText
+		display: none
+	.g2
+		visibility: hidden
+	body, html
+		overflow-y: auto
+		overflow-x: hidden
+	.theLostRiverText3
+		left: -.5px
+		width: 43px
+		top: -81px
+
+	.headText
+		// padding-top: 30px
+		padding-left: 15px
+		font-size: 1em
+	.beach
+		height: 573px
+	#headerLeftSection
+		width: 190px
+		left: -25px
+		top: 245px
+		z-index: 2
+	.theLostRiverText
+		margin: -10px 8% 10px
+	.theLostRiverText2
+		margin: 8px 8% -4px
+	//////////////////////////////////////////////////
+	// animate own friend and glasier pictures
+	.lb, .rb, .wrMiniDisLeft, .wrMiniDisRight, .rombLeft, .rombRight
+		animation: dispHides 2s
+		visibility: hidden
+	@keyframes dispHides
+		0%
+			opacity: 1
+			visibility: visible
+			// display: block
+		100%
+			opacity: 0
+			visibility: hidden
+			// display: none
+	//////////////////////////////////////
+
+	.beach
+		grid-template-rows: 7% 310px 120%
+	.wrapContentImg
+		padding: 12%
+	.contentImg1 img, .contentImg2 img
+
+	.headerItem > div
+		line-height: .9em
+		font-size: .75em
+	.wrapperAll
+		grid-template-columns: 300px 220px
+		// justify-content: start
+	.into30, .into31, .into32, .into33, .into34, .bgImage1,.bgImage2, .bgImage3, .bgImage4,.bgImage5,.bgImage6,.bgImage7
+		width: 87px
+		height: 75px
+	.wrapVItem
+		left: -35px
+
+	.v1
+		left: 20px
+		top: -3px
+	.v2
+		left: 21px
+		top: 84px
+	.v3
+		left: -54px
+		top: 41px
+	.v4
+		left: -128px
+		top: -3px
+	.v5
+		left: -128px
+		top: 84px
+	.v6
+		left: -54px
+		top: -45px
+	.v7
+		left: -54px
+		top: 127px
+	.galleryDeg1
+		width: 300px
+		height: 260.86px
+		left: -80px
+		top: 17px
+	.galleryDeg2
+		width: 300px
+		height: 260.86px
+		left: 0
+		top: 0
+	.gallery
+		width: 302px
+		height: 196px
+		left: 0px
+		top: 33px
+	.arrowLeft
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		left: -65px
+		top: 45px
+		z-index: 1
+	.arrowRight
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		top: 45px
+		left: 188px
+		z-index: 1
+	.showNumber
+		display: block
+		position: absolute
+		left: 188px
+		top: 218px
+		z-index: 1
+	.ejDiv
+		order: 1
+	.textEj
+		order: 2
+		display: none
+	.catText
+		display: none
+	.duckText
+		display: none
+	.rombLeft, .rombRight
+		// display: none
+		// height: 240px
+		// display: none
+	/*Disable Animation on Mobile Devices*/
+	// .animated 
+	// 	/*CSS transitions*/
+	// 	-o-transition-property: none !important
+	// 	-moz-transition-property: none !important
+	// 	-ms-transition-property: none !important
+	// 	-webkit-transition-property: none !important
+	// 	transition-property: none !important
+	// 	/*CSS transforms*/
+	// 	-o-transform: none !important
+	// 	-moz-transform: none !important
+	// 	-ms-transform: none !important
+	// 	-webkit-transform: none !important
+	// 	transform: none !important
+	// 	/*CSS animations*/
+	// 	-webkit-animation: none !important
+	// 	-moz-animation: none !important
+	// 	-o-animation: none !important
+	// 	-ms-animation: none !important
+	// 	animation: none !important 
+// 
+@media only screen and (max-width: 600px)// and (orientation: portrait)
+	.wrapFoo img
+		max-width: 50%
+	.firstSection, .afterFirst, .forest, .afterForest, .palmBg, .afterBeach, .glacier, .ownFriends, .beach, .angle3#angle3, .footer
+		margin: 0 0%
+		width: 100%
+	.menuLabel
+		display: none
+	.beach
+		height: 565px
+	#headerLeftSection
+		width: 160px
+		left: -58px
+		top: 206px
+		z-index: 2
+	.theLostRiverText2
+		margin: 8px 8% -8px
+	.wrapperAll
+		grid-template-columns: 300px
+		justify-content: center
+	.wrapVItem
+		grid-row: 2
+		left: 0
+		top: -20px
+		margin-bottom: 60px
+	.galleryDeg1
+		left: 0
+		top: -32px
+	.arrowLeft
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		left: 0px
+		top: 20px
+		z-index: 1
+	.arrowRight
+		display: grid
+		align-content: center
+		justify-content: center
+		position: absolute
+		top: 20px
+		left: 280px
+		z-index: 1
+	.showNumber
+		display: block
+		position: absolute
+		left: 276px
+		top: 168px
+		z-index: 1
+
+	.beach
+		grid-template-columns: 100%
+		grid-template-rows: 7% 302px 120%
+		// grid-template-rows: 37% 0	37% 25%
+		// margin: 0 auto
+	.contentImg1
+		transition: opacity 1s
+	.wrapContentImg
+		display: grid
+		justify-content: end
+		position: absolute
+		grid-column: 1
+		grid-row: 2
+	// .contentImg1 img, .contentImg2 img
+	// // display: none
+	// // margin: 6% 3% 6% 6%
+	// width: 100%
+	// height: 220px
+	.item1
+		grid-column: 1
+		grid-row: 1
+		position: relative
+	.item4
+		display: grid
+		grid-template-columns: auto 100% auto
+		grid-column: 1
+		grid-row: 2
+		position: relative
+		grid-template-rows: 0 auto
+		// justify-content: end
+	.item5
+		grid-column: 1
+		grid-row: 3
+	.item6
+		position: absolute
+		grid-column: 1
+		grid-row: 1
+		z-index: 1
+		height: 100%
+		padding: 0
+		background: linear-gradient(rgba(255,255,255,.1),rgba(0,0,0,.4))
+
+		& div
+			cursor: pointer
+	.item3
+		// position: relative
+		grid-column: 2
+		grid-row: 2
+		// display: none
+		position: absolute
+		margin: 0
+		right: 0px
+		height: 100%
+		width: 100px
+		// background: linear-gradient(rgba(255,255,255,.1),rgba(0,0,0,.8))
+		z-index: 1
+		// +borders(green)
+		padding: 0
+		overflow: hidden
+		box-shadow: initial
+
+	.wrapItem3
+		padding: 0
+		top: 0
+		right: 1px
+		height: auto
+		overflow: hidden
+		margin-bottom: -20px
+
+	.wrapMenuBtn
+		grid-column: 2 
+		grid-row: 1
+		height: 40px
+		display: block
+		// justify-content: end
+	.menuBtn
+		display: block
+		margin: 0 auto
+		position: relative
+	.menuBtn::-webkit-scrollbar 
+		width: 0
+	.menuBtn 
+		-ms-overflow-style: none
+	.menuBtn 
+		overflow: -moz-scrollbars-none
+/* Extra Small Devices, Phones */
+
+@media only screen and (max-width: 480px)
+	.lDiv
+		font-size: .82em
+	.lDiv p:first-child
+		left: 10px
+	.lDiv p:last-child
+		left: -10px
+	.rDiv
+		position: relative
+		// right: 0px
+	.wrapCenterHeaderDiv
+		grid-template-columns: 146px auto
+	// .rDiv ul
+	// 	width: 170px
+	.headText
+		left: 0
+		padding-left: 0
+		width: 100%
+	#headerLeftSection
+		width: 120px
+		left: -15px
+		top: 205px
+		z-index: 2
+	.theLostRiverText
+		margin: -8px 8% 20px
+	.theLostRiverText2
+		margin: 18px 8% 6px
+
+	.titleText
+		// display: grid
+		position: relative
+		width: 100%
+		margin: 0 auto
+		// left: 35%
+		// right: 35%
+		// top: 50px
+		font-size: 1em
+		color: $textColor
+		z-index: 1
+		font-size: .75em
+		text-align: center
+	.headerDiv
+		position: sticky
+		top: 0px
+		display: grid
+		align-content: end
+		background-color: pink
+		text-align: center
+		padding: 0
+	.wrapPicture
+		visibility: hidden
+	.div_ul li
+		font-size: .7em
+		padding: 9px 0
+	.divForText
+		font-size: .75em
+	.rowCat
+		justify-content: center
+	.rowEj
+		justify-content: center
+	.ejDiv
+		order: 1
+	.textEj
+		order: 2
+	.rowDuck
+		justify-content: center
+	.wrapDuck
+		margin: 0
+	.textGlacier
+		font-size: 1em
+	.wrapContentImg
+		padding: 0%
+		column-gap: 0
+	.forest
+		padding: initial
+	.arrowLeft
+		top: -5px
+		left: -8px
+		width: 30px
+		height: 30px
+	.arrowRight
+		top: -5px
+		width: 30px
+		height: 30px
+	.arrowRight
+		width: 30px
+		height: 30px
+	html, body
+		overflow-x: auto
+@media only screen and (max-width: 439px)
+	.btnRight button
+		top: -9px
+	.btnLeft button
+		top: 131px
+@media only screen and (max-width: 400px)
+	.g6Cont
+		font-size: .85em
+	.item1
+		font-size: .9em
+	.littleLeft
+		position: relative
+		left: -15px
+	.grid25
+		grid-template-columns: 180px auto 180px
+	.grid1
+		width: 180px
+	.g1 .wrapContactSection
+		font-size: .8em
+	.g6
+	.g7
+	.grid2
+		font-size: .8em
+
+
+
+// reverse mobile
+@media only screen and (min-width: 960px) and (max-height: 600px) and (orientation: landscape) {}
+
+	
+
+	
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px){}
+	
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px)
+	.fires
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px)
+	.fires
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px)
+	.fires
+
+// @media only screen and (min-width: 768px) and (max-width: 1200px)
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px)
+	.fires
+	
+	
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px)
+	.fires

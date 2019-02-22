@@ -1,0 +1,724 @@
+doctype html
+html(lang="en")
+	head
+		title mySite
+		meta(charset='UTF-8')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		// Latest compiled and minified CSS
+		link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css')
+		link(rel="stylesheet" href="css/cssLibs/magnific-popup.css")
+		link(rel='stylesheet' href='css/main.css')
+		link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous")
+		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Rubik|Seymour+One|Comfortaa|Amatic+SC|Open+Sans|Roboto")
+		// jQuery library
+		style.
+			.wrapperLoader {
+				position: fixed;
+				background-color: rgb(0,0,0);
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				z-index: 9999;
+				display: grid;
+				align-content: center;
+				justify-content: center;
+			}
+			.loader img {
+				width: 80px;
+				height: 80px;
+				transform: rotate(0deg);
+				animation: rotate 4s linear infinite;
+			}
+			@keyframes rotate {
+				from {transform: rotate(0deg);}
+				to {transform: rotate(360deg);}
+			}
+				
+	body
+		.wrapperLoader
+			.loader
+				img(src='/img/images/balls/ball10.png' alt='')
+		#arrowToTop
+				a(href='#wrapper' rel="m_PageScroll2id")
+					img(src='img/favicon/toTop.png' alt='arrow')
+		// wrapper
+		.display
+			p(id='showScroll')
+			p(id='width')
+			p(id='height')
+		.wrapper#wrapper
+			//- section.balls
+			//- 	img(src='/img/images/balls/ball1.png' alt='balls').ball1
+			//- 	img(src='/img/images/balls/ball2.png' alt='balls').ball2
+			//- 	img(src='/img/images/balls/ball3.png' alt='balls').ball3
+			//- 	img(src='/img/images/balls/ball4.png' alt='balls').ball4
+			//- 	img(src='/img/images/balls/ball5.png' alt='balls').ball5
+			//- 	img(src='/img/images/balls/ball6.png' alt='balls').ball6
+			//- 	img(src='/img/images/balls/ball7.png' alt='balls').ball7
+			.wrapSun
+				img.sun(src='img/images/sun.png' alt='fire-logo' width='130px' height='90px')
+			
+			
+			// header first page
+			section.firstSection
+
+				header.top_header
+					.wr16
+						.into00
+							.into01
+								.into02
+									.into03
+										.into04
+											.into05
+												.into06
+					.headText
+						p
+							| Один из лучших сайтов о природе
+							br
+							| и
+							br
+							| её обитателях.
+				.wrapCenterHeaderDiv
+					.lDiv
+						p
+							| Этот сайт
+						p
+							| создан
+						p
+							| для
+						P
+							| поднятия настроения
+						p
+							| всем тем,
+						p
+							| кто соскучился
+						p
+							| по красоте и природы.
+						p
+							| Удивительные
+						p
+							| уголки мира,
+						p
+							| замечательные
+						p
+							| животные и расстения
+						P
+							| с нетерпением
+						p
+							| ждут 
+						p
+							| минутки
+						p
+							| вашего внимания.
+						p
+							| Добро пожаловать.
+					.centerDiv
+						.rDiv
+							ul
+								li
+									a(href='#forest')
+										button.
+											природные локации
+								li
+									a(href='#palmBg')
+										button.
+											дикие кошки
+								li
+									a(href='#ownFriends')
+										button.
+											жители леса
+								li
+									a(href='#bluesky')
+										button.
+											мировые курорты
+						.bDiv
+							.bDivText
+								p#bDivTextP
+									| Облака
+								.wrapperImg
+							.wr17
+								.into00
+									.into01
+										.into02
+											.into03
+												.into04
+													.into05
+														.into06
+												.wrapCircleImg
+													img.circleImg(src='/img/images/button3.png' alt='button')
+			// end header first page
+			section.afterFirst
+				.wrapDuckSec2.container-fluid
+					.row.justify-content-center.rowDuck
+						.wrapDuck.col.col-md-4
+							img.duck(src='img/images/flowers/romashka1.jpg' alt='duck')
+						.col.col-sm-.duckText
+							span#angleLabelText
+								| так выглядит:
+							p
+								| Ромашка
+						.wrapDuck.col.col-md-4
+							img.duck2(src='img/images/flowers/romashka2.jpg' alt='duck')
+
+			// forest section
+			section#forest.forest
+				.theLostRiverText2
+					p#forestTextContainer
+						| Поля охватывают значительную часть наземного пространства, не имея высокой растительности. За эту особенность их иногда даже называют бескрайними. На полях растут: либо культурные сорта растений и трав, либо дикорастущие. Не имея особых преград, ветер в поле гуляет особенно сильно.
+				.theLostRiverText3
+				.wrapperAll
+					.leftItem
+						#headerLeftSection
+							p
+								| поля
+						.galleryDeg1Left
+							.galleryDeg2Left
+								.galleryLeft
+
+									.galleryImgContentLeft
+										a.popup-modal2.mfp-bg(id='popupLeft' href='#imgContent2' data-effect='mfp-zoom-in')
+											img#imgContent2(src='/img/images/fields/6.png' alt='foto Nature')
+					.wrapVItem
+						.v1
+							.into30
+								.into31
+									.bgImage1( id='theone')
+										.into33
+											.into34
+						.v2
+							.into30
+								.into31
+									.bgImage2
+										.into33
+											.into34
+						.v3
+							.into30
+								.into31
+									.bgImage3
+										.into33
+											.into34
+						.v4
+							.into30
+								.into31
+									.bgImage4
+										.into33
+											.into34
+						.v5
+							.into30
+								.into31
+									.bgImage5
+										.into33
+											.into34
+						.v6
+							.into30
+								.into31
+									.bgImage6
+										.into33
+											.into34
+						.v7
+							.into30
+								.into31
+									.bgImage7(id="the7")
+										.into33
+											.into34
+					.wrapGallery
+						span.arrowLeft
+						span.arrowRight
+						span.showNumber
+							img(id='num' src='img/images/numbers/1.png')
+						.galleryDeg1
+							.galleryDeg2
+								.gallery
+									.galleryImgContent
+										a.popup-modal2(id='popupRight' href='#imgContent1' data-effect='mfp-zoom-in')
+											img#imgContent(src='img/images/fields/1.png' 	alt='foto Nature')
+				.theLostRiverText.grid.center
+					| Природные локации
+				//- .endSectionText
+				//- 	| some text 
+			// end forest section
+
+			section.afterForest
+				.conEj.container-fluid
+						.rowEj.row.justify-content-center
+							.col.col-md-4.ejDiv
+								img.ej(src='img/images/berries/malina1.jpg' alt='ej')
+							.col.col-sm-.textEj
+								p
+									| Малина
+								span#angleLabelText2
+									| так выглядит:
+							.col.col-md-4.ejDiv
+								img.ej2(src='img/images/berries/malina2.jpg' alt='ej')
+
+
+			// animal section
+			section.palmBg(id='palmBg')
+				.txtBestAnimal.center 
+					p Топ 6 из семейства кошачих
+				.container
+					.row.justify-content-center
+						.col-sm-.m-2.grid
+							// <span class="wrapAni center grid"></span>
+							a.test-popup-link(href='img/images/tiger.jpg')
+								.cardShadow.animal.tiger
+									p
+										| Тигр&#x9;
+							.textAnimal.grid.center
+								| Тигр обитает в азии - в Индии, Непале и на Алтае... Тигры - это большие, сильные, крупные и красивые кошки. Тигр самый крупный и тяжёлый представитель семейства кошачих.
+						.col-sm-.m-2
+							a.test-popup-link(href='img/images/pantera.jpg')
+								.cardShadow.animal.panthera
+									p
+										| Пантера&#x9;
+							.textAnimal
+								| Чёрной пантерой обычно является леопард или ягуар, имеющий чёрную шкуру. На охоту пантеры всегда выходят ночью, так как в тёмное время суток они практически невидимы. Пантеры предпочитают жить поодиночке, или парами самец + самка.
+						.col-sm-.m-2.grid
+							a.test-popup-link(href='img/images/puma.jpg')
+								.cardShadow.animal.puma
+									p 
+										| Пума&#x9;
+							.textAnimal
+								| Пума обитает в северной и южной Америке, предпочитая селиться в горных районах. Также пумы могут встретиться в 
+								|	хвойных и тропических лесах. Пума легко передвигается по горным склонам и скалам, отлично лазают
+								| по деревьям и хорошо плавают.
+						.col-sm-.m-2
+							a.test-popup-link(href='img/images/snowBars.jpg')
+								.cardShadow.animal.snowBars
+									p 
+										| Снежный леопард
+							.textAnimal
+								| Снежный барс - представитель семейства кошачих, обитающий в суровом климате горных массивов цетральной азии. Среди всех крупных кошек снежный брас - единственный постоянный житель высокогорий.
+						.col-sm-.m-2
+							a.test-popup-link(href='img/images/lev.jpg')
+								.cardShadow.animal.lion
+									p 
+										| Лев
+							.textAnimal
+								| Длинна когтей льва достигает семи сантиметров, а клыков достигают восьми. Лев и львица внешне очень отличаются друг от друга.
+								| Охотятся у львов в основном самки.
+						.col-sm-.m-2
+							a.test-popup-link(href='img/images/jaguar.jpg')
+								.cardShadow.animal.jaguar
+									p 
+										| Ягуар
+							.textAnimal
+								| Ягуар имеет внушительные размеры. Его окраска по праву считается одной из самых красивых кошачих окрасок. Среда обитания Ягуара
+								| южная и центральная Америка. 
+			// end animal section
+			section.afterBeach
+				.wrapCats.container-fluid
+					.row.rowCat.justify-content-center
+						.col.col-md-4.divCat
+							img.catsImg(src='img/images/animals/ej1.jpg' alt='cats')
+						.col.col-sm-.catText
+							span#angleLabelText3
+									| так выглядит:
+							p
+								| ёж
+						.col.col-md-4.divCat2
+							img.catsImg2(src='img/images/animals/ej2.jpg' alt='cats2')
+
+			// Glacier
+			section#glacier.glacier
+				.textGlacier
+					p
+						| Один из крупнейших ледников
+				.glacierBack
+				.glacierBack2
+				.glacierLogo.grid.center
+					//- img.fireBall(src='img/images/fire_logo_small.png' alt='fireBall')
+				.wrapPicture
+					.pictureLeft
+					.pictureRight
+				.wrapRombs
+					.rombLeft
+					.rombCenter
+					.rombRight
+			// end Glaser
+			section.ownFriends#ownFriends
+				.wrapAfterGlacierHead
+					.lb
+						img#numLeft(src='img/images/numbers/1.png' alt="number")
+					.afterGlacierHead
+						h2
+							| Жители леса
+					.rb
+						img#numRight(src='img/images/numbers/1.png' alt="number")
+				.wrapCardBoot
+					.wrapCard
+						.wrMiniDisLeft
+							.into10
+								.inImgLeft
+									.into12
+						.TheCard1
+							p.cardTextHead1
+								| Орёл
+							p.cardTextBody1
+								| Крылатый истребитель, Гроза неба
+							.into20
+								.into21
+									.angle12Left
+										.into23
+											.into24
+					.wrapCard
+						.TheCard2
+							p.cardTextHead2
+								| Медведь
+							p.cardTextBody2
+								| Лесной тяжеловес, любитель мёда.
+							.into20
+								.into21
+									.angle12Center
+										.into23
+											.into24
+					.wrapCard
+						.wrMiniDisRight
+							.into10
+								.inImgRight
+									.into12
+						.TheCard3
+							p.cardTextHead3
+								| Волк
+							p.cardTextBody3
+								| Серый волк, зубами щёлк.
+							.into20
+								.into21
+									.angle12Right
+										.into23
+											.into24
+			// beach
+			section.beach(id='bluesky')
+				.item1
+					p
+						| Топ 6 лучших курортов мира
+				.item3(id='item3')
+					.wrapItem3(id='wrapItem3')
+						.maldivesMin0(title="maldivi")
+							.maldivesMin1
+								.maldivesMin2
+						.dubayMin0
+							.dubayMin1
+								.dubayMin2
+						.kanariMin0
+							.kanariMin1
+								.kanariMin2
+						.seysheliMin0
+							.seysheliMin1
+								.seysheliMin2
+						.gavaiMin0
+							.gavaiMin1
+								.gavaiMin2
+						.baliMin0
+							.baliMin1
+								.baliMin2
+					.menuLabel
+						p
+							| меню
+				.item4(id='item4')
+					.item6
+						.seysheliMin0
+							.seysheliMin1
+								.seysheliMin2
+						.gavaiMin0
+							.gavaiMin1
+								.gavaiMin2
+						.baliMin0
+							.baliMin1
+								.baliMin2
+					.wrapMenuBtn
+						button.menuBtn
+							| menu
+					.wrapContentImg
+						.contentImg1
+							img(src="/img/images/maldives1.jpg", id="contentImg1" alt="maldives1")
+						.contentImg2
+							img(src="/img/images/maldives2.jpg", id="contentImg2" alt="maldives2")
+					
+				.item5
+					p#contentText
+						| Если ваше представление о рае - это нетронутый тропический остров с раскачивающимися пальмами
+						|	 и белоснежными пляжами, окруженными кристаллическими лагунами различных оттенков синего
+						|	 - тогда Мальдивские острова наверняка будут отвечать всем требованиям. Неудивительно,
+						|	 что большой процент туристов, которые приезжают на Мальдивы, являются постоянными посетителями - людьми,
+						|	 которые приехали однажды и так полюбили это место, что им просто пришлось приехать снова. 
+						br
+						|	 Красота Мальдив действительно вызывает привыкание. После того, как вы попробуете пьянящую смесь уединенного спокойствия,
+						|	 захватывающих занятий водными видами спорта, успокаивающих спа-салонов,
+						|	 расслабляющих пляжей - все в роскошном комфорте современных удобств - вы обязательно захотите испытать снова.
+						br
+						|	 Солнечные, уникальные и нетронутые, острова Мальдив предлагают вам солнце, независимо от того,
+						|	 в какое время года вы решите посетить Мальдивы - острова, которые поистине являются раем на Земле.
+					p.maldivesText
+						| Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Меня послушавшись жизни себя запятой текстами собрал свою возвращайся залетают заманивший великий, пунктуация раз маленькая речью большой страна алфавит lorem сих если лучше. Заголовок толку от всех страна снова живет, семантика ipsum свой ему, океана грамматики, пустился единственное проектах выйти. Возвращайся.
+					p.dubayText
+						| Dubay Text
+					p.kanariText
+						| kanari text
+					p.seysheliText
+						| seysheliText
+					p.gavaiText
+						| gavaiText
+					p.baliText
+						| baliText
+			// end beach
+			section.angle3#angle3
+				.wu0
+					.into60
+						.into61
+							.into62.bgImg.bgBack1
+								.into63
+									.into64
+				.w0
+					.into70
+						.into71
+							.into72.bgImg.bgBack2
+								.into73
+									.into74
+				.w-1
+					.into70
+						.into71
+							.into72.bgImg.bgBack3
+								.into73
+									.into74
+				.w1
+					.into70
+						.into71
+							.into72.bgImg.bgBack4
+								.into73
+									.into74
+				.w2#w2
+					.into70
+						.into71
+							.into72.bgImg.bgBack5
+								.into73
+									.into74
+				.w-2
+					.into70
+						.into71
+							.into72.bgImg.bgBack6
+								.into73
+									.into74
+				.w-3
+					.into70
+						.into71
+							.into72.bgImg.bgBack7
+								.into73
+									.into74
+				.wu1
+					.into60
+						.into61
+							.into62.bgImg.bgBack8
+								.into63
+									.into64
+				.wu2
+					.into60
+						.into61
+							.into62.bgImg.bgBack9
+								.into63
+									.into64
+				.wu-1
+					.into60
+						.into61
+							.into62.bgImg.bgBack10
+								.into63
+									.into64
+				.wu-2
+					.into60
+						.into61
+							.into62.bgImg.bgBack11
+								.into63
+									.into64
+			// footer
+			section.footer#footer
+				.grid25
+					.grid1
+						.g1
+							.contacts
+								p
+									| контакты
+							.wrapContactSection
+								.contactSection
+									.phone
+										i.fas.fa-mobile-alt(style='font-size:22px;color:lightblue;')
+									.phone2
+										p#phone
+											| 8 905 104 10 26
+									.skype
+										i.fab.fa-skype(style='font-size:20px;color:lightblue;')
+									.skype2
+										p#skype
+											| sergey jetreal7
+									.gmail
+										i.far.fa-envelope(style='font-size:20px;color:lightblue;')
+									.gmail2
+										p#gmail
+											| someGmail@gmail.com
+						.g6
+							.wrapHead
+								i.fa.fa-address-card
+								.headerThis
+									p
+										| информация
+							.g6Cont
+								p
+									|  Сайт разработан при поддержке творческого объединения, ведущих веб разработчиков сетевой паутины.
+							
+				
+						.g7
+							.wrapG7
+								header
+									i.fas.fa-handshake
+									.wrapperP
+										p Поддержка
+								table
+									tr
+										td
+											| visa
+										td.littleLeft
+											| 5469 0800 1320 8314
+									tr
+										td
+											| yandex
+										td.littleLeft
+											| 410012458826759
+									tr
+										td
+											| webmoney
+										td.littleLeft
+											| z106623153059
+							.ang
+					.wrapBook
+						.someButifulText
+							p
+								em
+									| Природное многообразие неисчерпаемо. Любая точка пространства на открытом воздухе, будь то равнина, остров, лес или море  имеет своё неповторимое очарование. 
+									
+						.bookCover
+							| фотоАльбом
+						.wrapBook2
+							.grid3.closeBook
+								.centerLine
+								.site01
+									div.fistDivSite
+										div.wrapPages
+											p 
+										span 
+											| 1
+									div.fistDivSite
+										div.wrapPages
+											p 
+										span 
+											| 1
+									div.fistDivSite
+										div.wrapPages
+											p 
+										span 
+											| 1
+									div.fistDivSite
+										div.wrapPages
+											p 
+										span 
+											| 1
+									i(id='count' class='far fa-times-circle')
+								.site02
+									div.fistDivSite
+										div.wrapPages
+											p
+										span 
+											| 1
+									div.fistDivSite
+										div.wrapPages
+											p
+										span 
+											| 1
+									div.fistDivSite
+										div.wrapPages
+											p
+										span 
+											| 1
+									div.fistDivSite
+										div.wrapPages
+											p
+										span 
+											| 1
+							input(type='number' id='numberSite' name='numSite' value='1' min='0' max='' class='')
+							
+							button(id='count2')
+							button#leftSlide
+							button#rightSlide
+							button(id="close")
+							//- button(id="close2" class='')
+							button(id='appearance') фотоальбом
+					.grid2
+						.footerRight
+							p
+								|  отзывы
+								div
+						.f1Header
+							p.far.fa-caret-square-right
+							p.ht
+						.f1Content
+							p.bt Я получил настоящее эстетическое наслаждение после прочтения статей этого сайта. Долго любовался пейзажами, так как обожаю природу.
+
+				.intoWr
+					.into45
+						.into46
+							.into47
+								.into48
+									.into49
+										.into40
+											.into41
+												.into42
+													.into42
+				.bottomFooter
+					.wrapFoo
+						img.uicn(src='img/images/iucn.png' alt='iucn')
+					.wrapFoo
+						img.greenPeace(src='img/images/green.png' alt='greenPeace')
+					.wrapFoo
+						img.wap(src='img/images/wap.png' alt='wap')
+					.wrapFoo
+						img.panda(src='img/images/panda5.png' alt='panda')
+					.wrapFoo
+						img.wcs(src='img/images/wcs.png' alt='wcs')
+					.line-7
+					.line-6
+					.line-5
+					.line-4
+					.line-3
+					.line-2
+					.line-1
+					.line0
+					.line1
+					.line2
+					.line3
+					.line4
+					.line5
+					.line6
+					.line7
+			#arrowToBottom
+				a(href='#footer')
+					img(src='img/favicon/toBottom.png' alt='arrow')
+			.copyright
+				i.far.fa-copyright
+				p
+					| national geographic 2019
+			// end footer
+			
+		// end wrapper 
+		// end wrapper
+
+		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
+		// nice scroll
+		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js")
+		// Latest compiled JavaScript
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
+		// Magnific Popup core JS file
+		script(src='libs/html5shiv/html5shiv.min.js')
+		script(src='libs/is.min.js')
+		script(src='libs/Magnific/jquery.magnific-popup.min.js')
+		script(src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js")
+		script(src='js/common.js' defer)
+	

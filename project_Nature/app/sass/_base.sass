@@ -1,0 +1,215 @@
+// common presets
+.imgResponsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.center
+	align-content: center
+	justify-content: center
+	text-align: center
+
+.display
+	display: block
+	position: fixed
+	width: 70px
+	height: 100px
+	color: white
+	z-index: 1
+#showScroll
+	color: #fff
+
+.grid
+	display: grid
+
+#arrowToTop
+	position: fixed
+	height: 0px
+	// float: right
+	width: 100%
+	max-width: inherit
+	z-index: 10
+
+	& a
+		position: absolute
+		right: 0px
+		top: 10px
+		box-shadow: 0px 0px 0px black
+		transition: box-shadow .4s
+		&:hover
+			box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray,
+			2px -2px 3px 2px gray, -2px 2px 3px 2px gray
+#arrowToBottom
+	position: fixed
+	bottom: 0
+	height: 0px
+	// float: right
+	width: 100%
+	max-width: inherit
+	z-index: 10
+	& a
+		position: absolute
+		right: 0px
+		top: -90px
+		box-shadow: 0px 0px 0px black
+		transition: box-shadow .4s
+		&:hover
+			box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray,
+			2px -2px 3px 2px gray, -2px 2px 3px 2px gray
+*
+	margin: 0
+	padding: 0
+	&::selection 
+		color: #FEFEFC
+
+html, body 
+	width: 100%
+	outline: 1px solid gray
+	min-width: 360px
+	max-width: 1366px
+	margin: 0 auto
+	height: auto
+	font-size: 16px
+	// box-shadow: 10px 10px 10px gray inset, -10px -10px 10px gray inset
+	// overflow-x: hidden
+	// overflow-y: hidden
+
+
+// wrapper
+body
+	background-image: url('/img/images/fon4.jpg')
+	background-color: #0c0c0c
+	box-sizing: border-box
+	font-family: Oswald, sans-serif
+	// background-attachment: fixed
+	background-position: 0 200px
+	overflow-y: scroll
+	// overflow-x: auto
+	scroll-behavior: smooth
+.wrapper
+	display: block
+	position: relative
+	padding: 0 0 50px
+	width: 100%
+	// height: 99%
+	max-width: 1366px
+	// overflow-y: auto
+	overflow-x: hidden
+	top: 0
+	left: 0
+
+	// &::before
+	// 	z-index: 0
+	// 	content: ''
+	// 	position: absolute
+	// 	top: 0
+	// 	bottom: 0
+	// 	left: 0
+	// 	right: 0
+	// 	background-color: rgba(255,255,255,.07)
+
+
+	// +initial
+	// padding: 50px auto/
+	// padding: 0 0 50px
+	// top: 50px
+// end wrapper
+
+ul, li, a 
+	// display: inline-block
+	list-style-type: none
+	text-decoration: none
+
+ul
+	position: relative
+	// background: pink
+p
+	color: #A9D9F2
+
+
+
+
+//animationPopup class
+.mfp-zoom-in 
+	/* start state */
+	/* animate in */
+	/* animate out */
+
+.mfp-zoom-in .mfp-with-anim
+	opacity: 0
+	transition: all 0.2s ease-in-out
+	transform: scale(0.8)
+
+.mfp-zoom-in.mfp-bg
+	opacity: 0
+	transition: all 0.3s ease-out
+
+.mfp-zoom-in.mfp-ready .mfp-with-anim
+	opacity: 1
+	transform: scale(1)
+
+.mfp-zoom-in.mfp-ready.mfp-bg
+	opacity: 0.8
+
+.mfp-zoom-in.mfp-removing .mfp-with-anim
+	transform: scale(0.4)
+	opacity: 0
+
+.mfp-zoom-in.mfp-removing.mfp-bg
+	opacity: 0
+
+.mfp-with-zoom .mfp-container, .mfp-with-zoom.mfp-bg
+	opacity: 0
+	-webkit-backface-visibility: hidden
+	-webkit-transition: all 0.3s ease-out
+	-moz-transition: all 0.3s ease-out
+	-o-transition: all 0.3s ease-out
+	transition: all 0.3s ease-out
+
+
+.mfp-with-zoom.mfp-ready .mfp-container
+	opacity: 1
+
+.mfp-with-zoom.mfp-ready.mfp-bg
+	opacity: 0.8
+
+.mfp-with-zoom.mfp-removing .mfp-container, .mfp-with-zoom.mfp-removing.mfp-bg
+	opacity: 0
+	
+.mfp-figure:after
+	background: rgba(0,0,0,0)
+	box-shadow: 0 0 0 rgba(0,0,0,0)
+// opacity: .5
+
+.noscroll
+	// overflow-y: hidden
+
+input[type='number'] 
+	-moz-appearance: textfield
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button 
+	-webkit-appearance: none
+
+
+.disable-hover, .disable-hover * 
+  pointer-events: none !important
+
+.animated 
+	/*CSS transitions*/
+	-o-transition-property: none !important
+	-moz-transition-property: none !important
+	-ms-transition-property: none !important
+	-webkit-transition-property: none !important
+	transition-property: none !important
+	/*CSS transforms*/
+	-o-transform: none !important
+	-moz-transform: none !important
+	-ms-transform: none !important
+	-webkit-transform: none !important
+	transform: none !important
+	/*CSS animations*/
+	-webkit-animation: none !important
+	-moz-animation: none !important
+	-o-animation: none !important
+	-ms-animation: none !important
+	animation: none !important
