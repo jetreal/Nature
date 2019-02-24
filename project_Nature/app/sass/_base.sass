@@ -98,15 +98,15 @@ body
 	top: 0
 	left: 0
 
-	// &::before
-	// 	z-index: 0
-	// 	content: ''
-	// 	position: absolute
-	// 	top: 0
-	// 	bottom: 0
-	// 	left: 0
-	// 	right: 0
-	// 	background-color: rgba(255,255,255,.07)
+	&::before
+		z-index: 0
+		content: ''
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		background-color: rgba(255,255,255,.05)
 
 
 	// +initial
@@ -125,9 +125,6 @@ ul
 	// background: pink
 p
 	color: #A9D9F2
-
-
-
 
 //animationPopup class
 .mfp-zoom-in 
@@ -166,7 +163,6 @@ p
 	-o-transition: all 0.3s ease-out
 	transition: all 0.3s ease-out
 
-
 .mfp-with-zoom.mfp-ready .mfp-container
 	opacity: 1
 
@@ -189,7 +185,6 @@ input[type='number']
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button 
 	-webkit-appearance: none
-
 
 .disable-hover, .disable-hover * 
   pointer-events: none !important
