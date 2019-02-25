@@ -101,11 +101,12 @@ function headerAnime(iDivDataObj) {
 			$('.circleImg').on('click', offTimerHeader);
 			// css
 			$('.circleImg').attr('src', '/img/images/button3.png');
-			$('.circleImg').css({width:'150px',height:'150px',
-			 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
-			 -3px 3px 6px gray, 3px -3px 6px gray'});
+			$('.circleImg').css({width:'150px', height:'150px',
+			 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
+			 -2px 2px 6px gray, 2px -2px 6px gray'});
 			$('.into03, .into04, .into05, .into06')
-			.css('box-shadow', '3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset');
+			.css('box-shadow', '2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset,\
+				-2px 2px 6px #7F7F7F inset, 2px -2px 6px #7F7F7F inset');
 			$('.bDiv').css('border', '1px solid #99747A');
 	},32000);
 }
@@ -2385,7 +2386,7 @@ $(document).ready(function() {
 });
 
 // change section 'reviews' and hide it
-
+// start functions
 	$('.far.fa-caret-square-right').on('click', rightSectionArrTxt, changeReviews);
 	$('.footerRight').on('click', hideReviews);
 
@@ -2412,7 +2413,7 @@ function changeReviews() {
 	setTimeout(function() {
 		$('.f1Content p.bt').text(rightSectionArrTxt[counter].body);
 		$('.f1Content p.bt').css({'transform': 'rotateX(0deg) scale(1, 1)'});
-	},150)
+	},150);
 	//change header
 	$('.f1Header p.ht')
 		.css({'transform': 'rotateX(90deg) scale(0, 0)'})
@@ -2430,16 +2431,16 @@ var	flagT = true;
 function hideReviews() {
 	switch(true) {
 		case (flagT == false):
-		$('.f1Header, .f1Content').css({'opacity': '0'});
-		$('.footerRight p, .far.fa-caret-square-right').css({'color': 'rgb(169, 217, 242)'});
-		flagT = true;
-		  break;
+			$('.f1Header, .f1Content').css({'opacity': '0'});
+			$('.footerRight p, .far.fa-caret-square-right').css({'color': 'rgb(169, 217, 242)'});
+			flagT = true;
+		break;
 		case (flagT == true):
-		$('.f1Header, .f1Content').css({'opacity': '1'});
-		$('.footerRight p, .far.fa-caret-square-right').css({'color': '#CBBEAE'});
-		flagT = false;
-	    break;
-	}  
+			$('.f1Header, .f1Content').css({'opacity': '1'});
+			$('.footerRight p, .far.fa-caret-square-right').css({'color': '#CBBEAE'});
+			flagT = false;
+	  break;
+	}
 }
 // hide footerRight sideBar initially
 $(document).ready(function() {
@@ -2447,18 +2448,17 @@ $(document).ready(function() {
 });
 
 ////////////////////////////////////////
-     // preloader
+// preloader
 $(window).one('load', function() {
 	setTimeout(function() {
 		$('.wrapperLoader').fadeOut('slow');
-		
-	},250)
+	},250);
 });
 ///////////////////////////////////////////
 //smoothScroll to id
 $(document).ready(function() {
 	if ($(window).outerWidth() > 768) {
-		(function(){
+		(function() {
 		  $(window).on("load",function(){
 		    $("a[href*='#']").mPageScroll2id({
 		    	scrollSpeed: 500,
@@ -2479,7 +2479,6 @@ window.addEventListener('scroll', function() {
   if(!body.classList.contains('disable-hover')) {
     body.classList.add('disable-hover')
   }
-  
   timer = setTimeout(function(){
     body.classList.remove('disable-hover')
   },300);

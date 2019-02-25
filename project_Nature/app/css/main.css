@@ -3672,7 +3672,9 @@ a.test-popup-link {
   display: none; }
 
 .item6 {
-  display: none; }
+  display: none;
+  -webkit-border-radius: 4px;
+          border-radius: 4px; }
 
 .angle3 {
   background-position: center;
@@ -5190,6 +5192,7 @@ input::-webkit-inner-spin-button {
   left: -2px; }
 
 .into01 {
+  position: absolute;
   -webkit-transform: rotate(22.5deg);
       -ms-transform: rotate(22.5deg);
           transform: rotate(22.5deg);
@@ -5226,8 +5229,8 @@ input::-webkit-inner-spin-button {
   left: 0;
   top: 0;
   text-align: center;
-  -webkit-box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset;
-          box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset; }
+  -webkit-box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset;
+          box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset; }
 
 .into04 {
   -webkit-transform: rotate(22.5deg);
@@ -5242,8 +5245,8 @@ input::-webkit-inner-spin-button {
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset;
-          box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset; }
+  -webkit-box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset;
+          box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset; }
 
 .into05 {
   -webkit-transform: rotate(45deg);
@@ -5258,8 +5261,8 @@ input::-webkit-inner-spin-button {
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset;
-          box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset; }
+  -webkit-box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset;
+          box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset; }
 
 .into06 {
   -webkit-transform: rotate(67.5deg);
@@ -5274,8 +5277,8 @@ input::-webkit-inner-spin-button {
   position: absolute;
   left: 0;
   top: 0;
-  -webkit-box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset;
-          box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset; }
+  -webkit-box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset;
+          box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset; }
 
 .intoWr {
   position: absolute;
