@@ -107,6 +107,7 @@
 	color: #CBBEAE
 	padding-left: 3px
 #angleLabelText3
+	line-height: initial
 	position: absolute
 	font-size: 16px
 	text-indent: 5px
@@ -820,6 +821,7 @@
 .ejDiv
 	padding: initial
 	max-width: 200px
+	max-height: 140px
 	text-align: center
 	// z-index: 1
 // imgs
@@ -992,11 +994,13 @@ a.test-popup-link
 .rowCat
 	+initial
 	width: 100%
+	max-height: 140px
 // wrap and imgs
 .divCat
 	+initial
 	min-width: 200px
 	max-width: 140px
+	max-height: 140px
 	border-radius: 4px
 .divCat2
 	+initial
@@ -1024,18 +1028,21 @@ a.test-popup-link
 	display: grid
 	align-content: center
 	width: 100%
+	max-height: 140px
 	min-width: 200px
 	min-height: 140px
 	text-align: center
 	background-color: #393939
 	border-radius: 4px
 	border: 1px solid gray
-	margin: initial
+	line-height: 3.5em
 	& p
 		color: #CBBEAE
 		font-size: 3.5em
 		position: relative
 		+initial
+		height: 90px
+		+center
 		&:before
 			display: block
 			position: absolute
@@ -1050,13 +1057,6 @@ a.test-popup-link
 			left: calc(50% - 51px)
 			transform: rotate(180deg)
 		// color: #CBBEAE
-#textCatModal
-	margin: 5%
-	padding: 20px
-	text-align: center
-	color: gray
-	z-index: 1
-
 
 
 // Glaser section
@@ -1266,7 +1266,8 @@ a.test-popup-link
 	width: 310px
 	height: 50px
 	text-align: center
-	font-family: "Open Sans"
+	font-family: "Comfortaa"
+	font-weight: normal
 	border-radius: 20px
 	z-index: 2
 	// cursor: pointer
@@ -1295,7 +1296,7 @@ a.test-popup-link
 	width: 150px
 	height: 150px
 	transform: rotate(30deg)
-	background-image: url("/img/images/ownFriends/eagle.jpg")
+	background-image: url("/img/images/ownFriends/eagle2.jpg")
 	background-position: -30px 0
 	background-size: cover
 	background-repeat: no-repeat
@@ -1308,7 +1309,7 @@ a.test-popup-link
 	width: 150px
 	height: 150px
 	transform: rotate(30deg)
-	background-image: url("/img/images/ownFriends/bear.jpg")
+	background-image: url("/img/images/ownFriends/bear2.jpg")
 	background-position: 0 0
 	background-size: cover
 	background-repeat: no-repeat
@@ -1322,7 +1323,7 @@ a.test-popup-link
 	height: 150px
 	// border: 1px solid blue
 	transform: rotate(30deg)
-	background-image: url("/img/images/ownFriends/wolf.jpg")
+	background-image: url("/img/images/ownFriends/wolf2.jpg")
 	background-position: -20px 0px
 	background-size: cover
 	background-repeat: no-repeat
@@ -2269,8 +2270,8 @@ a.test-popup-link
 		transform: rotate(180deg)
 	& p.ht
 		position: relative
-		top: 0
-		left: 0
+    top: 0
+    left: 0
 		+initial
 		+center
 		transition: transform .15s ease-in-out
@@ -2293,11 +2294,18 @@ a.test-popup-link
 	opacity: 1
 	font-family: "Exo 2"
 	& p.bt
+		line-height: 1.5em
 		transition: transform .15s ease-in-out
 		position: relative
 		top: 0
 		left: 0
-
+.icon-to-end
+	cursor: pointer
+	position: absolute
+	top: 15px
+	left: 15px
+	font-size: 1.3em
+	z-index: 10
 .footerRight
 	cursor: pointer
 	// +initial
@@ -2334,6 +2342,7 @@ a.test-popup-link
 	width: 40px
 	height: 25px
 .someButifulText
+	line-height: 1.5em
 	position: absolute
 	+center
 	padding: 15px
@@ -2396,13 +2405,13 @@ a.test-popup-link
 	transform: rotateZ(360deg) scale(0, 0)
 
 .grid3
-	width: 400px
-	height: 240px
+	width: 415px
+	height: 255px
 	+center
 	border: 7px solid transparent 
 	border-image: url('/img/images/border3.png') 28 round
 	border-image-width: 10px
-	box-sizing: initial
+	// box-sizing: initial
 	color: #fff
 	position: relative
 	top: 23px
@@ -2590,7 +2599,6 @@ input::-webkit-inner-spin-button
 	cursor: pointer
 	+center
 	position: absolute
-	background-color: #172528
 	top: -26px
 	right: -8px
 	z-index: 150
@@ -2800,6 +2808,7 @@ input::-webkit-inner-spin-button
 	100%
 		top: -140px
 .g7
+	line-height: 1em
 	width: 200px
 .g7 i
 	font-size: 1.3em

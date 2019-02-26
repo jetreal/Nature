@@ -998,7 +998,7 @@ $(document).ready(function() {
 
 	var counterImg = 1, arrObj = [
 		  {
-		  	url:'url(/img/images/ownFriends/bear.jpg',
+		  	url:'url(/img/images/ownFriends/bear2.jpg',
 				headerText: 'Медведь',
 				bodyText: 'Лесной тяжеловес, любитель мёда.',
 				bgp: '0 0',
@@ -1006,7 +1006,7 @@ $(document).ready(function() {
 				miniDisRight: 'url(/img/images/ownFriends/bear2/1.jpg)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/eagle.jpg',
+	    	url:'url(/img/images/ownFriends/eagle2.jpg',
 				headerText: 'Орёл',
 				bodyText: 'Крылатый истребитель, гроза неба.',
 				bgp: '-30px 0',
@@ -1014,7 +1014,7 @@ $(document).ready(function() {
 				miniDisRight: 'url(/img/images/ownFriends/bird2/1.jpg)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/wolf.jpg',
+	    	url:'url(/img/images/ownFriends/wolf2.jpg',
 				headerText: 'Волк',
 				bodyText: 'Серый волк, зубами щёлк.',
 				bgp: '-20px 0',
@@ -1695,12 +1695,12 @@ function movePhoneLeft(event) {
 		switch (true) {
 			case (( event.data.thisFlag == 'flagPhone') && (flagPhone == false)) :
 		 		$(event.data.class).css('left', '0px');
-		 		$('.phone i').css('color', '#CBBEAE');
+		 		$('.icon-mobile').css('color', '#CBBEAE');
 				flagPhone = true;
 					break;
 			case (( event.data.thisFlag == 'flagPhone') && (flagPhone == true)) :
 				$(event.data.class).css('left', event.data.leftHide);
-				$('.phone i').css('color', '#ADD8E6');
+				$('.icon-mobile').css('color', '#ADD8E6');
 				flagPhone = false;
 					break;
 			case (( event.data.thisFlag == 'flagSkype') && (flagSkype == false)) :
@@ -1715,12 +1715,12 @@ function movePhoneLeft(event) {
 					break;
 			case (( event.data.thisFlag == 'flagGmail') && (flagGmail == false)) :
 		 		$(event.data.class).css('left', '0px');
-			 	$('.gmail i').css('color', '#CBBEAE');
+			 	$('.icon-mail').css('color', '#CBBEAE');
 			 	flagGmail = true;
 					break;
 			case (( event.data.thisFlag == 'flagGmail') && (flagGmail == true)) :
 				$(event.data.class).css('left', event.data.leftHide);
-				$('.gmail i').css('color', '#ADD8E6');
+				$('.icon-mail').css('color', '#ADD8E6');
 				flagGmail = false;
 					break;
 		}
@@ -1743,10 +1743,10 @@ var flagConTime = false, flagContOff = null;
 					$('.skype').triggerHandler("click");
 					$('.gmail').triggerHandler("click");
 					$('.fa-address-card').triggerHandler('click');
-					$('.fas.fa-handshake').triggerHandler('click');
+					$('.icon-handshake-o').triggerHandler('click');
 
 					$('.fa-address-card').off('click');
-					$('.fas.fa-handshake').off('click');
+					$('.icon-handshake-o').off('click');
 					$('.phone').off("click");
 					$('.skype').off("click");
 					$('.gmail').off("click");
@@ -1788,13 +1788,13 @@ function hideContacts() {
 				flagContOff = true;
 				// hide support text
 				$('.wrapperP p').css('left', '-165px');
-				$('.fas.fa-handshake').css('color', '#A9D9F2');
+				$('.icon-handshake-o').css('color', '#A9D9F2');
 				$('.wrapG7 table').css('left', '-200px');
 				// f = true;
 				// change support overflow
 				$('.wrapperP').css({'overflow': 'visible'});
 				// icon support changeSideImgw
-				$('.fas.fa-handshake').css({'left': '-30px'});
+				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author
 				$('.headerThis p').css({'left': '-165px'}).removeClass('opacity');
 				// change header overflow
@@ -1806,20 +1806,20 @@ function hideContacts() {
 					$('.g6Cont p').css({'animation': ''});
 					// flagAuthor = false;
 				},750);
-				$('.wrapHead i').css({'left': '-15px', 'position': 'relative'});
+				$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});
 				// off click author and support
 
 				break;
 			case (contactFlag == false) :
 				// hide support text
 				$('.wrapperP p').css('left', '-165px');
-				$('.fas.fa-handshake').css('color', '#A9D9F2');
+				$('.icon-handshake-o').css('color', '#A9D9F2');
 				$('.wrapG7 table').css('left', '-200px');
 				f = true;
 				// change support overflow
 				$('.wrapperP').css({'overflow': 'visible'});
 				// icon support changeSideImgw
-				$('.fas.fa-handshake').css({'left': '-30px'});
+				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author text
 				$('.headerThis p').css({'left': '-165px'});
 				// change header overflow
@@ -1830,7 +1830,7 @@ function hideContacts() {
 					$('.g6Cont p').css({'animation': ''});
 					flagAuthor = false;
 				},750);
-				$('.wrapHead i').css({'left': '-15px', 'position': 'relative'});// icon author changeSideImgw
+				$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});// icon author changeSideImgw
         //////////////////////////////////////////////////////
         // top contacts
 				$('#phone, #skype').css('left', '-110px');
@@ -1843,10 +1843,10 @@ function hideContacts() {
 		  	break;
 			case (contactFlag == true) :
 				// icon support changeSideImgw
-				$('.fas.fa-handshake').css({'left': '-2px'});
+				$('.icon-handshake-o').css({'left': '-6px', 'color': '#CBBEAE'});
 				// icon author changeSideImgw
 				$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
-				$('.wrapHead i').css({'left': '10px', 'position': 'relative'});
+				$('.icon-comment-empty').css({'left': '10px', 'position': 'relative'});
 				// changeSideImgw contacts
 				$('.contactSection').css('top', '-14px');
 				$('.contacts p').css({color: '#CBBEAE'});
@@ -1865,7 +1865,7 @@ function hideContacts() {
 		 		// of support
 					$('.wrapperP').css({'overflow': 'hidden'});
 					$('.wrapperP p').css('left', '13px');
-					$('.fas.fa-handshake').css('color', '#CBBEAE');
+					$('.icon-handshake-o').css('color', '#CBBEAE');
 					$('.wrapG7 table').css('left', '0px');
 					// f = false;
 
@@ -1877,9 +1877,7 @@ function hideContacts() {
 
 
 // about author
-$(document).ready(function() {
-	$('.fa-address-card, .headerThis').on('click', hideHeader);
-});
+
 
 var flagAuthor = false;
 function hideHeader() {	
@@ -1916,12 +1914,12 @@ function hideHeader() {
 
 
 var f = true;
-	$('.fas.fa-handshake').on('click', hideHeader2);
+	$('.icon-handshake-o').on('click', hideHeader2);
 		function hideHeader2() {
 			switch(true) {
 				case (f == false) :
 					$('.wrapperP p').css('left', '-165px');
-					$('.fas.fa-handshake').css('color', '#A9D9F2');
+					$('.icon-handshake-o').css('color', '#A9D9F2');
 					$('.wrapG7 table').css('left', '-200px');
 					f = true;
 				break;
@@ -1929,7 +1927,7 @@ var f = true;
 					// change support overflow property
 					$('.wrapperP').css({'overflow': 'hidden'});
 					$('.wrapperP p').css('left', '13px');
-					$('.fas.fa-handshake').css('color', '#CBBEAE');
+					$('.icon-handshake-o').css('color', '#CBBEAE');
 					$('.wrapG7 table').css('left', '0px');
 					f = false;
 				break;
@@ -2387,7 +2385,7 @@ $(document).ready(function() {
 
 // change section 'reviews' and hide it
 // start functions
-	$('.far.fa-caret-square-right').on('click', rightSectionArrTxt, changeReviews);
+	$('.icon-to-end').on('click', rightSectionArrTxt, changeReviews);
 	$('.footerRight').on('click', hideReviews);
 
 // content reviews
@@ -2432,12 +2430,12 @@ function hideReviews() {
 	switch(true) {
 		case (flagT == false):
 			$('.f1Header, .f1Content').css({'opacity': '0'});
-			$('.footerRight p, .far.fa-caret-square-right').css({'color': 'rgb(169, 217, 242)'});
+			$('.footerRight p, .icon-to-end').css({'color': 'rgb(169, 217, 242)'});
 			flagT = true;
 		break;
 		case (flagT == true):
 			$('.f1Header, .f1Content').css({'opacity': '1'});
-			$('.footerRight p, .far.fa-caret-square-right').css({'color': '#CBBEAE'});
+			$('.footerRight p, .icon-to-end').css({'color': '#CBBEAE'});
 			flagT = false;
 	  break;
 	}
