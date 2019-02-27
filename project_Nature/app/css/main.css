@@ -5100,7 +5100,7 @@ a.test-popup-link {
   line-height: 1.2em;
   text-indent: 10px;
   text-align: center;
-  font-family: 'RobotoRegular';
+  font-family: 'Exo 2';
   -webkit-border-radius: 4px;
           border-radius: 4px;
   -webkit-box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset;
@@ -5141,8 +5141,7 @@ a.test-popup-link {
   padding-bottom: initial;
   padding-left: initial;
   padding-right: initial;
-  width: 100%;
-  max-height: 140px; }
+  width: 100%; }
 
 .divCat {
   margin: initial;
@@ -5157,9 +5156,7 @@ a.test-popup-link {
   padding-right: initial;
   min-width: 200px;
   max-width: 140px;
-  max-height: 140px;
-  -webkit-border-radius: 4px;
-          border-radius: 4px; }
+  max-height: 140px; }
 
 .divCat2 {
   margin: initial;
@@ -5172,11 +5169,9 @@ a.test-popup-link {
   padding-bottom: initial;
   padding-left: initial;
   padding-right: initial;
-  position: relative;
+  max-height: 140px;
   min-width: 200px;
-  max-width: 140px;
-  -webkit-border-radius: 4px;
-          border-radius: 4px; }
+  max-width: 140px; }
 
 .catsImg {
   cursor: pointer;
@@ -7567,7 +7562,7 @@ input::-webkit-inner-spin-button {
   display: grid;
   grid-template-columns: 5px auto; }
   .wrapHead i {
-    color: #CBBEAE; }
+    color: #A9D9F2; }
 
 .headerThis {
   margin: initial;

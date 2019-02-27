@@ -6,7 +6,6 @@ $(document).ready(function() {
 	},250);
 });
 
-
 ////////////////////////////////////////////////////////////////////////
 
 // magnific Popup
@@ -1796,7 +1795,7 @@ function hideContacts() {
 				// icon support changeSideImgw
 				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author
-				$('.headerThis p').css({'left': '-165px'}).removeClass('opacity');
+				$('.headerThis p').css({'left': '-185px'}).removeClass('opacity');
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
@@ -1821,7 +1820,7 @@ function hideContacts() {
 				// icon support changeSideImgw
 				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author text
-				$('.headerThis p').css({'left': '-165px'});
+				$('.headerThis p').css({'left': '-185px'});
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
@@ -1855,7 +1854,7 @@ function hideContacts() {
 		 		setTimeout(function() {
 			 		$('.fa-address-card').css('color', '#CBBEAE');
 					// header movie
-					$('.headerThis p').css({'left': '-15px'});
+					$('.headerThis p').css({'left': '-20px'});
 					// change header overflow
 					$('.headerThis').css({'overflow': 'hidden'});
 					// slide content
@@ -1886,7 +1885,7 @@ function hideHeader() {
 			// icon color
 			$('.fa-address-card').css('color', '#CBBEAE');
 			// header movie
-			$('.headerThis p').css({'left': '-15px'});
+			$('.headerThis p').css({'left': '-20px'});
 			// change header overflow
 			$('.headerThis').css({'overflow': 'hidden'});
 			// slide content
