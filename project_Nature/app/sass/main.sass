@@ -8,130 +8,7 @@
 @import "base"
 
 ///////////////////////////////////////////////////////////////////
-// afterFirst duck
-.afterFirst
-	+initial
-	background-image: url('/img/images/brokenDisp2.png')
-	background-position: 0 250px
-	width: 90%
-	margin: 0 5%
-	height: auto
-	position: relative
-	border: 1px solid gray
 
-// wrap duck
-.wrapDuckSec2
-	position: relative
-	width: calc(100% - 40px)
-	padding: 10px 0
-	margin: 0 20px
-	// border: 1px solid white
-	overflow: visible
-	border-radius: 20px
-	transition: opacity .5s
-// row duck
-.rowDuck
-	will-change: opacity
-	+initial
-	width: 100%
-	padding: 10px 0
-	position: relative
-// wrap sides img
-.wrapDuck
-	width: 100%
-	padding: initial
-	min-width: 200px
-	max-width: 200px
-	height: 140px
-// duck imgs
-.duck
-	cursor: pointer
-	width: 200px
-	height: 140px
-	border-radius: 4px
-	border: 1px solid gray
-.duck2
-	cursor: pointer
-	width: 200px
-	height: 140px
-	border-radius: 4px
-	border: 1px solid gray
-// duck text
-// .duckText
-// 	+initial
-.duckText 
-	display: grid
-	align-content: center
-	background-color: #393939
-	font-size: .75em
-	color: #CBBEAE
-	width: 100%
-	min-width: 200px
-	min-height: 140px
-	text-align: center
-	border: 1px solid gray
-	border-radius: 4px
-	font-size: 3.5em
-	text-shadow: 1px 1px 5px #0A1D0D
-	+initial
-	& p
-		+initial
-		color: #CBBEAE
-		&:before
-			display: block
-			position: absolute
-			content: url('/img/images/lines.png')
-			top: 0px
-			left: calc(50% - 51px)
-		&:after
-			display: block
-			position: absolute
-			content: url('/img/images/lines.png')
-			bottom: -7px
-			left: calc(50% - 51px)
-			transform: rotate(180deg)
-
-// modal text
-#angleLabelText
-	position: absolute
-	font-size: 16px
-	text-indent: 5px
-	font-family: "Exo 2"
-	color: #CBBEAE
-	padding-left: 3px
-#angleLabelText2
-	position: absolute
-	font-size: 16px
-	text-indent: 5px
-	font-family: "Exo 2"
-	color: #CBBEAE
-	padding-left: 3px
-#angleLabelText3
-	line-height: initial
-	position: absolute
-	font-size: 16px
-	text-indent: 5px
-	font-family: "Exo 2"
-	color: #CBBEAE
-	padding-left: 3px
-#textDuckModal
-	margin: 5%
-	padding: 20px
-	text-align: center
-	color: gray
-	z-index: 1	
-.someText1
-	display: none
-	padding: $gutter
-	line-height: 1.25em
-	position: relative
-	color: #fff
-	width: auto
-	font-size: .75em
-
-//////////////////////////////////////////////////////////////////
-// forest section
-// wrap all and text class
 .forest
 	// transition: width .5s height .5s
 	border: 1px solid #7F7F7F
@@ -146,6 +23,7 @@
 	height: auto
 	margin: 0 5%
 .theLostRiverText
+	+center
 	pointer-events: none
 	margin: 0px 8% 10px
 	position: relative
@@ -158,6 +36,7 @@
 	border-radius: 10px
 	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
 .theLostRiverText2
+	+center
 	border: 1px solid gray
 	padding: 10px 25px
 	margin: 8px 8% 8px
@@ -169,9 +48,12 @@
 	border-radius: 10px
 	text-align: center
 	overflow: hidden
+	opacity: 1
+	& p
+		position: relative
+		z-index: 1
 
 #forestTextContainer
-	+center
 	pointer-events: none
 	color: $textColor
 	height: auto
@@ -843,7 +725,7 @@
 .palmBg
 	border: 1px solid #7F7F7F
 	position: relative
-	background-image: url("/img/images/palmBg2.jpg")
+	background-image: url("/img/images/palmBg2.webp")
 	background-position: center
 	background-size: cover
 	background-repeat: no-repeat
@@ -878,6 +760,7 @@
 	border-radius: 4px
 	border: 1px solid gray
 .txtBestAnimal p
+	text-align: center
 	margin: 0
 	padding: 0
 	position: relative
@@ -935,20 +818,31 @@ a.test-popup-link
 // animal Url
 
 .tiger
-	background-image: url("/img/images/animalMini/tigerMini.jpg")
+	background-image: url("/img/images/animalMini/allCatsMini.jpg")
+	background-position: 1100px 0
 	color: $textColor
 .panthera
-	background-image: url("/img/images/animalMini/panteraMini.jpg")
+	background-image: url("/img/images/animalMini/allCatsMini.jpg")
+	background-position: 440px 0
+
 	// background-position: 	-20px 0
 .puma
-	background-image: url("/img/images/animalMini/pumaMini.jpg")
+	background-image: url("/img/images/animalMini/allCatsMini.jpg")
+	background-position: 880px 0
+
 .snowBars
-	background-image: url("/img/images/animalMini/snowBarsMini.jpg")
+	background-image: url("/img/images/animalMini/allCatsMini.jpg")
+	background-position: 220px 0
+
 .lion
-	background-image: url("/img/images/animalMini/levMini.jpg")
+	background-image: url("/img/images/animalMini/allCatsMini.jpg")
+	background-position: 660px 0
+
 	// background-position: 	-40px 0
 .jaguar
-	background-image: url("/img/images/animalMini/jaguarMini.jpg")
+	background-image: url("/img/images/animalMini/allCatsMini.jpg")
+	background-position: 0px 0
+
 // text card Animal
 .textAnimal
 	display: grid
@@ -2326,8 +2220,10 @@ a.test-popup-link
 	& p 
 		+initial
 		position: relative
-		top: 3px
+		top: 1px
 		transition: color 1s
+	&:active
+		background-color: green
 
 .grid1
 	+gc(1)
@@ -2742,6 +2638,8 @@ input::-webkit-inner-spin-button
 		transition: all .5s
 		// text-decoration: underline
 		+initial
+	&:active
+		background-color: green
 .g6
 	height: 117px
 	width: 200px
@@ -2776,8 +2674,7 @@ input::-webkit-inner-spin-button
 		+initial
 		position: relative
 		+center
-		// top: -1px
-		left: -165px
+		left: -185px
 		transition: all 1s
 		color: #CBBEAE
 .opacity
@@ -3007,24 +2904,6 @@ input::-webkit-inner-spin-button
 //////////////////////////
 // test containers
 // 16's angle
-.wrapCircleImg
-	height: 150px
-	position: relative
-	+center
-	overflow: visible
-	transform: scale(.7,.7)
-	border: initial
-.circleImg
-	width: 150px
-	height: 150px
-	cursor: pointer
-	border-radius: 100%
-	// background-image: url('/img/images/button2.png')
-	// +forBGI
-	box-shadow: 3px 3px 6px gray, -3px -3px 6px gray
-	z-index: 1
-	transform: scale(.7,.7)
-
 
 .into00
 	// border: 1px solid red
@@ -3034,7 +2913,6 @@ input::-webkit-inner-spin-button
 	width: 150px
 	height: 150px
 	left: -2px
-
 .into01
 	// border: 1px solid green
 	position: absolute

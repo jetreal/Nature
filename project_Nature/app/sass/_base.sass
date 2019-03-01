@@ -3,25 +3,13 @@
 	display: block
 	max-width: 100%
 	height: auto
-
-.center
-	align-content: center
-	justify-content: center
-	text-align: center
-
-.display
-	display: block
-	position: fixed
-	width: 70px
-	height: 100px
-	color: white
-	z-index: 1
-#showScroll
-	color: #fff
-
-.grid
-	display: grid
-
+// .display
+// 	display: block
+// 	position: fixed
+// 	width: 70px
+// 	height: 100px
+// 	color: white
+// 	z-index: 1
 #arrowToTop
 	position: fixed
 	height: 0px
@@ -29,7 +17,6 @@
 	width: 100%
 	max-width: inherit
 	z-index: 10
-
 	& a
 		position: absolute
 		right: 0px
@@ -56,75 +43,13 @@
 		&:hover
 			box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray,
 			2px -2px 3px 2px gray, -2px 2px 3px 2px gray
-*
-	margin: 0
-	padding: 0
-	&::selection 
-		color: #FEFEFC
-
-html, body 
-	width: 100%
-	outline: 1px solid gray
-	min-width: 360px
-	max-width: 1366px
-	margin: 0 auto
-	height: auto
-	font-size: 16px
-	// box-shadow: 10px 10px 10px gray inset, -10px -10px 10px gray inset
-	// overflow-x: hidden
-	// overflow-y: hidden
-
-
-// wrapper
-body
-	background-image: url('/img/images/fon4.jpg')
-	background-color: #0c0c0c
-	box-sizing: border-box
-	font-family: Oswald, sans-serif
-	// background-attachment: fixed
-	background-position: 0 200px
-	overflow-y: scroll
-	// overflow-x: auto
-	scroll-behavior: smooth
-.wrapper
-	display: block
-	position: relative
-	padding: 0 0 50px
-	width: 100%
-	// height: 99%
-	max-width: 1366px
-	// overflow-y: auto
-	overflow-x: hidden
-	top: 0
-	left: 0
-
-	&::before
-		z-index: 0
-		content: ''
-		position: absolute
-		top: 0
-		bottom: 0
-		left: 0
-		right: 0
-		background-color: rgba(255,255,255,.05)
-
-
-	// +initial
-	// padding: 50px auto/
-	// padding: 0 0 50px
-	// top: 50px
-// end wrapper
-
-ul, li, a 
-	// display: inline-block
-	list-style-type: none
-	text-decoration: none
-
-ul
-	position: relative
-	// background: pink
-p
-	color: #A9D9F2
+// div
+// 	-webkit-touch-callout: none
+// 	-webkit-user-select: none
+// 	-khtml-user-select: none
+// 	-moz-user-select: none
+// 	-ms-user-select: none
+// 	user-select: none
 
 //animationPopup class
 .mfp-zoom-in 
@@ -187,8 +112,20 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button
 	-webkit-appearance: none
 
 .disable-hover, .disable-hover * 
-  pointer-events: none !important
-
+	pointer-events: none !important
+	-webkit-touch-callout: none !important
+	-webkit-user-select: none !important
+	-khtml-user-select: none !important
+	-moz-user-select: none !important
+	-ms-user-select: none !important
+	user-select: none !important
+.userSelect
+	-webkit-touch-callout: none !important
+	-webkit-user-select: none !important
+	-khtml-user-select: none !important
+	-moz-user-select: none !important
+	-ms-user-select: none !important
+	user-select: none !important
 .animated 
 	/*CSS transitions*/
 	-o-transition-property: none !important

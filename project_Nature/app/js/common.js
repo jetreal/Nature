@@ -73,9 +73,9 @@ $('.popup-modal2').magnificPopup({
 // header bottom text scale function
 var lDivDataObj = {
 	wind:{img:'url(/img/images/sky2.jpg)', text:'Ветер', rightImg:''},
-	fire:{img:'url(/img/images/fireHeaderDisp.jpg', text: 'Огонь', rightImg: ''},
-	water:{img:'url(/img/images/waterHeaderDisp.jpg', text: 'Вода', rightImg: ''},
-	earth:{img:'url(/img/images/earth.jpg', text: 'Земля', rightImg: ''}
+	fire:{img:'url(/img/images/fireHeaderDisp.jpg)', text: 'Огонь', rightImg: ''},
+	water:{img:'url(/img/images/waterHeaderDisp.jpg)', text: 'Вода', rightImg: ''},
+	earth:{img:'url(/img/images/earth.jpg)', text: 'Земля', rightImg: ''}
 }
 var flagi = false;
 
@@ -217,53 +217,53 @@ $(window).on('load resize', replaceTopLine);
 //afterHeader section change image
 var sectionObj = [
 	{
-		leftSrc: '/img/images/flowers/romashka1.jpg',
-		rightSRC: '/img/images/flowers/romashka2.jpg',
+		leftSrc: '1000px 0',
+		rightSRC: '1200px 0',
 		centerTxt: 'Ромашка'
 	},
 	{
-		leftSrc: '/img/images/flowers/nartsisi1.jpg',
-		rightSRC: '/img/images/flowers/nartsisi2.jpg',
+		leftSrc: '1600px 0',
+		rightSRC: '1400px 0',
 		centerTxt: 'Нарцисс'
 	},
 	{
-		leftSrc: '/img/images/flowers/rose1.jpg',
-		rightSRC: '/img/images/flowers/rose2.jpg',
+		leftSrc: '600px 0',
+		rightSRC: '800px 0',
 		centerTxt: 'Роза'
 	},
 	{
-		leftSrc: '/img/images/flowers/tulpan1.jpg',
-		rightSRC: '/img/images/flowers/tulpan2.jpg',
+		leftSrc: '0px 0',
+		rightSRC: '200px 0',
 		centerTxt: 'Тюльпан'
 	},
 	{
-		leftSrc: '/img/images/flowers/fucsia1.jpg',
-		rightSRC: '/img/images/flowers/fucsia2.jpg',
+		leftSrc: '3600px 0',
+		rightSRC: '3400px 0',
 		centerTxt: 'Фуксия'
 	},
 	{
-		leftSrc: '/img/images/flowers/lilii1.jpg',
-		rightSRC: '/img/images/flowers/lilii2.jpg',
+		leftSrc: '2000px 0',
+		rightSRC: '1800px 0',
 		centerTxt: 'Лилия'
 	},
 	{
-		leftSrc: '/img/images/flowers/hrizantem1.jpg',
-		rightSRC: '/img/images/flowers/hrizantem2.jpg',
+		leftSrc: '2800px 0',
+		rightSRC: '2600px 0',
 		centerTxt: 'Хризантема'
 	},
 	{
-		leftSrc: '/img/images/flowers/kolokolchik1.jpg',
-		rightSRC: '/img/images/flowers/kolokolchik2.jpg',
+		leftSrc: '2200px 0',
+		rightSRC: '2400px 0',
 		centerTxt: 'Колокольчик'
 	},
 	{
-		leftSrc: '/img/images/flowers/fialki1.jpg',
-		rightSRC: '/img/images/flowers/fialki2.jpg',
+		leftSrc: '3800px 0',
+		rightSRC: '4000px 0',
 		centerTxt: 'Фиалка'
 	},
 	{
-		leftSrc: '/img/images/flowers/gvozdika1.jpg',
-		rightSRC: '/img/images/flowers/gvozdika2.jpg',
+		leftSrc: '3000px 0',
+		rightSRC: '3200px 0',
 		centerTxt: 'Гвоздика'
 	}
 ];
@@ -273,8 +273,8 @@ function changeCount(event) {
 	switch(true) {
 		case (event.target.className == 'duck') :
 			function changeSideImg(){
-				$('.duck').attr('src', sectionObj[indexO].leftSrc);
-				$('.duck2').attr('src', sectionObj[indexO].rightSRC);
+				$('.duck').css('background-position', sectionObj[indexO].leftSrc);
+				$('.duck2').css('background-position', sectionObj[indexO].rightSRC);
 				$('.duckText p').text(sectionObj[indexO].centerTxt);
 				$('#textDuckModal p:eq(0)').text(sectionObj[indexO].centerTxt);
 			}
@@ -1795,7 +1795,7 @@ function hideContacts() {
 				// icon support changeSideImgw
 				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author
-				$('.headerThis p').css({'left': '-185px'}).removeClass('opacity');
+				$('.headerThis p').css({'left': '-190px'}).removeClass('opacity');
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
@@ -1820,7 +1820,7 @@ function hideContacts() {
 				// icon support changeSideImgw
 				$('.icon-handshake-o').css({'left': '-35px'});
 				// hide author text
-				$('.headerThis p').css({'left': '-185px'});
+				$('.headerThis p').css({'left': '-190px'});
 				// change header overflow
 				$('.headerThis').css({'overflow': 'visible'});
 				$('.fa-address-card').css('color', '#A9D9F2');
@@ -1900,7 +1900,7 @@ function hideHeader() {
 		case (flagAuthor == true) :
 		// function hide()
 			$('.fa-address-card').css('color', '#A9D9F2');
-			$('.headerThis p').css('left', '-155px');
+			$('.headerThis p').css('left', '-190px');
 			$('.g6Cont').css({'left': '-160px', 'opacity': '0'});
 			setTimeout(function() {
 				$('.g6Cont p').css({'animation': ''});
@@ -2440,17 +2440,22 @@ function hideReviews() {
 	}
 }
 // hide footerRight sideBar initially
+
 $(document).ready(function() {
 	$('.f1Header, .f1Content').css({'opacity': '0'});
 });
-
 ////////////////////////////////////////
-// preloader
-$(window).one('load', function() {
-	setTimeout(function() {
-		$('.wrapperLoader').fadeOut('slow');
-	},250);
-});
+// // preloader
+// var scrolled = window.pageYOffset || document.documentElement.scrollTop;
+// if (scrolled != 0) {
+	$(window).one('load', function() {
+		setTimeout(function() {
+			$('.wrapperLoader').fadeOut('slow');
+		},250);
+	});
+// } else {
+// 	$('.wrapperLoader').css({'display': 'none'});
+// }
 ///////////////////////////////////////////
 //smoothScroll to id
 $(document).ready(function() {
@@ -2467,7 +2472,6 @@ $(document).ready(function() {
 	} 
 });
 
-
 // disable hovers and click events when scrolling
 var body = document.body,
     timer;
@@ -2481,12 +2485,12 @@ window.addEventListener('scroll', function() {
   },300);
 }, false);
  //////////////////////////////////////////////////////
-$(document).ready(function() {
-	$(window).on('load resize', function() {
-	if ($(window).outerWidth() < 480) {
-		$('body').addClass('animated');
-	} else {
-		$('body').removeClass('animated');
-	}
-	});
-});
+// $(document).ready(function() {
+// 	$(window).on('load resize', function() {
+// 	if ($(window).outerWidth() < 768) {
+// 		$('body').addClass('.userSelect');
+// 	} else {
+// 		$('body').removeClass('.userSelect');
+// 	}
+// 	});
+// });

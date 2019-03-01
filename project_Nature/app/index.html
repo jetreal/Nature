@@ -3,7 +3,12 @@
   <head>
     <title>mySite</title>
     <meta charset="UTF-8">
+    <noscript>
+      <link rel="stylesheet" href="main.css">
+    </noscript>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="_grid.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- fonts -->
     <link rel="stylesheet" href="fonts/fontello/css/animation.css">
     <link rel="stylesheet" href="fonts/fontello/css/myicon-codes.css">
@@ -11,6 +16,7 @@
     <link rel="stylesheet" href="fonts/fontello/css/myicon-embedded.css">
     <style>
       .wrapperLoader {
+      	transition: opacity .5s;
       	position: fixed;
       	background-color: rgb(0,0,0);
       	top: 0;
@@ -32,20 +38,22 @@
       	from {transform: rotate(0deg);}
       	to {transform: rotate(360deg);}
       }
-      	
     </style>
   </head>
   <body>
-    <div class="wrapperLoader">
-      <div class="loader"><img src="img/images/balls/ball10.png" alt=""></div>
+    <div class="wrapperLoader" id="prel">
+      <div class="loader">
+        <picture>
+          <source srcset="img/images/balls/ball10.webp" type="image/webp" alt="">
+          <source srcset="img/images/balls/ball10.png" type="image/png" alt=""><img src="img/images/balls/ball10.png" alt="">
+        </picture>
+      </div>
     </div>
-    <div id="arrowToTop"><a href="#wrapper" rel="m_PageScroll2id"><img src="img/favicon/toTop.png" alt="arrow"></a></div>
+    <div id="arrowToTop"><a href="#wrapper" rel="m_PageScroll2id">
+        <div></div></a></div>
+    <div id="arrowToBottom"><a href="#footer">
+        <div></div></a></div>
     <!-- wrapper-->
-    <div class="display">
-      <p id="showScroll"></p>
-      <p id="width"></p>
-      <p id="height"></p>
-    </div>
     <div class="wrapper" id="wrapper">
       <div class="wrapSun"><img class="sun" src="img/images/sun.png" alt="fire-logo" width="130px" height="90px"></div>
       <!-- header first page-->
@@ -131,11 +139,15 @@
       <section class="afterFirst">
         <div class="wrapDuckSec2 container-fluid">
           <div class="row justify-content-center rowDuck">
-            <div class="wrapDuck col col-md-4"><img class="duck" src="img/images/flowers/romashka1.jpg" alt="duck"></div>
+            <div class="wrapDuck col col-md-4">
+              <div class="duck"></div>
+            </div>
             <div class="col col-sm- duckText"><span id="angleLabelText">так выглядит:</span>
               <p>Ромашка</p>
             </div>
-            <div class="wrapDuck col col-md-4"><img class="duck2" src="img/images/flowers/romashka2.jpg" alt="duck"></div>
+            <div class="wrapDuck col col-md-4">
+              <div class="duck2"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -246,7 +258,7 @@
             </div>
           </div>
         </div>
-        <div class="theLostRiverText grid center">Природные локации</div>
+        <div class="theLostRiverText">Природные локации</div>
       </section>
       <!-- end forest section-->
       <section class="afterForest">
@@ -819,7 +831,6 @@
           <div class="line7"></div>
         </div>
       </section>
-      <div id="arrowToBottom"><a href="#footer"><img src="img/favicon/toBottom.png" alt="arrow"></a></div>
       <div class="copyright"><i class="icon-copyright"></i>
         <p>national geographic 2019</p>
       </div>
@@ -828,7 +839,6 @@
     <!-- end wrapper-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans">
     <!-- jQuery library-->
-    <link rel="stylesheet" href="css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- nice scroll-->
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js"></script>

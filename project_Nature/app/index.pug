@@ -3,18 +3,21 @@ html(lang="en")
 	head
 		title mySite
 		meta(charset='UTF-8')
+		noscript
+			link(rel='stylesheet', href='main.css')
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+		link(rel='stylesheet' href='_grid.min.css')
 		//- link(rel="stylesheet" href="css/cssLibs/magnific-popup.css")
 		//- link(rel='stylesheet' href='css/header.css')
+		link(rel='stylesheet' href='css/main.css')
 		// fonts 
 		link(rel='stylesheet' href='fonts/fontello/css/animation.css')
 		link(rel='stylesheet' href='fonts/fontello/css/myicon-codes.css')
 		link(rel='stylesheet' href='fonts/fontello/css/myicon.css')
 		link(rel='stylesheet' href='fonts/fontello/css/myicon-embedded.css')
-
-		
 		style.
 			.wrapperLoader {
+				transition: opacity .5s;
 				position: fixed;
 				background-color: rgb(0,0,0);
 				top: 0;
@@ -36,19 +39,21 @@ html(lang="en")
 				from {transform: rotate(0deg);}
 				to {transform: rotate(360deg);}
 			}
-				
 	body
-		.wrapperLoader
+		.wrapperLoader#prel
 			.loader
-				img(src='img/images/balls/ball10.png' alt='')
+				picture
+					source(srcset='img/images/balls/ball10.webp' type="image/webp" alt='')
+					source(srcset='img/images/balls/ball10.png' type="image/png" alt='')
+					img(src='img/images/balls/ball10.png' alt='')
 		#arrowToTop
-				a(href='#wrapper' rel="m_PageScroll2id")
-					img(src='img/favicon/toTop.png' alt='arrow')
+			a(href='#wrapper' rel="m_PageScroll2id")
+				div
+		#arrowToBottom
+			a(href='#footer')
+				div
+		
 		// wrapper
-		.display
-			p(id='showScroll')
-			p(id='width')
-			p(id='height')
 		.wrapper#wrapper
 			//- section.balls
 			//- 	img(src='/img/images/balls/ball1.png' alt='balls').ball1
@@ -152,14 +157,14 @@ html(lang="en")
 				.wrapDuckSec2.container-fluid
 					.row.justify-content-center.rowDuck
 						.wrapDuck.col.col-md-4
-							img.duck(src='img/images/flowers/romashka1.jpg' alt='duck')
+							.duck
 						.col.col-sm-.duckText
 							span#angleLabelText
 								| так выглядит:
 							p
 								| Ромашка
 						.wrapDuck.col.col-md-4
-							img.duck2(src='img/images/flowers/romashka2.jpg' alt='duck')
+							.duck2
 
 			// forest section
 			section#forest.forest
@@ -232,7 +237,7 @@ html(lang="en")
 									.galleryImgContent
 										a.popup-modal2(id='popupRight' href='#imgContent1' data-effect='mfp-zoom-in')
 											img#imgContent(src='img/images/fields/1.png' 	alt='foto Nature')
-				.theLostRiverText.grid.center
+				.theLostRiverText
 					| Природные локации
 				//- .endSectionText
 				//- 	| some text 
@@ -692,9 +697,6 @@ html(lang="en")
 					.line5
 					.line6
 					.line7
-			#arrowToBottom
-				a(href='#footer')
-					img(src='img/favicon/toBottom.png' alt='arrow')
 			.copyright
 				i.icon-copyright
 				p
@@ -704,11 +706,28 @@ html(lang="en")
 		// end wrapper
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans")
 		// jQuery library
-		link(rel='stylesheet' href='css/main.css')
+		//- link(rel='stylesheet' href='css/main.css')
+
+
+		//- script.
+		//- 	function loadCSS(hf) {
+		//- 	var ms=document.createElement("link");ms.rel="stylesheet";
+		//- 	ms.href=hf;document.getElementsByTagName("head")[0].appendChild(ms);
+		//- 	}
+			//- loadCSS("libs/animate/animate.css"); //Load Libs CSS: Animate CSS
+			//- loadCSS("_header.css");              //Header Styles (compress & paste to header after release)
+			//- loadCSS("_main.css");                //User Styles: Main
+			//- loadCSS("_media.css");               //User Styles: Media
+			//- loadCSS("css/main.css");      
+		//- // Load CSS compiled without Bootstrap & Header styles (after release)
+		//- script.
+		//- 	var ms=document.createElement("link");ms.rel="stylesheet";
+		//- 	ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
+
+
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 		// nice scroll
 		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js")
-
 		//- script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js')
 		// Magnific Popup core JS file
 		script(src='libs/html5shiv/html5shiv.min.js')
