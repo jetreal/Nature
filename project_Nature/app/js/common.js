@@ -307,63 +307,63 @@ function changeCount(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj2 = [
 	{
-		leftSrc: '/img/images/berries/malina1.jpg',
-		rightSRC: '/img/images/berries/malina2.jpg',
+		leftSrc: '1800px 0',
+		rightSRC: '2000px 0',
 		centerTxt: 'Малина'
 	},
 	{
-		leftSrc: '/img/images/berries/ejevika1.jpg',
-		rightSRC: '/img/images/berries/ejevika2.jpg',
+		leftSrc: '3600px 0',
+		rightSRC: '3400px 0',
 		centerTxt: 'Ежевика'
 	},
 	{
-		leftSrc: '/img/images/berries/zemlyanika1.jpg',
-		rightSRC: '/img/images/berries/zemlyanika2.jpg',
+		leftSrc: '200px 0',
+		rightSRC: '400px 0',
 		centerTxt: 'Земляника'
 	},
 	{
-		leftSrc: '/img/images/berries/krijovnik1.jpg',
-		rightSRC: '/img/images/berries/krijovnik2.jpg',
+		leftSrc: '2200px 0',
+		rightSRC: '2400px 0',
 		centerTxt: 'Крыжовник'
 	},
 	{
-		leftSrc: '/img/images/berries/klubnika1.jpg',
-		rightSRC: '/img/images/berries/klubnika2.jpg',
+		leftSrc: '2600px 0',
+		rightSRC: '2800px 0',
 		centerTxt: 'Клубника'
 	},
 	{
-		leftSrc: '/img/images/berries/smorodina1.jpg',
-		rightSRC: '/img/images/berries/smorodina2.jpg',
+		leftSrc: '1000px 0',
+		rightSRC: '1200px 0',
 		centerTxt: 'Смородина'
 	},
 	{
-		leftSrc: '/img/images/berries/chernika1.jpg',
-		rightSRC: '/img/images/berries/chernika2.jpg',
+		leftSrc: '3800px 0',
+		rightSRC: '3800px 0',
 		centerTxt: 'Черника'
 	},
 	{
-		leftSrc: '/img/images/berries/vishnya1.jpg',
-		rightSRC: '/img/images/berries/vishnya2.jpg',
+		leftSrc: '600px 0',
+		rightSRC: '800px 0',
 		centerTxt: 'Вишня'
 	},
 	{
-		leftSrc: '/img/images/berries/golubika1.jpg',
-		rightSRC: '/img/images/berries/golubika2.jpg',
+		leftSrc: '3200px 0',
+		rightSRC: '3000px 0',
 		centerTxt: 'Голубика'
 	},
 	{
-		leftSrc: '/img/images/berries/chereshnya1.jpg',
-		rightSRC: '/img/images/berries/chereshnya2.jpg',
+		leftSrc: '0px 0',
+		rightSRC: '4600px 0',
 		centerTxt: 'Черешня'
 	},
 	{
-		leftSrc: '/img/images/berries/brusnika1.jpg',
-		rightSRC: '/img/images/berries/brusnika2.jpg',
+		leftSrc: '4400px 0',
+		rightSRC: '4200px 0',
 		centerTxt: 'Брусника'
 	},
 	{
-		leftSrc: '/img/images/berries/vinograd1.jpg',
-		rightSRC: '/img/images/berries/vinograd2.jpg',
+		leftSrc: '1600px 0',
+		rightSRC: '1400px 0',
 		centerTxt: 'Виноград'
 	}
 ];
@@ -373,8 +373,8 @@ function changeCount2(event) {
 	switch(true) {
 		case (event.target.className == 'ej') :
 			function changeSideImg(){
-				$('.ej').attr('src', sectionObj2[indexO2].leftSrc);
-				$('.ej2').attr('src', sectionObj2[indexO2].rightSRC);
+				$('.ej').css('background-position', sectionObj2[indexO2].leftSrc);
+				$('.ej2').css('background-position', sectionObj2[indexO2].rightSRC);
 				$('.textEj p').text(sectionObj2[indexO2].centerTxt);
 				$('#textEjModal p:eq(0)').text(sectionObj2[indexO2].centerTxt);
 			}
@@ -407,8 +407,8 @@ function changeCount2(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj3 = [
 	{
-		leftSrc: '/img/images/animals/ej1.jpg',
-		rightSRC: '/img/images/animals/ej2.jpg',
+		leftSrc: '3000px 0',
+		rightSRC: '3200px 0',
 		centerTxt: 'ёж',
 		popupTect: 'Образ колючего жителя лесов\
 		 и степей всем хорошо известен. Происхождение \
@@ -422,48 +422,48 @@ var sectionObj3 = [
 		  становится неприступной крепостью.'
 	},
 	{
-		leftSrc: '/img/images/animals/belka1.jpg',
-		rightSRC: '/img/images/animals/belka2.jpg',
+		leftSrc: '4000px 0',
+		rightSRC: '3800px 0',
 		centerTxt: 'Белка'
 	},
 	{
-		leftSrc: '/img/images/animals/kaban1.jpg',
-		rightSRC: '/img/images/animals/kaban2.jpg',
+		leftSrc: '2400px 0',
+		rightSRC: '2200px 0',
 		centerTxt: 'Кабан'
 	},
 	{
-		leftSrc: '/img/images/animals/enot1.jpg',
-		rightSRC: '/img/images/animals/enot2.jpg',
+		leftSrc: '2600px 0',
+		rightSRC: '2800px 0',
 		centerTxt: 'Енот'
 	},
 	{
-		leftSrc: '/img/images/animals/bobr1.jpg',
-		rightSRC: '/img/images/animals/bobr2.jpg',
+		leftSrc: '3600px 0',
+		rightSRC: '3400px 0',
 		centerTxt: 'Бобр'
 	},
 	{
-		leftSrc: '/img/images/animals/olen1.jpg',
-		rightSRC: '/img/images/animals/olen2.jpg',
+		leftSrc: '1000px 0',
+		rightSRC: '1200px 0',
 		centerTxt: 'Олень'
 	},
 	{
-		leftSrc: '/img/images/animals/zayats1.jpg',
-		rightSRC: '/img/images/animals/zayats2.jpg',
+		leftSrc: '200px 0',
+		rightSRC: '400px 0',
 		centerTxt: 'Заяц'
 	},
 	{
-		leftSrc: '/img/images/animals/los1.jpg',
-		rightSRC: '/img/images/animals/los2.jpg',
+		leftSrc: '1600px 0',
+		rightSRC: '1400px 0',
 		centerTxt: 'Лось'
 	},
 	{
-		leftSrc: '/img/images/animals/lisa1.jpg',
-		rightSRC: '/img/images/animals/lisa2.jpg',
+		leftSrc: '1800px 0',
+		rightSRC: '2000px 0',
 		centerTxt: 'Лиса'
 	},
 	{
-		leftSrc: '/img/images/animals/sova1.jpg',
-		rightSRC: '/img/images/animals/sova2.jpg',
+		leftSrc: '800px 0',
+		rightSRC: '600px 0',
 		centerTxt: 'Сова'
 	}
 ]
@@ -472,8 +472,8 @@ function changeCount3(event) {
 	switch(true) {
 		case (event.target.className == 'catsImg') :
 			function changeSideImg(){
-				$('.catsImg').attr('src', sectionObj3[indexO3].leftSrc);
-				$('.catsImg2').attr('src', sectionObj3[indexO3].rightSRC);
+				$('.catsImg').css('background-position', sectionObj3[indexO3].leftSrc);
+				$('.catsImg2').css('background-position', sectionObj3[indexO3].rightSRC);
 				$('.catText p').text(sectionObj3[indexO3].centerTxt);
 				$('#textCatModal p:eq(0)').text(sectionObj3[indexO3].centerTxt);
 			}
@@ -997,28 +997,28 @@ $(document).ready(function() {
 
 	var counterImg = 1, arrObj = [
 		  {
-		  	url:'url(/img/images/ownFriends/bear2.jpg',
+		  	url:'url(/img/images/ownFriends/3Animals.jpg',
 				headerText: 'Медведь',
 				bodyText: 'Лесной тяжеловес, любитель мёда.',
 				bgp: '0 0',
-				miniDisLeft: 'url(/img/images/ownFriends/bear/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/bear2/1.jpg)'
+				miniDisLeft: 'url(/img/images/ownFriends/bear/allBears.jpg)',
+				miniDisRight: 'url(/img/images/ownFriends/bear/allBears.jpg)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/eagle2.jpg',
+	    	url:'url(/img/images/ownFriends/3Animals.jpg',
 				headerText: 'Орёл',
 				bodyText: 'Крылатый истребитель, гроза неба.',
-				bgp: '-30px 0',
-				miniDisLeft: 'url(/img/images/ownFriends/bird/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/bird2/1.jpg)'
+				bgp: '-150px 0',
+				miniDisLeft: 'url(/img/images/ownFriends/bird/allBirds.jpg)',
+				miniDisRight: 'url(/img/images/ownFriends/bird/allBirds.jpg)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/wolf2.jpg',
+	    	url:'url(/img/images/ownFriends/3Animals.jpg',
 				headerText: 'Волк',
 				bodyText: 'Серый волк, зубами щёлк.',
-				bgp: '-20px 0',
-				miniDisLeft: 'url(/img/images/ownFriends/wolf/1.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/wolf2/1.jpg)'
+				bgp: '-300px 0',
+				miniDisLeft: 'url(/img/images/ownFriends/wolf/allWolfs.jpg)',
+				miniDisRight: 'url(/img/images/ownFriends/wolf/allWolfs.jpg)'
 			}
 	];
 	
@@ -1026,8 +1026,8 @@ $(document).ready(function() {
 		if ($(window).outerWidth() < '1150') {
 			$('.angle12Center').css('background-image', arrObj[counterImg].url);
 			$('.angle12Center').css('background-position', arrObj[counterImg].bgp);
-			$('.inImgLeft').css('background-image', arrObj[counterImg].miniDisLeft);
-			$('.inImgRight').css('background-image', arrObj[counterImg].miniDisRight);
+			$('.inImgLeft').css({'background-image': arrObj[counterImg].miniDisLeft, 'background-position': '0 0'});
+			$('.inImgRight').css({'background-image': arrObj[counterImg].miniDisRight, 'background-position': '-750px 0'});
 			$('.cardTextHead2').text(arrObj[counterImg].headerText);
 			$('.cardTextBody2').text(arrObj[counterImg].bodyText);
 			counterImg++;
@@ -1042,62 +1042,65 @@ $(document).ready(function() {
 	}
 	// restore Img on large display
 	function restoreImg() {
-		if ($(window).outerWidth() > '1150' || $(window).outerWidth() < '768') {
+		if ($(window).outerWidth() > '1150' || $(window).outerWidth() < '748') {
 		$('.angle12Center').css('background-image', arrObj[0].url);
+		$('.angle12Center').css('background-position', arrObj[0].bgp);
 		$('.cardTextHead2').text(arrObj[0].headerText);
 		$('.cardTextBody2').text(arrObj[0].bodyText);
 		counterImg = 1;
 		CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
 		CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
+		setTimeout(function() {
+			$('.inImgLeft').css({'background-image': 'url(/img/images/ownFriends/bear/allBears.jpg)', 'background-position': '0 0'});
+			$('.inImgRight').css({'background-image': 'url(/img/images/ownFriends/bear/allBears.jpg)', 'background-position': '-750px 0'});	
+		}, 1200);
 		} else {
-			$('.inImgLeft').css('background-image', 'url(/img/images/ownFriends/bear/1.jpg)');
-			$('.inImgRight').css('background-image', 'url(/img/images/ownFriends/bear2/1.jpg)');
 			$('.lb img').attr('src', locationObj.numbers[0]);
 			$('.rb img').attr('src', locationObj.numbers[0]);
 		}
 	}
 	var leftMiniDispArr = {
 		eagleLeft: [
-			'url(/img/images/ownFriends/bird/1.jpg)',
-			'url(/img/images/ownFriends/bird/2.jpg)',
-			'url(/img/images/ownFriends/bird/3.jpg)',
-			'url(/img/images/ownFriends/bird/4.jpg)',
-			'url(/img/images/ownFriends/bird/5.jpg)'
+			'0 0',
+			'-150px 0',
+			'-300px 0',
+			'-450px 0',
+			'-600px 0'
 		],
 		bearLeft: [
-			'url(/img/images/ownFriends/bear/1.jpg)',
-			'url(/img/images/ownFriends/bear/2.jpg)',
-			'url(/img/images/ownFriends/bear/3.jpg)',
-			'url(/img/images/ownFriends/bear/4.jpg)',
-			'url(/img/images/ownFriends/bear/5.jpg)'
+			'0 0',
+			'-150px 0',
+			'-300px 0',
+			'-450px 0',
+			'-600px 0'
 		],
 		wolfLeft: [
-			'url(/img/images/ownFriends/wolf/1.jpg)',
-			'url(/img/images/ownFriends/wolf/2.jpg)',
-			'url(/img/images/ownFriends/wolf/3.jpg)',
-			'url(/img/images/ownFriends/wolf/4.jpg)',
-			'url(/img/images/ownFriends/wolf/5.jpg)'
+			'0 0',
+			'-150px 0',
+			'-300px 0',
+			'-450px 0',
+			'-600px 0'
 		],
 		eagleRight: [
-			'url(/img/images/ownFriends/bird2/1.jpg)',
-			'url(/img/images/ownFriends/bird2/2.jpg)',
-			'url(/img/images/ownFriends/bird2/3.jpg)',
-			'url(/img/images/ownFriends/bird2/4.jpg)',
-			'url(/img/images/ownFriends/bird2/5.jpg)'
+			'-750px 0',
+			'-900px 0',
+			'-1050px 0',
+			'-1200px 0',
+			'-1350px 0'
 		],
 		bearRight: [
-			'url(/img/images/ownFriends/bear2/1.jpg)',
-			'url(/img/images/ownFriends/bear2/2.jpg)',
-			'url(/img/images/ownFriends/bear2/3.jpg)',
-			'url(/img/images/ownFriends/bear2/4.jpg)',
-			'url(/img/images/ownFriends/bear2/5.jpg)'
+			'-750px 0',
+			'-900px 0',
+			'-1050px 0',
+			'-1200px 0',
+			'-1350px 0'
 		],
 		wolfRight: [
-			'url(/img/images/ownFriends/wolf2/1.jpg)',
-			'url(/img/images/ownFriends/wolf2/2.jpg)',
-			'url(/img/images/ownFriends/wolf2/3.jpg)',
-			'url(/img/images/ownFriends/wolf2/4.jpg)',
-			'url(/img/images/ownFriends/wolf2/5.jpg)'
+			'-750px 0',
+			'-900px 0',
+			'-1050px 0',
+			'-1200px 0',
+			'-1350px 0'
 		]
 	};
 
@@ -1108,7 +1111,7 @@ $(document).ready(function() {
 	$('.lb').on('mousedown', function() {
 		$(this).css('background-image', 'url(/img/favicon/click.png)');
 		if (counterImg == 1) {
-			$('.inImgLeft').css('background-image', leftMiniDispArr.bearLeft[CountBearL]);
+			$('.inImgLeft').css('background-position', leftMiniDispArr.bearLeft[CountBearL]);
 				CountBearL++;
 			$('.lb img').attr('src', locationObj.numbers[CountBearL - 1]);
 			if (CountBearL == leftMiniDispArr.bearLeft.length) {
@@ -1116,7 +1119,7 @@ $(document).ready(function() {
 			}
 		}
 		if (counterImg == 2) {
-			$('.inImgLeft').css('background-image', leftMiniDispArr.eagleLeft[CountEagleL]);
+			$('.inImgLeft').css('background-position', leftMiniDispArr.eagleLeft[CountEagleL]);
 				CountEagleL++;
 			$('.lb img').attr('src', locationObj.numbers[CountEagleL - 1]);
 			if (CountEagleL == leftMiniDispArr.eagleLeft.length) {
@@ -1124,7 +1127,7 @@ $(document).ready(function() {
 			}
 		}
 		if (counterImg == 0) {
-			$('.inImgLeft').css('background-image', leftMiniDispArr.wolfLeft[CountWolfL]);
+			$('.inImgLeft').css('background-position', leftMiniDispArr.wolfLeft[CountWolfL]);
 				CountWolfL++;
 				$('.lb img').attr('src', locationObj.numbers[CountWolfL - 1]);
 			if (CountWolfL == leftMiniDispArr.wolfLeft.length) {
@@ -1142,7 +1145,7 @@ $(document).ready(function() {
 	$('.rb').on('mousedown', function() {
 		$(this).css('background-image', 'url(/img/favicon/click.png)');
 		if (counterImg == 1) {
-			$('.inImgRight').css('background-image', leftMiniDispArr.bearRight[CountBearR]);
+			$('.inImgRight').css('background-position', leftMiniDispArr.bearRight[CountBearR]);
 				CountBearR++;
 				$('.rb img').attr('src', locationObj.numbers[CountBearR - 1]);
 			if (CountBearR == leftMiniDispArr.bearRight.length) {
@@ -1150,7 +1153,7 @@ $(document).ready(function() {
 			}
 		}
 		if (counterImg == 2) {
-			$('.inImgRight').css('background-image', leftMiniDispArr.eagleRight[CountEagleR]);
+			$('.inImgRight').css('background-position', leftMiniDispArr.eagleRight[CountEagleR]);
 				CountEagleR++;
 				$('.rb img').attr('src', locationObj.numbers[CountEagleR - 1]);
 			if (CountEagleR == leftMiniDispArr.eagleRight.length) {
@@ -1158,7 +1161,7 @@ $(document).ready(function() {
 			}
 		}
 		if (counterImg == 0) {
-			$('.inImgRight').css('background-image', leftMiniDispArr.wolfRight[CountWolfR]);
+			$('.inImgRight').css('background-position', leftMiniDispArr.wolfRight[CountWolfR]);
 				CountWolfR++;
 				$('.rb img').attr('src', locationObj.numbers[CountWolfR - 1]);
 			if (CountWolfR == leftMiniDispArr.wolfRight.length) {

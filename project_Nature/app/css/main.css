@@ -2550,6 +2550,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   max-height: initial; }
 
 #imgContent2 {
+  background-image: url("/img/images/fields/6.png");
+  background-position: center;
   width: 100%;
   height: auto;
   max-height: initial; }
@@ -2781,6 +2783,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   text-align: center; }
 
 .ej {
+  background-image: url("/img/images/berries/allBerries.jpg");
+  background-position: 1800px 0;
   cursor: pointer;
   width: 200px;
   height: 140px;
@@ -2789,6 +2793,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   border: 1px solid gray; }
 
 .ej2 {
+  background-image: url("/img/images/berries/allBerries.jpg");
+  background-position: 2000px 0;
   cursor: pointer;
   width: 200px;
   height: 140px;
@@ -3003,6 +3009,8 @@ a.test-popup-link {
   max-width: 140px; }
 
 .catsImg {
+  background-image: url("/img/images/animals/allAnimals.jpg");
+  background-position: 3000px 0;
   cursor: pointer;
   position: relative;
   padding: initial;
@@ -3013,6 +3021,8 @@ a.test-popup-link {
   border: 1px solid gray; }
 
 .catsImg2 {
+  background-image: url("/img/images/animals/allAnimals.jpg");
+  background-position: 3200px 0;
   cursor: pointer;
   padding: initial;
   width: 200px;
@@ -3340,8 +3350,8 @@ a.test-popup-link {
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
-  background-image: url("/img/images/ownFriends/eagle2.jpg");
-  background-position: -30px 0;
+  background-image: url("/img/images/ownFriends/3Animals.jpg");
+  background-position: -150px 0;
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -3361,8 +3371,8 @@ a.test-popup-link {
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
-  background-image: url("/img/images/ownFriends/bear2.jpg");
-  background-position: 0 0;
+  background-image: url("/img/images/ownFriends/3Animals.jpg");
+  background-position: 0px 0;
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -3382,8 +3392,8 @@ a.test-popup-link {
   -webkit-transform: rotate(30deg);
       -ms-transform: rotate(30deg);
           transform: rotate(30deg);
-  background-image: url("/img/images/ownFriends/wolf2.jpg");
-  background-position: -20px 0px;
+  background-image: url("/img/images/ownFriends/3Animals.jpg");
+  background-position: -300px 0px;
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
@@ -3445,15 +3455,13 @@ a.test-popup-link {
           box-shadow: 3px 3px 6px #6B95C7 inset, -3px -3px 6px #6B95C7 inset; }
 
 .inImgRight {
-  background-image: url("/img/images/ownFriends/bear2/1.jpg");
-  background-position: center;
+  background-image: url("/img/images/ownFriends/bear/allBears.jpg");
   -webkit-background-size: cover;
           background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
   width: 150px;
   height: 100px;
-  background-color: light-blue;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -6777,7 +6785,7 @@ input::-webkit-inner-spin-button {
     grid-column-gap: 15px; } }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1149px) {
+@media only screen and (min-width: 748px) and (max-width: 1149px) {
   .lb, .rb, .wrMiniDisLeft, .wrMiniDisRight, .rombLeft, .rombRight {
     -webkit-animation: dispShows 2s;
             animation: dispShows 2s;
