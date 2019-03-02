@@ -2750,7 +2750,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   height: 90px;
   color: #CBBEAE;
   overflow-y: hidden;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
   .textEj p:before {
     display: block;
     position: absolute;
