@@ -44,8 +44,8 @@ html(lang="en")
 			.loader
 				picture
 					source(srcset='img/images/balls/ball10.webp' type="image/webp" alt='')
-					source(srcset='img/images/balls/ball10.png' type="image/png" alt='')
-					img(src='img/images/balls/ball10.png' alt='')
+					source(srcset='img/images/balls/ball10.webp' type="image/png" alt='')
+					img(src='img/images/balls/ball10.webp' alt='')
 		#arrowToTop
 			a(href='#wrapper' rel="m_PageScroll2id")
 				div
@@ -56,15 +56,15 @@ html(lang="en")
 		// wrapper
 		.wrapper#wrapper
 			//- section.balls
-			//- 	img(src='/img/images/balls/ball1.png' alt='balls').ball1
-			//- 	img(src='/img/images/balls/ball2.png' alt='balls').ball2
-			//- 	img(src='/img/images/balls/ball3.png' alt='balls').ball3
-			//- 	img(src='/img/images/balls/ball4.png' alt='balls').ball4
-			//- 	img(src='/img/images/balls/ball5.png' alt='balls').ball5
-			//- 	img(src='/img/images/balls/ball6.png' alt='balls').ball6
-			//- 	img(src='/img/images/balls/ball7.png' alt='balls').ball7
+			//- 	img(src='/img/images/balls/ball1.webp' alt='balls').ball1
+			//- 	img(src='/img/images/balls/ball2.webp' alt='balls').ball2
+			//- 	img(src='/img/images/balls/ball3.webp' alt='balls').ball3
+			//- 	img(src='/img/images/balls/ball4.webp' alt='balls').ball4
+			//- 	img(src='/img/images/balls/ball5.webp' alt='balls').ball5
+			//- 	img(src='/img/images/balls/ball6.webp' alt='balls').ball6
+			//- 	img(src='/img/images/balls/ball7.webp' alt='balls').ball7
 			.wrapSun
-				img.sun(src='img/images/sun.png' alt='fire-logo' width='130px' height='90px')
+				img.sun(src='img/images/sun.webp' alt='fire-logo' width='130px' height='90px')
 			// header first page
 			section.firstSection
 
@@ -151,7 +151,7 @@ html(lang="en")
 													.into05
 														.into06
 												.wrapCircleImg
-													img.circleImg(src='img/images/button3.png' alt='button')
+													img.circleImg(src='img/images/button3.webp' alt='button')
 			// end header first page
 			section.afterFirst
 				.wrapDuckSec2.container-fluid
@@ -182,7 +182,7 @@ html(lang="en")
 
 									.galleryImgContentLeft
 										a.popup-modal2.mfp-bg(id='popupLeft' href='#imgContent2' data-effect='mfp-zoom-in')
-											img#imgContent2(src='img/images/fields/6.png' alt='foto Nature')
+											img#imgContent2(src='img/images/fields/6.webp' alt='foto Nature')
 					.wrapVItem
 						.v1
 							.into30
@@ -230,13 +230,13 @@ html(lang="en")
 						span.arrowLeft
 						span.arrowRight
 						span.showNumber
-							img(id='num' src='img/images/numbers/1.png')
+							img(id='num' src='img/images/numbers/1.webp')
 						.galleryDeg1
 							.galleryDeg2
 								.gallery
 									.galleryImgContent
 										a.popup-modal2(id='popupRight' href='#imgContent1' data-effect='mfp-zoom-in')
-											img#imgContent(src='img/images/fields/1.png' 	alt='foto Nature')
+											img#imgContent(src='img/images/fields/1.webp' 	alt='foto Nature')
 				.theLostRiverText
 					| Природные локации
 				//- .endSectionText
@@ -261,23 +261,22 @@ html(lang="en")
 					p Топ 6 из семейства кошачих
 				.container
 					.row.justify-content-center
-						.col-sm-.m-2.grid
-							// <span class="wrapAni center grid"></span>
-							a.test-popup-link(href='img/images/tiger.jpg')
+						.col-sm-.m-2.grid.wrapATiger
+							a.test-popup-link(id='aTiger' href='img/images/tiger.webp')
 								.cardShadow.animal.tiger
 									p
 										| Тигр&#x9;
 							.textAnimal.grid.center
 								| Тигр обитает в азии - в Индии, Непале и на Алтае... Тигры - это большие, сильные, крупные и красивые кошки. Тигр самый крупный и тяжёлый представитель семейства кошачих.
-						.col-sm-.m-2
-							a.test-popup-link(href='img/images/pantera.jpg')
+						.col-sm-.m-2.wrapAPanthera
+							a.test-popup-link(id='aPanthera' href='img/images/pantera.webp')
 								.cardShadow.animal.panthera
 									p
 										| Пантера&#x9;
 							.textAnimal
 								| Чёрной пантерой обычно является леопард или ягуар, имеющий чёрную шкуру. На охоту пантеры всегда выходят ночью, так как в тёмное время суток они практически невидимы. Пантеры предпочитают жить поодиночке, или парами самец + самка.
-						.col-sm-.m-2.grid
-							a.test-popup-link(href='img/images/puma.jpg')
+						.col-sm-.m-2.grid.wrapAPuma
+							a.test-popup-link(id='aPuma' href='img/images/puma.webp')
 								.cardShadow.animal.puma
 									p 
 										| Пума&#x9;
@@ -285,23 +284,23 @@ html(lang="en")
 								| Пума обитает в северной и южной Америке, предпочитая селиться в горных районах. Также пумы могут встретиться в 
 								|	хвойных и тропических лесах. Пума легко передвигается по горным склонам и скалам, отлично лазают
 								| по деревьям и хорошо плавают.
-						.col-sm-.m-2
-							a.test-popup-link(href='img/images/snowBars.jpg')
+						.col-sm-.m-2.wrapASnowBars
+							a.test-popup-link(id='aSnowBars' href='img/images/snowBars.webp')
 								.cardShadow.animal.snowBars
 									p 
 										| Снежный леопард
 							.textAnimal
 								| Снежный барс - представитель семейства кошачих, обитающий в суровом климате горных массивов цетральной азии. Среди всех крупных кошек снежный брас - единственный постоянный житель высокогорий.
-						.col-sm-.m-2
-							a.test-popup-link(href='img/images/lev.jpg')
+						.col-sm-.m-2.wrapALion
+							a.test-popup-link(id='aLion' href='img/images/lev.webp')
 								.cardShadow.animal.lion
 									p 
 										| Лев
 							.textAnimal
 								| Длинна когтей льва достигает семи сантиметров, а клыков достигают восьми. Лев и львица внешне очень отличаются друг от друга.
 								| Охотятся у львов в основном самки.
-						.col-sm-.m-2
-							a.test-popup-link(href='img/images/jaguar.jpg')
+						.col-sm-.m-2.wrapAJaguar
+							a.test-popup-link(id='aJaguar' href='img/images/jaguar.webp')
 								.cardShadow.animal.jaguar
 									p 
 										| Ягуар
@@ -330,7 +329,7 @@ html(lang="en")
 				.glacierBack
 				.glacierBack2
 				.glacierLogo.grid.center
-					//- img.fireBall(src='img/images/fire_logo_small.png' alt='fireBall')
+					//- img.fireBall(src='img/images/fire_logo_small.webp' alt='fireBall')
 				.wrapPicture
 					.pictureLeft
 					.pictureRight
@@ -342,12 +341,12 @@ html(lang="en")
 			section.ownFriends#ownFriends
 				.wrapAfterGlacierHead
 					.lb
-						img#numLeft(src='img/images/numbers/1.png' alt="number")
+						img#numLeft(src='img/images/numbers/1.webp' alt="number")
 					.afterGlacierHead
 						h2
 							| Жители леса
 					.rb
-						img#numRight(src='img/images/numbers/1.png' alt="number")
+						img#numRight(src='img/images/numbers/1.webp' alt="number")
 				.wrapCardBoot
 					.wrapCard
 						.wrMiniDisLeft
@@ -434,9 +433,9 @@ html(lang="en")
 							| menu
 					.wrapContentImg
 						.contentImg1
-							img(src="img/images/maldives1.jpg", id="contentImg1" alt="maldives1")
+							img(src="img/images/maldives1.webp", id="contentImg1" alt="maldives1")
 						.contentImg2
-							img(src="img/images/maldives2.jpg", id="contentImg2" alt="maldives2")
+							img(src="img/images/maldives2.webp", id="contentImg2" alt="maldives2")
 					
 				.item5
 					p#contentText
@@ -673,15 +672,15 @@ html(lang="en")
 													.into42
 				.bottomFooter
 					.wrapFoo
-						img.uicn(src='img/images/iucn.png' alt='iucn')
+						img.uicn(src='img/images/iucn.webp' alt='iucn')
 					.wrapFoo
-						img.greenPeace(src='img/images/green.png' alt='greenPeace')
+						img.greenPeace(src='img/images/green.webp' alt='greenPeace')
 					.wrapFoo
-						img.wap(src='img/images/wap.png' alt='wap')
+						img.wap(src='img/images/wap.webp' alt='wap')
 					.wrapFoo
-						img.panda(src='img/images/panda5.png' alt='panda')
+						img.panda(src='img/images/panda5.webp' alt='panda')
 					.wrapFoo
-						img.wcs(src='img/images/wcs.png' alt='wcs')
+						img.wcs(src='img/images/wcs.webp' alt='wcs')
 					.line-7
 					.line-6
 					.line-5
@@ -708,7 +707,6 @@ html(lang="en")
 		// jQuery library
 		//- link(rel='stylesheet' href='css/main.css')
 
-
 		//- script.
 		//- 	function loadCSS(hf) {
 		//- 	var ms=document.createElement("link");ms.rel="stylesheet";
@@ -723,8 +721,6 @@ html(lang="en")
 		//- script.
 		//- 	var ms=document.createElement("link");ms.rel="stylesheet";
 		//- 	ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
-
-
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 		// nice scroll
 		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js")

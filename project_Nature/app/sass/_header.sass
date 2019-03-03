@@ -100,19 +100,7 @@ p
 .wr16
 	position: relative
 	z-index: 1
-.wr16 .into03,.wr16 .into04,.wr16 .into05,.wr16 .into06
-	animation: animaWr16 10s
-@keyframes animaWr16
-	0%
-		box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset
-	25%
-		box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
-	50%
-		box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset
-	75%
-		box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
-	100%
-		box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset
+// .wr16 .into03,.wr16 .into04,.wr16 .into05,.wr16 .into06
 
 .top_header
 	display: grid
@@ -262,7 +250,7 @@ p
 	padding: 10px
 	overflow: hidden
 	background-color: $bgColor
-	// background-image: url('/img/images/brokenDisp.png')
+	// background-image: url('/img/images/waterHeaderDisp.webp')
 	& p
 		opacity: 0
 		// white-space: nowrap
@@ -286,17 +274,7 @@ p
 		background-size: content
 		background-color: #191917
 
-.rollAnim
-	animation: roll 2s ease-out
-@keyframes roll
-	0%
-		transform: rotate(-0deg) scale(.7,.7)
-		// transform: scale(.7,.7)
-	50%
-		// box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
-	100%
-		transform: rotate(-90deg) scale(.7,.7)
-		// box-shadow: 3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset
+
 .anima
 	animation: newAn 4s ease-out
 @keyframes newAn
@@ -442,15 +420,12 @@ body
 		position: absolute
 		right: 0px
 		top: 10px
-		box-shadow: 0px 0px 0px black
-		transition: box-shadow .4s
 		&:hover
-			box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray,
-			2px -2px 3px 2px gray, -2px 2px 3px 2px gray
+			border: 1px solid gray
 	div
 		background-image: url('/img/favicon/toTop.png')
 		width: 29px
-		height: 85px
+		height: 57px
 #arrowToBottom
 	position: fixed
 	bottom: 0
@@ -463,15 +438,13 @@ body
 		position: absolute
 		right: 0px
 		top: -90px
-		box-shadow: 0px 0px 0px black
-		transition: box-shadow .4s
 		&:hover
-			box-shadow: 2px 2px 3px 2px gray, -2px -2px 3px 2px gray,
-			2px -2px 3px 2px gray, -2px 2px 3px 2px gray
+			border: 1px solid gray
 	div
 		background-image: url('/img/favicon/toBottom.png')
+		background-position: 0 -27px
 		width: 29px
-		height: 85px
+		height: 57px
 ul, li, a 
 	// display: inline-block
 	list-style-type: none

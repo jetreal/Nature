@@ -3,42 +3,133 @@
 $(document).ready(function() {
 	setTimeout(function() {
 		$(window).trigger('resize');
-	},250);
+	},1000);
 });
+// start field function without flicker when reload page
+$(window).on('load', function() {
+	setTimeout(function() {
+		$('.bgImage3').addClass('bgImage3no');
+		$('#headerLeftSection p').text(fTxt.fields).fadeIn(60);
+		var atrLeft = $('#imgContent2').attr('src');
+		var atrRight = $('#imgContent').attr('src');
+		$('#popupLeft').attr('href', atrLeft);
+		$('#popupRight').attr('href', atrRight);
+			index = 0;
+		$('#num').attr('src', locationObj.numbers[index]);
+		anyArr = locationObj.fields;
+		$('.wrapVItem *').css('box-shadow','');
+		$('.bgImage3, .bgImage3 div, .bgImage3 div div')
+		.css('box-shadow', '3px 3px 6px #FFB352 inset, -3px -3px 6px #FFB352 inset');
+		$('.into31 div:first-child')
+		.removeClass('bgImage2no bgImage1no bgImage4no bgImage5no bgImage6no bgImage7no');
+		$(this).addClass('bgImage3no');
+  		$('.bgImage3').off('click');
+  		$('.bgImage7').one('click', myCh2);
+  		$('.bgImage1').one('click', myCh);
+  		$('.bgImage2').one('click', myCh3);
+  		$('.bgImage4').one('click', myCh5);
+  		$('.bgImage5').one('click', myCh6);
+  		$('.bgImage6').one('click', myCh7);
+	},1200);
+});
+/////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////
 
 // magnific Popup
-jQuery(document).ready(function(){
-	jQuery('.test-popup-link').magnificPopup({
-		type: 'image',
-		gallery : {
-		enabled : true,
-		closeBtnInside: true,
-		navigateByImgClick: true
-	},
-	image: {
-		titleSrc: 'title'
-	},
-	removalDelay: 300,
-	mainClass: 'mfp-fade mfp-with-zoom'
-	});
-});
+$(window).on('resize load', () => {
+			jQuery(document).ready(function(){
+				jQuery('.test-popup-link').magnificPopup({
+					type: 'image',
+					gallery : {
+					enabled : true,
+					closeBtnInside: true,
+					navigateByImgClick: true
+				},
+				image: {
+					titleSrc: 'title'
+				},
+				removalDelay: 300,
+				mainClass: 'mfp-fade mfp-with-zoom',
+				disableOn: 768
+				});
+			});
 
-$('.popup-modal2').magnificPopup({
-		type: 'image',
-		closeOnContentClick: true,
-		closeBtnInside: true,
-		fixedContentPos: false,
-		mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
-		image: {
-			verticalFit: true
-		},
-		zoom: {
-			enabled: true,
-			// duration: 300 // don't foget to change the duration also in CSS
+				$('.popup-modal2').magnificPopup({
+					type: 'image',
+					closeOnContentClick: true,
+					closeBtnInside: true,
+					fixedContentPos: false,
+					mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+					image: {
+						verticalFit: true
+					},
+					zoom: {
+						enabled: true,
+					},
+					disableOn: 768
+				});	
+
+});
+// disable .popup-modal2 on small devices
+function disableMagnific() {
+const element = $('#popupRight');
+const element2 = $('#imgContent');
+	$(window).on('load resize', function() {
+		if ($(window).outerWidth() < 768) {
+			// remove tag <a> and replace content without <a> 
+			$('#imgContent').insertAfter('.galleryImgContent');
+			element.detach();
+
+		} else {
+			// return <a> link fon magnific
+			element.appendTo('.galleryImgContent');
+			element2.appendTo(element);
 		}
 	});
+}
+disableMagnific();
+//disable .test-popup-link
+function disableMagnific2() {
+const elementTiger  	= $('#aTiger');
+const elementPanter 	= $('#aPanthera');
+const elementPuma   	= $('#aPuma');
+const elementSnowLeo 	= $('#aSnowBars');
+const elementLion   	= $('#aLion');
+const elementJaguar 	= $('#aJaguar');
+	$(window).on('load resize', function() {
+		if ($(window).outerWidth() < 768) {
+			// remove tag <a> and replace content without <a> 
+			$('.tiger').prependTo('.wrapATiger');
+			elementTiger.detach();
+			$('.panthera').prependTo('.wrapAPanthera');
+			elementPanter.detach();
+			$('.puma').prependTo('.wrapAPuma');
+			elementPuma.detach();
+			$('.snowBars').prependTo('.wrapASnowBars');
+			elementSnowLeo.detach();
+			$('.lion').prependTo('.wrapALion');
+			elementLion.detach();
+			$('.jaguar').prependTo('.wrapAJaguar');
+			elementJaguar.detach();
+		} else {
+			// return <a> link fon magnific
+		  elementTiger.prependTo('.wrapATiger');
+		  elementPanter.prependTo('.wrapAPanthera');
+		  elementPuma.prependTo('.wrapAPuma');
+		  elementSnowLeo.prependTo('.wrapASnowBars');
+		  elementLion.prependTo('.wrapALion');
+		  elementJaguar.prependTo('.wrapAJaguar');
+			$('.tiger').appendTo(elementTiger);
+			$('.panthera').appendTo(elementPanter);
+			$('.puma').appendTo(elementPuma);
+			$('.snowBars').appendTo(elementSnowLeo);
+			$('.lion').appendTo(elementLion);
+			$('.jaguar').appendTo(elementJaguar);
+		}
+	});
+}
+disableMagnific2();
 /////////////////////////////////////////////////////////////
 // forest section
 
@@ -71,148 +162,147 @@ $('.popup-modal2').magnificPopup({
 	});
 ////////////////////////////////////////////////////////////
 // header bottom text scale function
-var lDivDataObj = {
-	wind:{img:'url(/img/images/sky2.jpg)', text:'Ветер', rightImg:''},
-	fire:{img:'url(/img/images/fireHeaderDisp.jpg)', text: 'Огонь', rightImg: ''},
-	water:{img:'url(/img/images/waterHeaderDisp.jpg)', text: 'Вода', rightImg: ''},
-	earth:{img:'url(/img/images/earth.jpg)', text: 'Земля', rightImg: ''}
-}
-var flagi = false;
 
-var timerHeader1, timerHeader2, timerHeader3, timerHeader4, timerHeader5;
-function headerAnime(iDivDataObj) {
-	// change the state
-	timerHeader1 = setTimeout(function() {
-		wind(lDivDataObj.wind.text, lDivDataObj.wind.img);
-	},0);
-	timerHeader2 = setTimeout(function() {
-		wind(lDivDataObj.fire.text, lDivDataObj.fire.img);
-	},8000);
-	timerHeader3 = setTimeout(function() {
-		wind(lDivDataObj.water.text, lDivDataObj.water.img);
-	},16000);
-	timerHeader4 = setTimeout(function() {
-		wind(lDivDataObj.earth.text, lDivDataObj.earth.img);
-	},24000);
-	timerHeader5 = setTimeout(function() {
-		// off button
-		$('.circleImg').off('click');
-			$('.circleImg').on('click', offTimerHeader);
-			// css
-			$('.circleImg').attr('src', '/img/images/button3.png');
-			$('.circleImg').css({width:'150px', height:'150px',
-			 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
-			 -2px 2px 6px gray, 2px -2px 6px gray'});
-			$('.into03, .into04, .into05, .into06')
-			.css('box-shadow', '2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset,\
-				-2px 2px 6px #7F7F7F inset, 2px -2px 6px #7F7F7F inset');
-			$('.bDiv').css('border', '1px solid #99747A');
-	},32000);
-}
-function offTimerHeader() {
-	clearTimeout(timerHeader1);
-	clearTimeout(timerHeader2);
-	clearTimeout(timerHeader3);
-	clearTimeout(timerHeader4);
-	clearTimeout(timerHeader5);
-}
-function wind(txt,img) {
-	$('#bDivTextP').text(txt);
-	$('.wrapperImg').css('background-image', img);
-	// start css animation
-	$('#bDivTextP').addClass('anima');
-	setTimeout(function() {
-		$('.wrapperImg').fadeIn(1000);
-	},3300);
-	setTimeout(function() {
-		$('.wrapperImg').fadeOut(1000);
-		$('#bDivTextP').removeClass('anima');
-	},7000);
-}
-// button toggle function 
-function mDown() {
-	switch (true) {
-		case (flagi == false ) :
-			$('.circleImg').on('click', lDivDataObj, headerAnime);
-			$('.circleImg').css({width:'140px',height:'140px',
-				'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
-				-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
-			// css
-			$('.circleImg').attr('src', '/img/images/button2.png');
-			$('.into03, .into04, .into05, .into06')
-			.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
-			$('.bDiv').css('border', '1px solid #19B9F5');
-			// change flag
-			flagi = true;
+function film() {
+	var lDivDataObj = {
+		wind:{img:'url(/img/images/sky2.webp)', text:'Ветер', rightImg:''},
+		fire:{img:'url(/img/images/fireHeaderDisp.webp)', text: 'Огонь', rightImg: ''},
+		water:{img:'url(/img/images/waterHeaderDisp.webp)', text: 'Вода', rightImg: ''},
+		earth:{img:'url(/img/images/earth.webp)', text: 'Земля', rightImg: ''}
+	}
+	var flagi = false;
+	var timerHeader1, timerHeader2, timerHeader3, timerHeader4, timerHeader5;
+	function headerAnime(iDivDataObj) {
+		// change the state
+		timerHeader1 = setTimeout(function() {
+			wind(lDivDataObj.wind.text, lDivDataObj.wind.img);
+		},0);
+		timerHeader2 = setTimeout(function() {
+			wind(lDivDataObj.fire.text, lDivDataObj.fire.img);
+		},8000);
+		timerHeader3 = setTimeout(function() {
+			wind(lDivDataObj.water.text, lDivDataObj.water.img);
+		},16000);
+		timerHeader4 = setTimeout(function() {
+			wind(lDivDataObj.earth.text, lDivDataObj.earth.img);
+		},24000);
+		timerHeader5 = setTimeout(function() {
+			// off button
+				// css
+				$('.circleImg').attr('src', '/img/images/button3.webp');
+				$('.circleImg').css({width:'150px', height:'150px',
+				 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
+				 -2px 2px 6px gray, 2px -2px 6px gray'});
+				$('.into03, .into04, .into05, .into06')
+				.css('box-shadow', '2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset,\
+					-2px 2px 6px #7F7F7F inset, 2px -2px 6px #7F7F7F inset');
+				$('.bDiv').css('border', '1px solid #99747A');
+				flagi = false;
+		},32000);
+	}
+	function offTimerHeader() {
+		clearTimeout(timerHeader1);
+		clearTimeout(timerHeader2);
+		clearTimeout(timerHeader3);
+		clearTimeout(timerHeader4);
+		clearTimeout(timerHeader5);
+	}
+	function wind(txt,img) {
+		$('#bDivTextP').text(txt);
+		$('.wrapperImg').css('background-image', img);
+		// start css animation
+		$('#bDivTextP').addClass('anima');
+		setTimeout(function() {
+			$('.wrapperImg').fadeIn(1000);
+		},3300);
+		setTimeout(function() {
+			$('.wrapperImg').fadeOut(1000);
+			$('#bDivTextP').removeClass('anima');
+		},7000);
+	}
+	// button toggle function 
+	function mDown() {
+		switch (true) {
+			case (flagi == false ) :
+				$('.circleImg').off('click').one('click', lDivDataObj, headerAnime);
+				$('.circleImg').css({width:'140px',height:'140px',
+					'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
+					-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
+				// css
+				$('.circleImg').attr('src', '/img/images/button2.webp');
+				$('.into03, .into04, .into05, .into06')
+				.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
+				$('.bDiv').css('border', '1px solid #19B9F5');
+				// change flag
+				flagi = true;
+				break;
+			case (flagi == true) :
+					$('.circleImg').off('click');
+					$('.circleImg').one('click', offTimerHeader);
+					// css
+					$('.circleImg').attr('src', '/img/images/button3.webp');
+					$('.circleImg').css({width:'150px',height:'150px',
+					 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
+					 -3px 3px 6px gray, 3px -3px 6px gray'});
+					$('.into03, .into04, .into05, .into06')
+					.css('box-shadow', '3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset');
+					$('.bDiv').css('border', '1px solid #99747A');
+					// change flag
+					flagi = false;
 			break;
-		case (flagi == true) :
-			$('.circleImg').off('click');
-			$('.circleImg').on('click', offTimerHeader);
-			// css
-			$('.circleImg').attr('src', '/img/images/button3.png');
-			$('.circleImg').css({width:'150px',height:'150px',
-			 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
-			 -3px 3px 6px gray, 3px -3px 6px gray'});
-			$('.into03, .into04, .into05, .into06')
-			.css('box-shadow', '3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset');
-			$('.bDiv').css('border', '1px solid #99747A');
-			// change flag
-			flagi = false;
-			break;
-	}	
-}
-// start function
-$('.circleImg').mousedown(mDown);
+		}	
+	}
+	// start function
+	$('.circleImg').on('mousedown', mDown);
 
-// hide button on resize
+	// hide button on resize
 
-var fl = 0;
-$(document).ready(function() {
-	$(window).on('resize load', hidechangeSideImgwButton);
-});
-
-function hidechangeSideImgwButton () {
-	if ($('html').outerWidth() < 700 && flagi == false){
- 		fl = 0;
-	 	$('.wrapCircleImg').click(function() {
-	 		$('.wr17').css({'transform': 'scale(.0,.0)'});
-
-	 		setTimeout(function() {
-	 			flagi = 0;
-	 			fl = 0;
-	 			$('.wr17').css({'transform': 'scale(.7,.7)'});
-	 		}, 32000);
-
-	 	});
-
-  } else if ($('html').outerWidth() < 700 && flagi == true) {
-		$('.wrapCircleImg').one('click', function() {
-			$(window).trigger('resize');
-		});
-
-	} else if ($('html').outerWidth() > 700 && flagi == true) {
-  	$('.wrapCircleImg').one('click', function() {
-			$(window).trigger('resize');
-		});
-  	$('.wrapCircleImg').off('click');	
-		if (fl == 0) {
-    	$('.wr17').css({'transform': 'scale(.7,.7)'});
-    	fl++;
-		}
-	} 
-}
-///////////////////////////////////////////////////////////
-// replace red TopLine at forest section  
-function replaceTopLine() {
+	var fl = 0;
 	$(document).ready(function() {
-		if ($(window).outerWidth() <= 992) {
-			$('.theLostRiverText3').css({position:'relative',bottom:'116px',zIndex: '11'}).appendTo($('.wrapVItem'));
-		}	else {
-			$('.theLostRiverText3').css({position:'relative',bottom:'8px',zIndex: '11'}).insertAfter($('.theLostRiverText2'));
-		}
+		$(window).on('resize load', hidechangeSideImgwButton);
 	});
+
+	function hidechangeSideImgwButton () {
+		if ($('html').outerWidth() < 700 && flagi == false){
+	 		fl = 0;
+	 		// $('.wr17').css({'display': 'none'});
+		 	$('.wrapCircleImg').click(function() {
+		 		$('.wr17').css({'transform': 'scale(.0,.0)'});
+
+		 		setTimeout(function() {
+		 			flagi = 0;
+		 			fl = 0;
+		 			$('.wr17').css({'transform': 'scale(.71,.71)'});
+		 		}, 32000);
+
+		 	});
+
+	  } else if ($('html').outerWidth() < 700 && flagi == true) {
+	  	// offTimerHeader();
+	  	 // $('.wrapperImg').css({'background-image': 'url(/img/images/waterHeaderDisp.webp)', 'display': 'block'})
+			$('.wrapCircleImg').one('click', function() {
+				$(window).trigger('resize');
+			});
+
+		} else if ($('html').outerWidth() > 700 && flagi == true) {
+	  	$('.wrapCircleImg').one('click', function() {
+				$(window).trigger('resize');
+			});
+	  	$('.wrapCircleImg').off('click');	
+			if (fl == 0) {
+	    	$('.wr17').css({'transform': 'scale(.71,.71)'});
+	    	fl++;
+			}
+		} 
+	}
 }
-$(window).on('load resize', replaceTopLine);
+// if ($(window).outerWidth() > 768) {
+	film();
+// } 
+	
+///////////////////////////////////////////////////////////
+ 
+
 ///////////////////////////////////////////////////////////////////////
 //afterHeader section change image
 var sectionObj = [
@@ -337,7 +427,7 @@ var sectionObj2 = [
 		centerTxt: 'Смородина'
 	},
 	{
-		leftSrc: '3800px 0',
+		leftSrc: '4000px 0',
 		rightSRC: '3800px 0',
 		centerTxt: 'Черника'
 	},
@@ -367,7 +457,6 @@ var sectionObj2 = [
 		centerTxt: 'Виноград'
 	}
 ];
-
 var indexO2 = 0;		
 function changeCount2(event) {
 	switch(true) {
@@ -506,62 +595,28 @@ function changeCount3(event) {
 
 ///////////////////////////////////////////////////////////////////////
 var fl = false;
+var arrNameClass = [
+	'.duck', '.duck2','.ej','.ej2','.catsImg','.catsImg2'
+]
 $(document).ready(function() {
-	$('.duck').on('click', function(event) {
-		if (fl == false) {
-			changeCount(event)
-			fl = true;
-			setTimeout(function() {
-				fl = false;
-			},150);
-		}
-	});
-	$('.duck2').on('click', function(event) {
-		if (fl == false) {
-			changeCount(event)
-			fl = true;
-			setTimeout(function() {
-				fl = false;
-			},150);
-		}	
-	});
-	$('.ej').on('click', function(event) {
-		if (fl == false) {
-			changeCount2(event)
-			fl = true;
-			setTimeout(function() {
-				fl = false;
-			},150);
-		}
-	});
-	$('.ej2').on('click', function(event) {
-		if (fl == false) {
-			changeCount2(event)
-			fl = true;
-			setTimeout(function() {
-				fl = false;
-			},150);
-		}
-	});
-	$('.catsImg').on('click', function(event) {
-		if (fl == false) {
-			changeCount3(event)
-			fl = true;
-			setTimeout(function() {
-				fl = false;
-			},150);
-		}
-	});
-	$('.catsImg2').on('click', function(event) {
-		if (fl == false) {
-			changeCount3(event)
-			fl = true;
-			setTimeout(function() {
-				fl = false;
-			},150);
-		}
-	});
-});
+	for (i = 0; i < arrNameClass.length; i++) {
+
+
+		$(arrNameClass[i]).on('click', function(event) {
+			if (fl == false) {
+				changeCount(event);
+				changeCount2(event);
+				changeCount3(event);
+				fl = true;
+				setTimeout(function() {
+					fl = false;
+				},150);
+			}
+		});
+
+	}
+})
+
 ///////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 // display param
@@ -591,7 +646,7 @@ var forestText = {
 	deserts: 'Пустыни - это огромные территории не плодотворных участков почвы,  лишённые практически всякой растительности. \
 	Пустыни бывают песчаные, каменистые, глинистые, а также некоторые арктические пространства называют пустынями. \
 	Несмотря на суровый климат, пресмыкающиеся, грызуны, \
-  некоторые птицы и даже такие крупные животные как - верблюды представляют животный мир пустынь. ',
+  	некоторые птицы и даже такие крупные животные как - верблюды представляют животный мир пустынь. ',
 	fields: 'Поля охватывают значительную часть наземного пространства, не имея высокой растительности. \
 	За эту особенность их иногда даже называют бескрайними. На полях растут: либо культурные сорта растений и трав, либо дикорастущие. Не имея \
 	особых преград, ветер в поле гуляет особенно сильно.',
@@ -620,69 +675,69 @@ var anyArr = [];
 	// img Obj path for imgs
 var locationObj = {
 	numbers: [
-		'/img/images/numbers/1.png',
-		'/img/images/numbers/2.png',
-		'/img/images/numbers/3.png',
-		'/img/images/numbers/4.png',
-		'/img/images/numbers/5.png'
+		'/img/images/numbers/1.webp',
+		'/img/images/numbers/2.webp',
+		'/img/images/numbers/3.webp',
+		'/img/images/numbers/4.webp',
+		'/img/images/numbers/5.webp'
 	],
 	rivers: [
-		'/img/images/rivers/1.png',
-		'/img/images/rivers/2.png',
-		'/img/images/rivers/3.png',
-		'/img/images/rivers/4.png',
-		'/img/images/rivers/5.png'
+		'/img/images/rivers/1.webp',
+		'/img/images/rivers/2.webp',
+		'/img/images/rivers/3.webp',
+		'/img/images/rivers/4.webp',
+		'/img/images/rivers/5.webp'
 	],
 	forest: [
-		'/img/images/forest/1.png',
-		'/img/images/forest/2.png',
-		'/img/images/forest/3.png',
-		'/img/images/forest/4.png',
-		'/img/images/forest/5.png'
+		'/img/images/forest/1.webp',
+		'/img/images/forest/2.webp',
+		'/img/images/forest/3.webp',
+		'/img/images/forest/4.webp',
+		'/img/images/forest/5.webp'
 	],
 	mountain: [
-		'/img/images/mountain/1.png',
-		'/img/images/mountain/2.png',
-		'/img/images/mountain/3.png',
-		'/img/images/mountain/4.png',
-		'/img/images/mountain/5.png'
+		'/img/images/mountain/1.webp',
+		'/img/images/mountain/2.webp',
+		'/img/images/mountain/3.webp',
+		'/img/images/mountain/4.webp',
+		'/img/images/mountain/5.webp'
 	],
 	fields: [
-		'/img/images/fields/1.png',
-		'/img/images/fields/2.png',
-		'/img/images/fields/3.png',
-		'/img/images/fields/4.png',
-		'/img/images/fields/5.png'
+		'/img/images/fields/1.webp',
+		'/img/images/fields/2.webp',
+		'/img/images/fields/3.webp',
+		'/img/images/fields/4.webp',
+		'/img/images/fields/5.webp'
 	],
 	seas: [
-		'/img/images/seas/1.png',
-		'/img/images/seas/2.png',
-		'/img/images/seas/3.png',
-		'/img/images/seas/4.png',
-		'/img/images/seas/5.png'
+		'/img/images/seas/1.webp',
+		'/img/images/seas/2.webp',
+		'/img/images/seas/3.webp',
+		'/img/images/seas/4.webp',
+		'/img/images/seas/5.webp'
 	],
 	deserts: [
-		'/img/images/deserts/1.png',
-		'/img/images/deserts/2.png',
-		'/img/images/deserts/3.png',
-		'/img/images/deserts/4.png',
-		'/img/images/deserts/5.png'
+		'/img/images/deserts/1.webp',
+		'/img/images/deserts/2.webp',
+		'/img/images/deserts/3.webp',
+		'/img/images/deserts/4.webp',
+		'/img/images/deserts/5.webp'
 	],
 	jungles: [
-		'/img/images/jungles/1.png',
-		'/img/images/jungles/2.png',
-		'/img/images/jungles/3.png',
-		'/img/images/jungles/4.png',
-		'/img/images/jungles/5.png'
+		'/img/images/jungles/1.webp',
+		'/img/images/jungles/2.webp',
+		'/img/images/jungles/3.webp',
+		'/img/images/jungles/4.webp',
+		'/img/images/jungles/5.webp'
 	]
 	}
 	var index = 0;
 
-$(document).ready(function() {
+
   function myCh() {
     function changeRiversContent() {
-			$('#imgContent').attr('src', '/img/images/rivers/1.png');
-			$('#imgContent2').attr('src', '/img/images/rivers/6.png');
+			$('#imgContent').attr('src', '/img/images/rivers/1.webp');
+			$('#imgContent2').attr('src', '/img/images/rivers/6.webp');
 			$('#headerLeftSection p').text(fTxt.rivers);
 			// src for popup
 			var atrLeft = $('#imgContent2').attr('src');
@@ -713,8 +768,8 @@ $(document).ready(function() {
   function myCh2() {
 // change display
   	function changeForestContent() {
-		$('#imgContent').attr('src', '/img/images/forest/1.png');
-		$('#imgContent2').attr('src', '/img/images/forest/6.png');
+		$('#imgContent').attr('src', '/img/images/forest/1.webp');
+		$('#imgContent2').attr('src', '/img/images/forest/6.webp');
 // change miniText
 		$('#headerLeftSection p').text(fTxt.forests);
 // change attr href for popup
@@ -748,11 +803,10 @@ $(document).ready(function() {
   	$('.bgImage5').off('click').one('click', myCh6);
   	$('.bgImage6').off('click').one('click', myCh7);
   };
-
   function myCh3() {
   	function changeMountainContent() {
-			$('#imgContent').attr('src', '/img/images/mountain/1.png');
-			$('#imgContent2').attr('src', '/img/images/mountain/6.png');
+			$('#imgContent').attr('src', '/img/images/mountain/1.webp');
+			$('#imgContent2').attr('src', '/img/images/mountain/6.webp');
 			$('#headerLeftSection p').text(fTxt.mountains);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -778,12 +832,11 @@ $(document).ready(function() {
   	$('.bgImage5').off('click').one('click', myCh6);
   	$('.bgImage6').off('click').one('click', myCh7);
   };
-
   function myCh4() {
   	$('.bgImage3').addClass('bgImage3no');
       function changeFieldsContent() {
-				$('#imgContent').attr('src', '/img/images/fields/1.png');
-				$('#imgContent2').attr('src', '/img/images/fields/6.png');
+				$('#imgContent').attr('src', '/img/images/fields/1.webp');
+				$('#imgContent2').attr('src', '/img/images/fields/6.webp');
 				$('#headerLeftSection p').text(fTxt.fields);
 				var atrLeft = $('#imgContent2').attr('src');
 				var atrRight = $('#imgContent').attr('src');
@@ -811,8 +864,8 @@ $(document).ready(function() {
   };
   function myCh5() {
   	function changeSeasContent() {
-			$('#imgContent').attr('src', '/img/images/seas/1.png');
-			$('#imgContent2').attr('src', '/img/images/seas/6.png');
+			$('#imgContent').attr('src', '/img/images/seas/1.webp');
+			$('#imgContent2').attr('src', '/img/images/seas/6.webp');
 			$('#headerLeftSection p').text(fTxt.seas);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -840,8 +893,8 @@ $(document).ready(function() {
   };
   function myCh6() {
   	function changeDesertsContent() {
-			$('#imgContent').attr('src', '/img/images/deserts/1.png');
-			$('#imgContent2').attr('src', '/img/images/deserts/6.png');
+			$('#imgContent').attr('src', '/img/images/deserts/1.webp');
+			$('#imgContent2').attr('src', '/img/images/deserts/6.webp');
 			$('#headerLeftSection p').text(fTxt.deserts);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -869,8 +922,8 @@ $(document).ready(function() {
   };
   function myCh7() {
   	function changeJunlesContent() {
-			$('#imgContent').attr('src', '/img/images/jungles/1.png');
-			$('#imgContent2').attr('src', '/img/images/jungles/6.png');
+			$('#imgContent').attr('src', '/img/images/jungles/1.webp');
+			$('#imgContent2').attr('src', '/img/images/jungles/6.webp');
 			$('#headerLeftSection p').text(fTxt.jungles);
 			var atrLeft = $('#imgContent2').attr('src');
 			var atrRight = $('#imgContent').attr('src');
@@ -902,38 +955,11 @@ $(document).ready(function() {
 	$('.bgImage2').one('click', myCh3);
 	$('.bgImage3').one('click', myCh4);
 		////////////////////////////////////////////////////////
-		// start field function without flicker when reload page
-		$(window).on('load', function() {
-			$('.bgImage3').addClass('bgImage3no');
 
-			$('#headerLeftSection p').text(fTxt.fields).fadeIn(60);
-			var atrLeft = $('#imgContent2').attr('src');
-			var atrRight = $('#imgContent').attr('src');
-			$('#popupLeft').attr('href', atrLeft);
-			$('#popupRight').attr('href', atrRight);
-  	
-  		index = 0;
-			$('#num').attr('src', locationObj.numbers[index]);
-			anyArr = locationObj.fields;
-			$('.wrapVItem *').css('box-shadow','');
-			$('.bgImage3, .bgImage3 div, .bgImage3 div div')
-			.css('box-shadow', '3px 3px 6px #FFB352 inset, -3px -3px 6px #FFB352 inset');
-			$('.into31 div:first-child')
-			.removeClass('bgImage2no bgImage1no bgImage4no bgImage5no bgImage6no bgImage7no');
-			$(this).addClass('bgImage3no');
-  		$('.bgImage3').off('click');
-  		$('.bgImage7').one('click', myCh2);
-  		$('.bgImage1').one('click', myCh);
-  		$('.bgImage2').one('click', myCh3);
-  		$('.bgImage4').one('click', myCh5);
-  		$('.bgImage5').one('click', myCh6);
-  		$('.bgImage6').one('click', myCh7);
-		});
-		/////////////////////////////////////////////////////////
 	$('.bgImage4').one('click', myCh5);
 	$('.bgImage5').one('click', myCh6);
 	$('.bgImage6').one('click', myCh7);
-});
+
 // forest slide and changeSideImgw counter
 $(document).ready(function() {	
 	$('.arrowRight').click(function() {
@@ -976,7 +1002,6 @@ function replaceForestTextLeft(){
 
 $(window).on('load resize', replaceFText);
 
-
 //animal section
 // hide animal text
 $(document).ready(function() {
@@ -997,28 +1022,28 @@ $(document).ready(function() {
 
 	var counterImg = 1, arrObj = [
 		  {
-		  	url:'url(/img/images/ownFriends/3Animals.jpg',
+		  	url:'url(/img/images/ownFriends/3Animals.webp',
 				headerText: 'Медведь',
 				bodyText: 'Лесной тяжеловес, любитель мёда.',
 				bgp: '0 0',
-				miniDisLeft: 'url(/img/images/ownFriends/bear/allBears.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/bear/allBears.jpg)'
+				miniDisLeft: 'url(/img/images/ownFriends/bear/allBears.webp)',
+				miniDisRight: 'url(/img/images/ownFriends/bear/allBears.webp)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/3Animals.jpg',
+	    	url:'url(/img/images/ownFriends/3Animals.webp',
 				headerText: 'Орёл',
 				bodyText: 'Крылатый истребитель, гроза неба.',
 				bgp: '-150px 0',
-				miniDisLeft: 'url(/img/images/ownFriends/bird/allBirds.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/bird/allBirds.jpg)'
+				miniDisLeft: 'url(/img/images/ownFriends/bird/allBirds.webp)',
+				miniDisRight: 'url(/img/images/ownFriends/bird/allBirds.webp)'
 			},
 	    {
-	    	url:'url(/img/images/ownFriends/3Animals.jpg',
+	    	url:'url(/img/images/ownFriends/3Animals.webp',
 				headerText: 'Волк',
 				bodyText: 'Серый волк, зубами щёлк.',
 				bgp: '-300px 0',
-				miniDisLeft: 'url(/img/images/ownFriends/wolf/allWolfs.jpg)',
-				miniDisRight: 'url(/img/images/ownFriends/wolf/allWolfs.jpg)'
+				miniDisLeft: 'url(/img/images/ownFriends/wolf/allWolfs.webp)',
+				miniDisRight: 'url(/img/images/ownFriends/wolf/allWolfs.webp)'
 			}
 	];
 	
@@ -1051,8 +1076,8 @@ $(document).ready(function() {
 		CountEagleL = 1, CountBearL = 1, CountWolfL = 1;
 		CountEagleR = 1, CountBearR = 1, CountWolfR = 1;
 		setTimeout(function() {
-			$('.inImgLeft').css({'background-image': 'url(/img/images/ownFriends/bear/allBears.jpg)', 'background-position': '0 0'});
-			$('.inImgRight').css({'background-image': 'url(/img/images/ownFriends/bear/allBears.jpg)', 'background-position': '-750px 0'});	
+			$('.inImgLeft').css({'background-image': 'url(/img/images/ownFriends/bear/allBears.webp)', 'background-position': '0 0'});
+			$('.inImgRight').css({'background-image': 'url(/img/images/ownFriends/bear/allBears.webp)', 'background-position': '-750px 0'});	
 		}, 1200);
 		} else {
 			$('.lb img').attr('src', locationObj.numbers[0]);
@@ -1109,7 +1134,7 @@ $(document).ready(function() {
 // change img mini display on medium display
 	function leftBtn() {
 	$('.lb').on('mousedown', function() {
-		$(this).css('background-image', 'url(/img/favicon/click.png)');
+		$(this).css('background-image', 'url(/img/favicon/click.webp)');
 		if (counterImg == 1) {
 			$('.inImgLeft').css('background-position', leftMiniDispArr.bearLeft[CountBearL]);
 				CountBearL++;
@@ -1139,11 +1164,11 @@ $(document).ready(function() {
 	leftBtn();
 	function rightBtn() {
 	$('.lb').on('mouseup', function() {
-		$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
+		$(this).css('background-image', 'url(/img/favicon/btnUp.webp)');
 	});
 
 	$('.rb').on('mousedown', function() {
-		$(this).css('background-image', 'url(/img/favicon/click.png)');
+		$(this).css('background-image', 'url(/img/favicon/click.webp)');
 		if (counterImg == 1) {
 			$('.inImgRight').css('background-position', leftMiniDispArr.bearRight[CountBearR]);
 				CountBearR++;
@@ -1173,7 +1198,7 @@ $(document).ready(function() {
 	rightBtn();
 // for color button
 	$('.rb').on('mouseup', function() {
-		$(this).css('background-image', 'url(/img/favicon/btnUp.png)');
+		$(this).css('background-image', 'url(/img/favicon/btnUp.webp)');
 	});
 
 // change btn color
@@ -1285,14 +1310,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		// change img
 		$('#contentImg1').css('box-shadow', 'none').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/maldives1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', '/img/images/maldives1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/maldives2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', '/img/images/maldives2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/maldives2.jpg')
+			$('#contentImg2').attr('src', '/img/images/maldives2.webp')
 		}
 		// change text
 		$('#contentText, .item1 p').fadeOut('fast', function() {
@@ -1316,14 +1341,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/kanari2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', '/img/images/kanari2.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/kanari1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', '/img/images/kanari1.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/kanari1.jpg');
+			$('#contentImg2').attr('src', '/img/images/kanari1.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt3.bodyText).fadeIn(500);
@@ -1344,14 +1369,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast',function() {
-			$('#contentImg1').attr('src', '/img/images/dubay1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', '/img/images/dubay1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/dubay2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', '/img/images/dubay2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/dubay2.jpg');
+			$('#contentImg2').attr('src', '/img/images/dubay2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt2.bodyText).fadeIn(500);
@@ -1372,14 +1397,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/seysheli2.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', '/img/images/seysheli2.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/seysheli1.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', '/img/images/seysheli1.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/seysheli1.jpg');	
+			$('#contentImg2').attr('src', '/img/images/seysheli1.webp');	
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt4.bodyText).fadeIn(500);
@@ -1400,14 +1425,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/Gavai1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', '/img/images/Gavai1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/Gavai2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', '/img/images/Gavai2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/Gavai2.jpg');
+			$('#contentImg2').attr('src', '/img/images/Gavai2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt5.bodyText).fadeIn(500);
@@ -1428,14 +1453,14 @@ $(document).ready(function() {
 		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
-			$('#contentImg1').attr('src', '/img/images/bali1.jpg').fadeIn(500);
+			$('#contentImg1').attr('src', '/img/images/bali1.webp').fadeIn(500);
 		});
 		if ($(window).outerWidth() >= '992') {
 			$('#contentImg2').fadeOut('fast', function() {
-				$('#contentImg2').attr('src', '/img/images/bali2.jpg').fadeIn(500);
+				$('#contentImg2').attr('src', '/img/images/bali2.webp').fadeIn(500);
 			});
 		} else {
-			$('#contentImg2').attr('src', '/img/images/bali2.jpg');
+			$('#contentImg2').attr('src', '/img/images/bali2.webp');
 		}
 		$('#contentText, .item1 p').fadeOut('fast', function(){
 			$('#contentText').html(txt6.bodyText).fadeIn(500);
@@ -1531,42 +1556,40 @@ $(document).ready(function() {
 	});
 });
 
-
-
 // creating the angle3 section
 // function angle3() {
 // var angle3Item = $('.bgImg');
 // var arrImgUrl = [
-// 	'url(/img/images/nature/1.jpg)',
-// 	'url(/img/images/nature/2.jpg)',
-// 	'url(/img/images/nature/3.jpg)',
-// 	'url(/img/images/nature/4.jpg)',
-// 	'url(/img/images/nature/5.jpg)',
-// 	'url(/img/images/nature/6.jpg)',
-// 	'url(/img/images/nature/7.jpg)',
-// 	'url(/img/images/nature/8.jpg)',
-// 	'url(/img/images/nature/9.jpg)',
-// 	'url(/img/images/nature/10.jpg)',
-// 	'url(/img/images/nature/11.jpg)',
-// 	'url(/img/images/nature/12.jpg)',
-// 	'url(/img/images/nature/13.jpg)',
-// 	'url(/img/images/nature/14.jpg)',
-// 	'url(/img/images/nature/15.jpg)',
-// 	'url(/img/images/nature/16.jpg)',
-// 	'url(/img/images/nature/17.jpg)',
-// 	'url(/img/images/nature/18.jpg)',
-// 	'url(/img/images/nature/19.jpg)',
-// 	'url(/img/images/nature/20.jpg)',
-// 	'url(/img/images/nature/21.jpg)',
-// 	'url(/img/images/nature/22.jpg)',
-// 	'url(/img/images/nature/23.jpg)',
-// 	'url(/img/images/nature/24.jpg)',
-// 	'url(/img/images/nature/25.jpg)',
-// 	'url(/img/images/nature/26.jpg)',
-// 	'url(/img/images/nature/27.jpg)',
-// 	'url(/img/images/nature/28.jpg)',
-// 	'url(/img/images/nature/29.jpg)',
-// 	'url(/img/images/nature/30.jpg)'
+// 	'url(/img/images/nature/1.webp)',
+// 	'url(/img/images/nature/2.webp)',
+// 	'url(/img/images/nature/3.webp)',
+// 	'url(/img/images/nature/4.webp)',
+// 	'url(/img/images/nature/5.webp)',
+// 	'url(/img/images/nature/6.webp)',
+// 	'url(/img/images/nature/7.webp)',
+// 	'url(/img/images/nature/8.webp)',
+// 	'url(/img/images/nature/9.webp)',
+// 	'url(/img/images/nature/10.webp)',
+// 	'url(/img/images/nature/11.webp)',
+// 	'url(/img/images/nature/12.webp)',
+// 	'url(/img/images/nature/13.webp)',
+// 	'url(/img/images/nature/14.webp)',
+// 	'url(/img/images/nature/15.webp)',
+// 	'url(/img/images/nature/16.webp)',
+// 	'url(/img/images/nature/17.webp)',
+// 	'url(/img/images/nature/18.webp)',
+// 	'url(/img/images/nature/19.webp)',
+// 	'url(/img/images/nature/20.webp)',
+// 	'url(/img/images/nature/21.webp)',
+// 	'url(/img/images/nature/22.webp)',
+// 	'url(/img/images/nature/23.webp)',
+// 	'url(/img/images/nature/24.webp)',
+// 	'url(/img/images/nature/25.webp)',
+// 	'url(/img/images/nature/26.webp)',
+// 	'url(/img/images/nature/27.webp)',
+// 	'url(/img/images/nature/28.webp)',
+// 	'url(/img/images/nature/29.webp)',
+// 	'url(/img/images/nature/30.webp)'
 	
 // ];
 //  	var randImageNumber = Math.floor(Math.random() * arrImgUrl.length);
@@ -1628,7 +1651,6 @@ $(document).ready(function() {
 // 	},2000);
 // };
 // angle3();
-
 //hide 3angle
 var w = $('.w2, .w-3');
 var p = $('#w2').parent();
@@ -1667,7 +1689,6 @@ function hideAngle3() {
  		  $('.wu1, .wu-1').fadeIn('slow');
 	}
 }
-
 /////////////////////////////////////
 //random balls
 // function changePlaceBalls() {
@@ -1760,8 +1781,6 @@ var flagConTime = false, flagContOff = null;
 				},2000);
 		}
 	});
-
-
 function hideContacts() {
 	switch (true) {
 			case (contactFlag == false && flagPhone || flagSkype || flagGmail == true) :
@@ -1810,7 +1829,6 @@ function hideContacts() {
 				},750);
 				$('.icon-comment-empty').css({'left': '-15px', 'position': 'relative'});
 				// off click author and support
-
 				break;
 			case (contactFlag == false) :
 				// hide support text
@@ -1914,7 +1932,6 @@ function hideHeader() {
 }
 ///////////////////////////////////
 
-
 var f = true;
 	$('.icon-handshake-o').on('click', hideHeader2);
 		function hideHeader2() {
@@ -1938,38 +1955,38 @@ var f = true;
 ///////////////////////////////////////////
 
 var textContentBook = [
-	{"text":"", "img":"url(/img/images/nature2.png)"},
-	{"text":"", "img":"url(/img/images/nature/1.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/2.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/3.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/4.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/5.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/6.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/7.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/8.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/9.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/10.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/11.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/12.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/13.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/14.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/15.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/16.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/17.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/18.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/19.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/20.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/21.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/22.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/23.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/24.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/25.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/26.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/27.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/28.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/29.jpg)"},
-	{"text":"", "img":"url(/img/images/nature/30.jpg)"},
-	{"text":"", "img":"url(/img/images/nature2.png)"}
+	{"text":"", "img":"url(/img/images/nature2.webp)"},
+	{"text":"", "img":"url(/img/images/nature/1.webp)"},
+	{"text":"", "img":"url(/img/images/nature/2.webp)"},
+	{"text":"", "img":"url(/img/images/nature/3.webp)"},
+	{"text":"", "img":"url(/img/images/nature/4.webp)"},
+	{"text":"", "img":"url(/img/images/nature/5.webp)"},
+	{"text":"", "img":"url(/img/images/nature/6.webp)"},
+	{"text":"", "img":"url(/img/images/nature/7.webp)"},
+	{"text":"", "img":"url(/img/images/nature/8.webp)"},
+	{"text":"", "img":"url(/img/images/nature/9.webp)"},
+	{"text":"", "img":"url(/img/images/nature/10.webp)"},
+	{"text":"", "img":"url(/img/images/nature/11.webp)"},
+	{"text":"", "img":"url(/img/images/nature/12.webp)"},
+	{"text":"", "img":"url(/img/images/nature/13.webp)"},
+	{"text":"", "img":"url(/img/images/nature/14.webp)"},
+	{"text":"", "img":"url(/img/images/nature/15.webp)"},
+	{"text":"", "img":"url(/img/images/nature/16.webp)"},
+	{"text":"", "img":"url(/img/images/nature/17.webp)"},
+	{"text":"", "img":"url(/img/images/nature/18.webp)"},
+	{"text":"", "img":"url(/img/images/nature/19.webp)"},
+	{"text":"", "img":"url(/img/images/nature/20.webp)"},
+	{"text":"", "img":"url(/img/images/nature/21.webp)"},
+	{"text":"", "img":"url(/img/images/nature/22.webp)"},
+	{"text":"", "img":"url(/img/images/nature/23.webp)"},
+	{"text":"", "img":"url(/img/images/nature/24.webp)"},
+	{"text":"", "img":"url(/img/images/nature/25.webp)"},
+	{"text":"", "img":"url(/img/images/nature/26.webp)"},
+	{"text":"", "img":"url(/img/images/nature/27.webp)"},
+	{"text":"", "img":"url(/img/images/nature/28.webp)"},
+	{"text":"", "img":"url(/img/images/nature/29.webp)"},
+	{"text":"", "img":"url(/img/images/nature/30.webp)"},
+	{"text":"", "img":"url(/img/images/nature2.webp)"}
 ]
 // define array length
 var textContentBookLength = 0;
@@ -2485,7 +2502,7 @@ window.addEventListener('scroll', function() {
   }
   timer = setTimeout(function(){
     body.classList.remove('disable-hover')
-  },300);
+  },100);
 }, false);
  //////////////////////////////////////////////////////
 // $(document).ready(function() {

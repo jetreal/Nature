@@ -487,8 +487,12 @@
 	// 	-o-animation: none !important
 	// 	-ms-animation: none !important
 	// 	animation: none !important 
-// 
-@media only screen and (max-width: 600px)// and (orientation: portrait)
+@media only screen and (max-width: 600px) // and (orientation: portrait)
+	.wr17
+		display: none
+	.wrapperImg
+		background-image: url('/img/images/waterHeaderDisp.webp')
+		display: block
 	.wrapFoo img
 		max-width: 50%
 	.firstSection, .afterFirst, .forest, .afterForest, .palmBg, .afterBeach, .glacier, .ownFriends, .beach, .angle3#angle3, .footer
@@ -552,11 +556,7 @@
 		position: absolute
 		grid-column: 1
 		grid-row: 2
-	// .contentImg1 img, .contentImg2 img
-	// // display: none
-	// // margin: 6% 3% 6% 6%
-	// width: 100%
-	// height: 220px
+
 	.item1
 		grid-column: 1
 		grid-row: 1
@@ -580,7 +580,6 @@
 		height: 100%
 		padding: 0
 		background: linear-gradient(rgba(255,255,255,.1),rgba(0,0,0,.4))
-
 		& div
 			cursor: pointer
 	.item3
@@ -624,8 +623,8 @@
 		-ms-overflow-style: none
 	.menuBtn 
 		overflow: -moz-scrollbars-none
-/* Extra Small Devices, Phones */
 
+	/* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px)
 	.lDiv
 		font-size: .82em
@@ -638,8 +637,7 @@
 		// right: 0px
 	.wrapCenterHeaderDiv
 		grid-template-columns: 146px auto
-	// .rDiv ul
-	// 	width: 170px
+
 	.headText
 		left: 0
 		padding-left: 0
@@ -651,9 +649,23 @@
 		z-index: 2
 	.theLostRiverText
 		margin: -8px 8% 20px
+		box-shadow: initial
+		border: 1px solid gray
 	.theLostRiverText2
 		margin: 18px 8% 5px
-
+	.cardShadow
+		box-shadow: initial
+		outline: 1px solid gray
+	.item5
+		box-shadow: initial
+		border: 1px solid gray
+	.textAnimal
+		box-shadow: initial
+		outline: 1px solid gray
+	.item1
+		box-shadow: initial
+		border: 1px solid gray
+		border-radius: 4px
 	.titleText
 		// display: grid
 		position: relative
@@ -697,6 +709,8 @@
 	.textGlacier
 		font-size: 1em
 	.wrapContentImg
+		box-shadow: initial
+		border: 1px solid gray
 		padding: 0%
 		column-gap: 0
 	.forest
@@ -713,6 +727,30 @@
 	.arrowRight
 		width: 30px
 		height: 30px
+	.maldivesMin0, .maldivesMin1, .maldivesMin2
+		transition: all 0s
+	.dubayMin0, .dubayMin1, .dubayMin2
+		transition: all 0s
+	.kanariMin0, .kanariMin1, .kanariMin2
+		transition: all 0s
+	.seysheliMin0, .seysheliMin1, .seysheliMin2
+		transition: all 0s
+	.gavaiMin0, .gavaiMin1, .gavaiMin2
+		transition: all 0s
+	.baliMin0, .baliMin1, .baliMin2
+		transition: all 0s
+	.arrowLeft
+		transition: all 0s
+		&:hover
+			border: 1px solid #19B9F5
+		&:active
+			transform: scale(1,1)
+	.arrowRight
+		transition: all 0s
+		&:hover
+			border: 1px solid #19B9F5
+		&:active
+			transform: scale(1,1)
 	html, body
 		overflow-x: auto
 @media only screen and (max-width: 439px)
@@ -755,27 +793,21 @@
 /*==========  Mobile First Method  ==========*/
 
 /* Custom, iPhone Retina */
-@media only screen and (min-width: 320px)
-	.fires
+@media only screen and (min-width: 320px){}
 
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px)
-	.fires
+@media only screen and (min-width: 480px){}
 
 
 /* Small Devices, Tablets */
-@media only screen and (min-width: 768px)
-	.fires
+@media only screen and (min-width: 768px){}
 
-// @media only screen and (min-width: 768px) and (max-width: 1200px)
 
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width: 992px)
-	.fires
+@media only screen and (min-width: 992px){}
 	
 	
 /* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px)
-	.fires
+@media only screen and (min-width: 1200px){}
