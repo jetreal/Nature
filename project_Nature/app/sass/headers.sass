@@ -1,4 +1,6 @@
-
+@import "vars"
+@import "mixins"
+@import "fonts"
 *	
 	margin: 0
 	padding: 0
@@ -111,7 +113,10 @@ p
 		left: 0
 		right: 0
 		background-color: rgba(0,0,0,.4)
-
+.wr16
+	position: relative
+	z-index: 1
+// .wr16 .into03,.wr16 .into04,.wr16 .into05,.wr16 .into06
 
 .top_header
 	display: grid
@@ -525,7 +530,6 @@ p
 	position: relative
 	z-index: 1
 	top: -1px
-	pointer-events: none
 .into00
 	// border: 1px solid red
 	position: relative
@@ -697,8 +701,9 @@ p
 		width: 100%
 		& a
 			cursor: default
+
 		& button
-			font-family: 'Exo 2'
+			font-family: 'Open Sans'
 			text-transform: capitalize
 			font-size: .85em
 			line-height: 1.1em
@@ -893,7 +898,61 @@ p
 	padding: 20px
 	text-align: center
 	color: gray
-	z-index: 1	
+	z-index: 1
+
+//////////////////////////////////////////////////////////////////
+// forest section
+// wrap all and text class
+.forest
+	// transition: width .5s height .5s
+	border: 1px solid #7F7F7F
+	padding: $gutter
+	position: relative
+	background-image: url('/img/images/forest.webp')
+	background-size: cover
+	background-position: center
+	background-repeat: no-repeat
+	width: 90%
+	min-height: 320px
+	height: 491px
+	margin: 0 5%
+@media only screen and (max-width: 748px)
+	height: 474px
+@media only screen and (max-width: 600px)
+	height: 665px
+.theLostRiverText
+	pointer-events: none
+	margin: 0px 8% 10px
+	position: relative
+	top: 10px
+	width: 84%
+	height: 30px
+	color: $textColor
+	background-color: rgba(40,40,40,.7)
+	font-family: "Exo 2"
+	border-radius: 10px
+	box-shadow: 3px 3px 5px gray inset, -3px -3px 5px gray inset
+.theLostRiverText2
+	border: 1px solid gray
+	padding: 10px 25px
+	margin: 8px 8% 8px
+	position: relative
+	bottom: 8px
+	width: 84%
+	height: 140px
+	background-color: rgba(40,40,40,.7)
+	border-radius: 10px
+	text-align: center
+	overflow: hidden
+	+forBGI
+	opacity: .8
+	position: absolute
+	width: 100%
+	height: 150px
+	& p
+		position: relative
+		z-index: 1
+
 
 //////////////////////////////////////////////////////////////////
 // forest section

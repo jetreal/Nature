@@ -750,7 +750,7 @@
 	justify-content: center
 	color: white
 	background-color: $bgColor
-	font-family: "Titillium_Web"
+	font-family: "Comfortaa"
 	height: 60px
 	min-width: 150px
 	letter-spacing: 2px
@@ -902,7 +902,7 @@ a.test-popup-link
 	max-width: 140px
 	// border-radius: 4px
 .catsImg
-	background-image: url('/img/images/animals/allAnimals.webp')
+	background-image: url('/img/images/animals/allAnimal2.webp')
 	background-position: 3000px 0
 	cursor: pointer
 	position: relative
@@ -912,7 +912,7 @@ a.test-popup-link
 	border-radius: 4px
 	border: 1px solid gray
 .catsImg2
-	background-image: url('/img/images/animals/allAnimals.webp')
+	background-image: url('/img/images/animals/allAnimal2.webp')
 	background-position: 3200px 0
 	cursor: pointer
 	padding: initial
@@ -922,7 +922,6 @@ a.test-popup-link
 	border: 1px solid gray
 // text and text modal
 .catText
-
 	display: grid
 	align-content: center
 	width: 100%
@@ -941,6 +940,7 @@ a.test-popup-link
 		+initial
 		height: 90px
 		+center
+		z-index: 20
 		&:before
 			display: block
 			position: absolute
@@ -1342,8 +1342,9 @@ a.test-popup-link
 	border: 2px double
 	border-radius: 100px 30px 30px 100px
 	border-style: double
-	font-family: "Wide_Latin"
+	font-family: "Exo 2"
 .cardTextHead1
+	font-weight: bold
 	+borders(gray)
 	display: grid
 	width: 100%
@@ -1368,7 +1369,7 @@ a.test-popup-link
 	color: #fff
 	padding: 0px 3px 0px 55px
 	font-size: .9em
-	font-family: "montserrat_italic"
+	font-family: "Exo 2"
 	background-image: linear-gradient(#1B1B19, #01527C, #1B1B19)
 // 2 item
 .TheCard2
@@ -1380,9 +1381,10 @@ a.test-popup-link
 	border: 2px double
 	border-radius: 100px 30px 30px 100px
 	border-style: double
-	font-family: "Wide_Latin"
+	font-family: "Exo 2"
 	z-index: 1
 .cardTextHead2
+	font-weight: bold
 	+borders(gray)
 	display: grid
 	width: 100%
@@ -1409,7 +1411,7 @@ a.test-popup-link
 	padding: 0px 3px 0px 55px
 	font-size: .9em
 	font-size: .9em
-	font-family: "montserrat_italic"
+	font-family: "Exo 2"
 	background-image: linear-gradient(#1B1B19, #01527C, #1B1B19)
 	// padding: 0 20px
 // 3 item
@@ -1421,8 +1423,9 @@ a.test-popup-link
 	border: 2px double
 	border-radius: 100px 30px 30px 100px
 	border-style: double
-	font-family: "Wide_Latin"
+	font-family: "Exo 2"
 .cardTextHead3
+	font-weight: bold
 	+borders(gray)
 	display: grid
 	width: 100%
@@ -1448,7 +1451,7 @@ a.test-popup-link
 	padding: 0px 3px 0px 55px
 	font-size: .9em
 	background-image: linear-gradient(#1B1B19, #01527C, #1B1B19)
-	font-family: "montserrat_italic"
+	font-family: "Exo 2"
 /////////////////////////////
 // common cut class 
 .into20
@@ -1503,8 +1506,6 @@ a.test-popup-link
 	transition: all .3s
 .into22, .into23, .into24, .angle12Left, .angle12Center, .angle12Right
 	box-shadow: 3px 3px 6px #6B95C7 inset, -3px -3px 6px #6B95C7 inset
-.into22:hover, .into23:hover, .into24:hover, .angle12:hover, .angle12Left:hover, .angle12Center:hover, .angle12Right:hover
-	box-shadow: 3px 3px 6px lightgray inset, -3px -3px 6px lightgray inset
 ///////////////////////////////////////////////////////////////////////
 
 // beach section
@@ -1540,7 +1541,7 @@ a.test-popup-link
 	background: linear-gradient(rgba(255,255,255,.1),rgba(0,0,0,.4))
 	grid-column: 1 / span 2
 	grid-row: 1
-	font-family: "Wide_Latin"
+	font-family: "Open Sans"
 	font-size: 150%
 	text-align: center
 	color: $textColor
@@ -1803,7 +1804,9 @@ a.test-popup-link
 	justify-content: center
 .contentImg1
 	border-radius: 4px
+	transition: transform .3s
 .contentImg2
+	transition: transform .3s
 	border-radius: 4px
 .contentImg1 img
 	display: block
@@ -1818,7 +1821,6 @@ a.test-popup-link
 	width: 100%
 	height: 230px
 	border: 1px solid gray
-
 // text container
 // wrap
 .item5
@@ -1847,6 +1849,8 @@ a.test-popup-link
 	+initial
 	height: auto
 	color: $textColor
+	text-align: left
+	text-indent: 20px
 
 .maldivesText
 	display: none
@@ -2032,7 +2036,7 @@ a.test-popup-link
 	left: 18px
 	top: -32px
 .into62:hover,.into63:hover,.into64:hover
-	box-shadow: 2px 2px 2px grey inset, -2px -2px 2px grey inset
+	box-shadow: 2px 2px 2px #F78A23 inset, -2px -2px 2px #F78A23 inset
 ////////////////////////////////
 
 ////////////////////////////////
@@ -2084,7 +2088,7 @@ a.test-popup-link
 	left: -18px
 	top: 31px
 .into72:hover,.into73:hover,.into74:hover
-	box-shadow: 2px 2px 2px grey inset, -2px -2px 2px grey inset
+	box-shadow: 2px 2px 2px #F78A23 inset, -2px -2px 2px #F78A23 inset
 ////////////////////////////////////////////////////////////////
 .bgBack1
 	background-image: url('/img/images/nature/1.webp')
@@ -2121,7 +2125,7 @@ a.test-popup-link
 	margin: 0 5%
 	clear: both
 	position: relative
-	font-family: "Titillium_Web"
+	// font-family: "Comfortaa"
 
 .grid25
 	overflow: hidden
@@ -2299,7 +2303,9 @@ a.test-popup-link
 	background-image: url('/img/images/fon.webp')
 	+forBGI
 	box-shadow: 0px 0px 12px 0px rgba(2, 2, 2, 1)
-	font-family: 'LLLisa'
+	font-family: 'Comfortaa'
+	font-size: 1.5em
+	text-decoration: underline
 .appearance
 	transform: rotateZ(360deg) scale(0, 0)
 
@@ -2679,8 +2685,7 @@ input::-webkit-inner-spin-button
 		left: -185px
 		transition: all 1s
 		color: #CBBEAE
-.opacity
-	opacity: 1
+
 .g6Cont
 	position: absolute
 	transform: rotateX(10deg)
@@ -2903,87 +2908,6 @@ input::-webkit-inner-spin-button
 	color: brown
 	top: 0
 	
-//////////////////////////
-// test containers
-// 16's angle
-
-.into00
-	// border: 1px solid red
-	position: relative
-	transform: rotate(-45deg)
-	overflow: hidden
-	width: 150px
-	height: 150px
-	left: -2px
-.into01
-	// border: 1px solid green
-	position: absolute
-	transform: rotate(22.5deg)
-	overflow: hidden
-	width: 150px
-	height: 150px
-.into02
-	overflow: hidden
-	// border: 1px solid yellow
-	transform: rotate(45deg)
-	width: 150px
-	height: 150px
-	position: absolute
-	left: 0
-	right: 0
-.into03
-	background-image: url('/img/images/balls/ball8.webp')
-	background-size: cover
-	background-repeat: no-repeat
-	overflow: hidden
-	// border: 1px solid blue
-	transform: rotate(-22.5deg)
-	width: 150px
-	height: 150px
-	transition: all 1s
-	position: absolute
-	left: 0
-	top: 0
-	text-align: center
-	box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset
-.into04
-	// border: 1px solid pink
-	transform: rotate(22.5deg)
-	overflow: hidden
-	width: 150px
-	height: 150px
-	transition: all 1s
-	position: absolute
-	left: 0
-	top: 0
-	box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset
-.into05
-	// border: 1px solid aqua
-	transform: rotate(45deg)
-	overflow: visible
-	width: 150px
-	height: 150px
-	transition: all 1s
-	position: absolute
-	left: 0
-	top: 0
-	box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset
-.into06
-	// border: 3px solid gold
-	transform: rotate(67.5deg)
-	overflow: visible
-	width: 150px
-	height: 150px
-	transition: all 1s
-	position: absolute
-	left: 0
-	top: 0
-	box-shadow: 2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset
-// .into06:hover, .into05:hover, .into04:hover, .into03:hover
-// 	box-shadow: 3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset
-// square without angle
-
-
 // 5 angle
 .intoWr
 	position: absolute
@@ -3010,7 +2934,7 @@ input::-webkit-inner-spin-button
 	height: 100px
 	// border: .1px solid red
 	transform: rotate(72deg)
-	overflow: visible // visible ---> crystal effect
+	overflow: visible
 	position: absolute
 	top: 11px
 	left: -7px
@@ -3098,148 +3022,150 @@ input::-webkit-inner-spin-button
 	box-shadow: 2px 2px 3px #19B9F5 inset, -2px -2px 3px #19B9F5 inset
 // end footer
 
-.balls
-	position: fixed
-	width: 100%
-	max-width: 1366px
-	height: 0.1px
-	display: grid
-	grid-template-columns: auto auto auto auto auto auto auto
-	overflow: visible
-	margin-top: 0px
-.ball1
-	opacity: 0
-	position: relative
-	overflow: visible
-	background-repeat: no-repeat
-	// background-image: url('/img/images/balls/ball1.webp')
-	background-position: 0 -30px
-	width: 100%
-	height: auto
-	top: -230px
-	animation: myBall1 30s ease-in-out 15s infinite 
-@keyframes myBall1
-	0%
-		opacity: 1
-		top: 5050px
-	100%
-		opacity: 1
-		top: -200px
+// .balls
+// 	position: fixed
+// 	width: 100%
+// 	max-width: 1366px
+// 	height: 0.1px
+// 	display: grid
+// 	grid-template-columns: auto auto auto auto auto auto auto
+// 	overflow: visible
+// 	margin-top: 0px
+// .ball1
+// 	// opacity: 0
+// 	position: relative
+// 	overflow: visible
+// 	background-repeat: no-repeat
+// 	// background-image: url('/img/images/balls/ball1.webp')
+// 	// background-position: 0 -30px
+// 	width: 100%
+// 	height: auto
+// 	top: -230px
+// 	animation: myBall1 25s ease-in-out 0s infinite 
+// @keyframes myBall1
+// 	0%
+// 		opacity: 1
+// 		top: 5050px
+// 	100%
+// 		opacity: 1
+// 		top: -200px
 
-.ball2
-	opacity: 0
-	position: relative
-	width: 100%
-	height: auto
-	overflow: visible
-	top: -230px
-	// background-image: url('/img/images/balls/ball2.webp')
-	background-position: 0 -30px
-	// background-size: cover
-	background-repeat: no-repeat
-	animation: myBall2 30s ease-in-out 14s infinite 
-@keyframes myBall2
-	0%
-		opacity: 1
-		top: 5050px
-	100%
-		opacity: 1
-		top: -200px
-.ball3
-	opacity: 0
-	position: relative
-	width: 100%
-	height: auto
-	overflow: visible
-	top: -230px
-	// background-image: url('/img/images/balls/ball3.webp')
-	background-position: 0 -30px
-	// background-size: cover
-	background-repeat: no-repeat
-	animation: myBall3 30s ease-in-out 12s infinite 
-@keyframes myBall3
-	0%
-		opacity: 1
-		top: 5050px
-	100%
-		opacity: 1
-		top: -200px
+// .ball2
+// 	// opacity: 0
+// 	position: relative
+// 	width: 100%
+// 	height: auto
+// 	overflow: visible
+// 	top: -230px
+// 	// background-image: url('/img/images/balls/ball2.webp')
+// 	// background-position: 0 -30px
+// 	// background-size: cover
+// 	background-repeat: no-repeat
+// 	animation: myBall2 30s ease-in-out 14s infinite 
+// @keyframes myBall2
+// 	0%
+// 		opacity: 1
+// 		top: 5050px
+// 	100%
+// 		opacity: 1
+// 		top: -200px
+// .ball3
+// 	// opacity: 0
+// 	position: relative
+// 	width: 100%
+// 	height: auto
+// 	overflow: visible
+// 	top: -230px
+// 	// background-image: url('/img/images/balls/ball3.webp')
+// 	// background-position: 0 -30px
+// 	// background-size: cover
+// 	background-repeat: no-repeat
+// 	animation: myBall3 25s ease-in-out 12s infinite
+// @keyframes myBall3
+// 	0%
+// 		opacity: 1
+// 		top: 5050px
+// 	100%
+// 		opacity: 1
+// 		top: -200px
 
-.ball4
-	opacity: 0
-	position: relative
-	width: 100%
-	height: auto
-	overflow: visible
-	top: -230px
-	// background-image: url('/img/images/balls/ball4.webp')
-	background-position: 0 -30px
-	// background-size: cover
-	background-repeat: no-repeat
-	animation: myBall4 30s ease-in-out 6s infinite 
-@keyframes myBall4
-	0%
-		opacity: 1
-		top: 5050px
-	100%
-		opacity: 1
-		top: -200px
-.ball5
-	opacity: 0
-	position: relative
-	width: 100%
-	height: auto
-	overflow: visible
-	top: -230px
-	// background-image: url('/img/images/balls/ball5.webp')
-	background-position: 0 -30px
-	// background-size: cover
-	background-repeat: no-repeat
-	animation: myBall5 30s ease-in-out 4s infinite 
-@keyframes myBall5
-	0%
-		opacity: 1
-		top: 5050px
-	100%
-		opacity: 1
-		top: -200px
-.ball6
-	opacity: 0
-	position: relative
-	width: 100%
-	height: auto
-	overflow: visible
-	top: -230px
-	// background-image: url('/img/images/balls/ball5.webp')
-	background-position: 0 -30px
-	// background-size: cover
-	background-repeat: no-repeat
-	animation: myBall6 30s ease-in-out 8s infinite 
-@keyframes myBall6
-	0%
-		opacity: 1
-		top: 5050px
-	100%
-		opacity: 1
-		top: -200px
-.ball7
-	opacity: 0
-	width: 100%
-	height: auto
-	overflow: visible
-	position: relative
-	top: -230px
-	// background-image: url('/img/images/balls/ball5.webp')
-	background-position: 0 -30px
-	// background-size: cover
-	background-repeat: no-repeat
-	top: 0
-	animation: myBall7 30s ease-in-out infinite
-@keyframes myBall7
-	0%
-		top: 5050px
-	100%
-		top: -200px
+// .ball4
+// 	// opacity: 0
+// 	position: relative
+// 	width: 100%
+// 	height: auto
+// 	overflow: visible
+// 	top: -230px
+// 	// background-image: url('/img/images/balls/ball4.webp')
+// 	// background-position: 0 -30px
+// 	// background-size: cover
+// 	background-repeat: no-repeat
+// 	animation: myBall4 30s ease-in-out 6s infinite 
+// @keyframes myBall4
+// 	0%
+// 		opacity: 1
+// 		top: 5050px
+// 	100%
+// 		opacity: 1
+// 		top: -200px
+// .ball5
+// 	// opacity: 0
+// 	position: relative
+// 	width: 100%
+// 	height: auto
+// 	overflow: visible
+// 	top: -230px
+// 	// background-image: url('/img/images/balls/ball5.webp')
+// 	// background-position: 0 -30px
+// 	// background-size: cover
+// 	background-repeat: no-repeat
+// 	animation: myBall5 25s ease-in-out 4s infinite 
+// @keyframes myBall5
+// 	0%
+// 		opacity: 1
+// 		top: 5050px
+// 	100%
+// 		opacity: 1
+// 		top: -200px
+// .ball6
+// 	// opacity: 0
+// 	position: relative
+// 	width: 100%
+// 	height: auto
+// 	overflow: visible
+// 	top: -230px
+// 	// background-image: url('/img/images/balls/ball5.webp')
+// 	// background-position: 0 -30px
+// 	// background-size: cover
+// 	background-repeat: no-repeat
+// 	animation: myBall6 30s ease-in-out 8s infinite 
+// @keyframes myBall6
+// 	0%
+// 		opacity: 1
+// 		top: 5050px
+// 	100%
+// 		opacity: 1
+// 		top: -200px
+// .ball7
+// 	// opacity: 0
+// 	width: 100%
+// 	height: auto
+// 	overflow: visible
+// 	position: relative
+// 	top: -230px
+// 	// background-image: url('/img/images/balls/ball5.webp')
+// 	background-position: 0 -30px
+// 	// background-size: cover
+// 	background-repeat: no-repeat
+
+// 	animation: myBall7 20s ease-in-out infinite
+// @keyframes myBall7
+// 	0%
+// 		opacity: 1
+// 		top: 5050px
+// 	100%
+// 		opacity: 1
+// 		top: -200px
 
 .bottomFooter
 	+gc(5)
@@ -3404,22 +3330,22 @@ input::-webkit-inner-spin-button
 	opacity: .3
 	// animation: myFlicker 1s ease-in-out infinite
 	transition: opacity 1s
-.animFlicker
-	animation: myFlicker 2s ease-in-out infinite
-.animFlicker2
-	animation: myFlicker2 1s ease-in-out infinite
-@keyframes myFlicker
-	0%
-		opacity: .1
-	50%
-		opacity: .5
-	100%
-		opacity: .1
-@keyframes myFlicker2
-	0%
-		opacity: .5
-	50%
-		opacity: .1
-	100%
-		opacity: .5
+// .animFlicker
+// 	animation: myFlicker 2s ease-in-out infinite
+// .animFlicker2
+// 	animation: myFlicker2 1s ease-in-out infinite
+// @keyframes myFlicker
+// 	0%
+// 		opacity: .1
+// 	50%
+// 		opacity: .5
+// 	100%
+// 		opacity: .1
+// @keyframes myFlicker2
+// 	0%
+// 		opacity: .5
+// 	50%
+// 		opacity: .1
+// 	100%
+// 		opacity: .5
 @import "media"

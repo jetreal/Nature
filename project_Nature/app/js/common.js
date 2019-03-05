@@ -37,7 +37,7 @@ $(window).on('load', function() {
 ////////////////////////////////////////////////////////////////////////
 
 // magnific Popup
-$(window).on('resize load', () => {
+$(window).on('resize load', function() {
 			jQuery(document).ready(function(){
 				jQuery('.test-popup-link').magnificPopup({
 					type: 'image',
@@ -51,7 +51,7 @@ $(window).on('resize load', () => {
 				},
 				removalDelay: 300,
 				mainClass: 'mfp-fade mfp-with-zoom',
-				disableOn: 768
+				disableOn: 748
 				});
 			});
 
@@ -67,7 +67,7 @@ $(window).on('resize load', () => {
 					zoom: {
 						enabled: true,
 					},
-					disableOn: 768
+					disableOn: 748
 				});	
 
 });
@@ -133,21 +133,6 @@ disableMagnific2();
 /////////////////////////////////////////////////////////////
 // forest section
 
-// nice scroll
-	// $(document).ready(function() {
-	//   $("body")
-	//     .niceScroll({cursorwidth: '10px',
-	//      autohidemode: "cursor",
-	//      zindex: 998,
-	//      cursorcolor: 'aqua',
-	//      cursorborder: '2px solid grey',
-	//      railoffset: {left: "20px"},
-	//      horizrailenabled: false,
-	//      // scrollspeed: 100,
-	//      mousescrollstep: 40,
-	//      sensitiverail: false
-	//   });
-	// });
 	$(document).ready(function() {
 	  $(".wrapItem3, .theLostRiverText2, .item5")
 	    .niceScroll({cursorwidth: '6px',
@@ -193,9 +178,9 @@ function film() {
 				$('.circleImg').css({width:'150px', height:'150px',
 				 'box-shadow': '2px 2px 6px gray, -2px -2px 6px gray,\
 				 -2px 2px 6px gray, 2px -2px 6px gray'});
-				$('.into03, .into04, .into05, .into06')
-				.css('box-shadow', '2px 2px 6px #7F7F7F inset, -2px -2px 6px #7F7F7F inset,\
-					-2px 2px 6px #7F7F7F inset, 2px -2px 6px #7F7F7F inset');
+				$('.wr17 .into03, .wr17 .into04, .wr17 .into05, .wr17 .into06')
+				.css('box-shadow', '2px 2px #7F7F7F inset, -2px -2px #7F7F7F inset,\
+					-2px 2px #7F7F7F inset, 2px -2px #7F7F7F inset');
 				$('.bDiv').css('border', '1px solid #99747A');
 				flagi = false;
 		},32000);
@@ -230,7 +215,7 @@ function film() {
 					-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
 				// css
 				$('.circleImg').attr('src', '/img/images/button2.webp');
-				$('.into03, .into04, .into05, .into06')
+				$('.wr17 .into03, .wr17 .into04, .wr17 .into05, .wr17 .into06')
 				.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
 				$('.bDiv').css('border', '1px solid #19B9F5');
 				// change flag
@@ -244,8 +229,8 @@ function film() {
 					$('.circleImg').css({width:'150px',height:'150px',
 					 'box-shadow': '3px 3px 6px gray, -3px -3px 6px gray,\
 					 -3px 3px 6px gray, 3px -3px 6px gray'});
-					$('.into03, .into04, .into05, .into06')
-					.css('box-shadow', '3px 3px 6px #7F7F7F inset, -3px -3px 6px #7F7F7F inset');
+					$('.wr17 .into03, .wr17 .into04, .wr17 .into05, .wr17 .into06')
+					.css('box-shadow', '3px 3px #7F7F7F inset, -3px -3px #7F7F7F inset');
 					$('.bDiv').css('border', '1px solid #99747A');
 					// change flag
 					flagi = false;
@@ -496,8 +481,8 @@ function changeCount2(event) {
 ///////////////////////////////////////////////////////////////////////
 var sectionObj3 = [
 	{
-		leftSrc: '3000px 0',
-		rightSRC: '3200px 0',
+		leftSrc: '3000px 1120px',
+		rightSRC: '3200px 1120px',
 		centerTxt: 'ёж',
 		popupTect: 'Образ колючего жителя лесов\
 		 и степей всем хорошо известен. Происхождение \
@@ -508,51 +493,51 @@ var sectionObj3 = [
 		  волки, лисицы, харьки, куницы, коршуны, филины, \
 		  гадюки.При встрече с противником, ёж сначала прыгает\
 		  на противника с целью уколоть, а затем клубок иголок\
-		  становится неприступной крепостью.'
+	  	становится неприступной крепостью.'
 	},
 	{
-		leftSrc: '4000px 0',
-		rightSRC: '3800px 0',
+		leftSrc: '0 0',
+		rightSRC: '200px 0',
 		centerTxt: 'Белка'
 	},
 	{
-		leftSrc: '2400px 0',
-		rightSRC: '2200px 0',
+		leftSrc: '0 840px',
+		rightSRC: '200px 840px',
 		centerTxt: 'Кабан'
 	},
 	{
-		leftSrc: '2600px 0',
-		rightSRC: '2800px 0',
+		leftSrc: '0 980px',
+		rightSRC: '200px 980px',
 		centerTxt: 'Енот'
 	},
 	{
-		leftSrc: '3600px 0',
-		rightSRC: '3400px 0',
+		leftSrc: '0 1260px',
+		rightSRC: '200px 1260px',
 		centerTxt: 'Бобр'
 	},
 	{
-		leftSrc: '1000px 0',
-		rightSRC: '1200px 0',
+		leftSrc: '0 420px',
+		rightSRC: '200px 420px',
 		centerTxt: 'Олень'
 	},
 	{
-		leftSrc: '200px 0',
-		rightSRC: '400px 0',
+		leftSrc: '0 140px',
+		rightSRC: '200px 140px',
 		centerTxt: 'Заяц'
 	},
 	{
-		leftSrc: '1600px 0',
-		rightSRC: '1400px 0',
+		leftSrc: '0 560px',
+		rightSRC: '200px 560px',
 		centerTxt: 'Лось'
 	},
 	{
-		leftSrc: '1800px 0',
-		rightSRC: '2000px 0',
+		leftSrc: '0 700px',
+		rightSRC: '200px 700px',
 		centerTxt: 'Лиса'
 	},
 	{
-		leftSrc: '800px 0',
-		rightSRC: '600px 0',
+		leftSrc: '0 280px',
+		rightSRC: '200px 280px',
 		centerTxt: 'Сова'
 	}
 ]
@@ -626,12 +611,13 @@ $(document).ready(function() {
 //   scrolled = window.pageYOffset || document.documentElement.scrollTop;
 //   document.getElementById('changeSideImgwScroll').innerHTML = scrolled + 'px';
 // }
-// 	$(window).resize(function(){
-// 	var width = $('html').outerWidth();
-// 	var height = $(window).height();
-// 	$('#width').html(width + 'px');
-// 	$('#height').html(height + 'px');
-// });
+$(window).on('load resize', function(){
+	var width = $('html').outerWidth();
+	var height = $(window).height();
+	$('#width').html(width + 'px');
+	$('#height').html(height + 'px');
+});
+
 ////////////////////////////////////////////////////////////////////////
 // var txt for display text
 var forestText = {
@@ -1307,7 +1293,7 @@ $(document).ready(function() {
 		// change hilight buttons
 		$('.wrapItem3 *, .item6 *').css('box-shadow','');
 		$('.maldivesMin1, .maldivesMin2')
-		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
+		.css('box-shadow', '3px 3px #19B9F5 inset, -3px -3px #19B9F5 inset');
 		// change img
 		$('#contentImg1').css('box-shadow', 'none').fadeOut('fast', function() {
 			$('#contentImg1').attr('src', '/img/images/maldives1.webp').fadeIn(500);
@@ -1326,19 +1312,19 @@ $(document).ready(function() {
 		});
 		// off this and on others
 		$(this).off('click');
-		$('.kanariMin1').off('click').on('click onload', kanariClick);
-		$('.dubayMin1').off('click').on('click onload', dubayClick);
-		$('.seysheliMin1').off('click').on('click onload', seysheliClick);
-		$('.gavaiMin1').off('click').on('click onload', gavaiClick);
-		$('.baliMin1').off('click').on('click onload', baliClick);
+		$('.kanariMin1').off('click').on('click', kanariClick);
+		$('.dubayMin1').off('click').on('click', dubayClick);
+		$('.seysheliMin1').off('click').on('click', seysheliClick);
+		$('.gavaiMin1').off('click').on('click', gavaiClick);
+		$('.baliMin1').off('click').on('click', baliClick);
 	};
 	// start function
- 	$('.maldivesMin1').on('click onload', maldivesClick);
+ 	$('.maldivesMin1').on('click', maldivesClick);
 
   function kanariClick () {
   	$('.wrapItem3 *, .item6 *').css('box-shadow','');
 		$('.kanariMin1, .kanariMin2')
-		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
+		.css('box-shadow', '3px 3px #19B9F5 inset, -3px -3px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
 			$('#contentImg1').attr('src', '/img/images/kanari2.webp').fadeIn(500);
@@ -1355,18 +1341,18 @@ $(document).ready(function() {
 			$('.item1 p').text(txt3.headerText).fadeIn(500);
 		});
 		$(this).off('click');
-		$('.maldivesMin1').off('click').on('click onload', maldivesClick);
-		$('.dubayMin1').off('click').on('click onload', dubayClick);
-		$('.seysheliMin1').off('click').on('click onload', seysheliClick);
-		$('.gavaiMin1').off('click').on('click onload', gavaiClick);
-		$('.baliMin1').off('click').on('click onload', baliClick);
+		$('.maldivesMin1').off('click').on('click', maldivesClick);
+		$('.dubayMin1').off('click').on('click', dubayClick);
+		$('.seysheliMin1').off('click').on('click', seysheliClick);
+		$('.gavaiMin1').off('click').on('click', gavaiClick);
+		$('.baliMin1').off('click').on('click', baliClick);
 	};
-	$('.kanariMin1').on('click onload', kanariClick);
+	$('.kanariMin1').on('click', kanariClick);
 
 	function dubayClick () {
   	$('.wrapItem3 *, .item6 *').css('box-shadow','');
 		$('.dubayMin1, .dubayMin2')
-		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
+		.css('box-shadow', '3px 3px #19B9F5 inset, -3px -3px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast',function() {
 			$('#contentImg1').attr('src', '/img/images/dubay1.webp').fadeIn(500);
@@ -1383,18 +1369,18 @@ $(document).ready(function() {
 			$('.item1 p').text(txt2.headerText).fadeIn(500);
 		});
 		$(this).off('click');
-		$('.maldivesMin1').off('click').on('click onload', maldivesClick);
-		$('.kanariMin1').off('click').on('click onload', kanariClick);
-		$('.seysheliMin1').off('click').on('click onload', seysheliClick);
-		$('.gavaiMin1').off('click').on('click onload', gavaiClick);
-		$('.baliMin1').off('click').on('click onload', baliClick);
+		$('.maldivesMin1').off('click').on('click', maldivesClick);
+		$('.kanariMin1').off('click').on('click', kanariClick);
+		$('.seysheliMin1').off('click').on('click', seysheliClick);
+		$('.gavaiMin1').off('click').on('click', gavaiClick);
+		$('.baliMin1').off('click').on('click', baliClick);
 	};
-	$('.dubayMin1').on('click onload', dubayClick);
+	$('.dubayMin1').on('click', dubayClick);
 
 	function seysheliClick () {
 		$('.wrapItem3 *, .item6 *').css('box-shadow','');
 		$('.seysheliMin1, .seysheliMin2')
-		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
+		.css('box-shadow', '3px 3px #19B9F5 inset, -3px -3px #19B9F5 inset');
 
 		$('#contentImg1').fadeOut('fast', function() {
 			$('#contentImg1').attr('src', '/img/images/seysheli2.webp').fadeIn(500);
@@ -1411,18 +1397,18 @@ $(document).ready(function() {
 			$('.item1 p').text(txt4.headerText).fadeIn(500);
 		});
 		$(this).off('click');
-		$('.maldivesMin1').off('click').off('click').on('click onload', maldivesClick);
-		$('.kanariMin1').off('click').off('click').on('click onload', kanariClick);
-		$('.dubayMin1').off('click').off('click').on('click onload', dubayClick);
-		$('.gavaiMin1').off('click').off('click').on('click onload', gavaiClick);
-		$('.baliMin1').off('click').off('click').on('click onload', baliClick);
+		$('.maldivesMin1').off('click').off('click').on('click', maldivesClick);
+		$('.kanariMin1').off('click').off('click').on('click', kanariClick);
+		$('.dubayMin1').off('click').off('click').on('click', dubayClick);
+		$('.gavaiMin1').off('click').off('click').on('click', gavaiClick);
+		$('.baliMin1').off('click').off('click').on('click', baliClick);
 	};
-	$('.seysheliMin1').on('click onload', seysheliClick);
+	$('.seysheliMin1').on('click', seysheliClick);
 
 	function gavaiClick () {
 		$('.wrapItem3 *, .item6 *').css('box-shadow','');
 		$('.gavaiMin1, .gavaiMin2')
-		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
+		.css('box-shadow', '3px 3px #19B9F5 inset, -3px -3px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
 			$('#contentImg1').attr('src', '/img/images/Gavai1.webp').fadeIn(500);
@@ -1439,18 +1425,18 @@ $(document).ready(function() {
 			$('.item1 p').text(txt5.headerText).fadeIn(500);
 		});
 		$(this).off("click");
-		$('.maldivesMin1').off('click').on('click onload', maldivesClick);
-		$('.kanariMin1').off('click').on('click onload', kanariClick);
-		$('.dubayMin1').off('click').on('click onload', dubayClick);
-		$('.seysheliMin1').off('click').on('click onload', seysheliClick);
-		$('.baliMin1').off('click').on('click onload', baliClick);
+		$('.maldivesMin1').off('click').on('click', maldivesClick);
+		$('.kanariMin1').off('click').on('click', kanariClick);
+		$('.dubayMin1').off('click').on('click', dubayClick);
+		$('.seysheliMin1').off('click').on('click', seysheliClick);
+		$('.baliMin1').off('click').on('click', baliClick);
 	};
-		$('.gavaiMin1').on('click onload', gavaiClick);
+		$('.gavaiMin1').on('click', gavaiClick);
 
 	function baliClick () {
 		$('.wrapItem3 *, .item6 *').css('box-shadow','');
 		$('.baliMin1, .baliMin2')
-		.css('box-shadow', '3px 3px 6px #19B9F5 inset, -3px -3px 6px #19B9F5 inset');
+		.css('box-shadow', '3px 3px #19B9F5 inset, -3px -3px #19B9F5 inset');
 		
 		$('#contentImg1').fadeOut('fast', function() {
 			$('#contentImg1').attr('src', '/img/images/bali1.webp').fadeIn(500);
@@ -1467,13 +1453,13 @@ $(document).ready(function() {
 			$('.item1 p').text(txt6.headerText).fadeIn(500);
 		});
 		$(this).off("click");
-		$('.maldivesMin1').off('click').on('click onload', maldivesClick);
-		$('.kanariMin1').off('click').on('click onload', kanariClick);
-		$('.dubayMin1').off('click').on('click onload', dubayClick);
-		$('.seysheliMin1').off('click').on('click onload', seysheliClick);
-		$('.gavaiMin1').off('click').on('click onload', gavaiClick);
+		$('.maldivesMin1').off('click').on('click', maldivesClick);
+		$('.kanariMin1').off('click').on('click', kanariClick);
+		$('.dubayMin1').off('click').on('click', dubayClick);
+		$('.seysheliMin1').off('click').on('click', seysheliClick);
+		$('.gavaiMin1').off('click').on('click', gavaiClick);
 	};
-	$('.baliMin1').on('click onload', baliClick);
+	$('.baliMin1').on('click ', baliClick);
 });
 
 // test slide right
@@ -1699,7 +1685,12 @@ function hideAngle3() {
 // 	}
 // setTimeout(changePlaceBalls, 45000);
 // };
-// changePlaceBalls();
+// $(document).ready(function() {
+// 	if ($(window).outerWidth() > 768) {
+// 		changePlaceBalls();
+// 	}
+// });
+		
 ////////////////////////////////////////
 // function displayError() {
 // 	var items = $('.bottomFooter [class^=line]');
@@ -2378,7 +2369,6 @@ $(window).on('resize load', function() {
 		break;
 	}
 });
-
 // action for left and right button page
 function leftButton() {
 	if (document.getElementById('numberSite').value > 1) {
@@ -2466,16 +2456,13 @@ $(document).ready(function() {
 });
 ////////////////////////////////////////
 // // preloader
-// var scrolled = window.pageYOffset || document.documentElement.scrollTop;
-// if (scrolled != 0) {
+
 	$(window).one('load', function() {
 		setTimeout(function() {
 			$('.wrapperLoader').fadeOut('slow');
 		},250);
 	});
-// } else {
-// 	$('.wrapperLoader').css({'display': 'none'});
-// }
+
 ///////////////////////////////////////////
 //smoothScroll to id
 $(document).ready(function() {
@@ -2483,7 +2470,7 @@ $(document).ready(function() {
 		(function() {
 		  $(window).on("load",function(){
 		    $("a[href*='#']").mPageScroll2id({
-		    	scrollSpeed: 500,
+		    	scrollSpeed: 700,
 		    	// onStart:function(){},
 		    	// onComplete:function(){}
 		    });
@@ -2505,12 +2492,4 @@ window.addEventListener('scroll', function() {
   },100);
 }, false);
  //////////////////////////////////////////////////////
-// $(document).ready(function() {
-// 	$(window).on('load resize', function() {
-// 	if ($(window).outerWidth() < 768) {
-// 		$('body').addClass('.userSelect');
-// 	} else {
-// 		$('body').removeClass('.userSelect');
-// 	}
-// 	});
-// });
+

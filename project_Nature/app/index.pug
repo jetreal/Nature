@@ -8,11 +8,11 @@ html(lang="en")
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		link(rel='stylesheet' href='_grid.min.css')
 		//- link(rel="stylesheet" href="css/cssLibs/magnific-popup.css")
-		//- link(rel='stylesheet' href='css/header.css')
-		link(rel='stylesheet' href='css/main.css')
-		// fonts 
-		link(rel='stylesheet' href='fonts/fontello/css/animation.css')
-		link(rel='stylesheet' href='fonts/fontello/css/myicon-codes.css')
+		//- link(rel='stylesheet' href='css/headers.css')
+		//- 
+		//- fonts 
+		//- link(rel='stylesheet' href='fonts/fontello/css/animation.css')
+		//- link(rel='stylesheet' href='fonts/fontello/css/myicon-codes.css')
 		link(rel='stylesheet' href='fonts/fontello/css/myicon.css')
 		link(rel='stylesheet' href='fonts/fontello/css/myicon-embedded.css')
 		style.
@@ -55,6 +55,8 @@ html(lang="en")
 		
 		// wrapper
 		.wrapper#wrapper
+			//- #width
+			//- #height
 			//- section.balls
 			//- 	img(src='/img/images/balls/ball1.webp' alt='balls').ball1
 			//- 	img(src='/img/images/balls/ball2.webp' alt='balls').ball2
@@ -718,9 +720,9 @@ html(lang="en")
 			//- loadCSS("_media.css");               //User Styles: Media
 			//- loadCSS("css/main.css");      
 		//- // Load CSS compiled without Bootstrap & Header styles (after release)
-		//- script.
-		//- 	var ms=document.createElement("link");ms.rel="stylesheet";
-		//- 	ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
+		script.
+			var ms=document.createElement("link");ms.rel="stylesheet";
+			ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
 		script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js')
 		// nice scroll
 		script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.5.1/jquery.nicescroll.min.js")
