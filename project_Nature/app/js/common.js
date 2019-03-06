@@ -284,7 +284,18 @@ function film() {
 
 ///////////////////////////////////////////////////////////////////////
 //afterHeader section change image
-var sectionObj = [
+// obj with imgPositions and centerTexts
+
+var indexO = 0;
+// change number 
+var dataArr = [
+	// fist
+	{
+	  index: 0,
+	  classLeft: '.duck',
+	  classRight: '.duck2',
+	  classText: '.duckText p',
+	  Obj : [
 	{
 		leftSrc: '1000px 0',
 		rightSRC: '1200px 0',
@@ -335,46 +346,15 @@ var sectionObj = [
 		rightSRC: '3200px 0',
 		centerTxt: 'Гвоздика'
 	}
-];
-var indexO = 0;
-// change number 
-function changeCount(event) {
-	switch(true) {
-		case (event.target.className == 'duck') :
-			function changeSideImg(){
-				$('.duck').css('background-position', sectionObj[indexO].leftSrc);
-				$('.duck2').css('background-position', sectionObj[indexO].rightSRC);
-				$('.duckText p').text(sectionObj[indexO].centerTxt);
-				$('#textDuckModal p:eq(0)').text(sectionObj[indexO].centerTxt);
-			}
- 	    if (indexO != sectionObj.length) {
-				indexO++;
-				if (indexO == sectionObj.length) {
-					indexO = 0;
-				}
-				changeSideImg();
-			} else {
-				indexO = 1;
-				changeSideImg();
-			}
-		break;
-		case (event.target.className == 'duck2') :
-			if (indexO != 0) {
-				indexO--;
-				changeSideImg();
-				if (indexO == 0 ) {
-					indexO = sectionObj.length;
-				}
-			} else { 
-				indexO = sectionObj.length -1
-				changeSideImg();
-			}
-		break;
-	}
-}
-
-///////////////////////////////////////////////////////////////////////
-var sectionObj2 = [
+]
+	},
+	// second
+	{
+	  index: 0,
+	  classLeft: '.ej',
+	  classRight: '.ej2',
+	  classText: '.textEj p',
+	  Obj : [
 	{
 		leftSrc: '1800px 0',
 		rightSRC: '2000px 0',
@@ -435,59 +415,19 @@ var sectionObj2 = [
 		rightSRC: '1400px 0',
 		centerTxt: 'Виноград'
 	}
-];
-var indexO2 = 0;		
-function changeCount2(event) {
-	switch(true) {
-		case (event.target.className == 'ej') :
-			function changeSideImg(){
-				$('.ej').css('background-position', sectionObj2[indexO2].leftSrc);
-				$('.ej2').css('background-position', sectionObj2[indexO2].rightSRC);
-				$('.textEj p').text(sectionObj2[indexO2].centerTxt);
-				$('#textEjModal p:eq(0)').text(sectionObj2[indexO2].centerTxt);
-			}
-			if (indexO2 != sectionObj2.length) {
-				indexO2++;
-				if (indexO2 == sectionObj2.length) {
-					indexO2 = 0;
-				}
-				changeSideImg();
-			} else {
-				indexO2 = 1;
-				changeSideImg();
-			}
-		break;
-		case (event.target.className == 'ej2') :
-			if (indexO2 != 0) {
-				indexO2--;
-				changeSideImg();
-				if (indexO2 == 0 ) {
-					indexO2 = sectionObj2.length;
-				}
-			} else { 
-				indexO2 = sectionObj2.length -1
-				changeSideImg();
-			}
-		break;
-	}
-}
-
-///////////////////////////////////////////////////////////////////////
-var sectionObj3 = [
+]
+	},
+	// thid
+	{
+		index: 0,
+	 	classLeft: '.catsImg',
+	 	classRight: '.catsImg2',
+	 	classText: '.catText p',
+	 	Obj : [
 	{
 		leftSrc: '3000px 1120px',
 		rightSRC: '3200px 1120px',
-		centerTxt: 'ёж',
-		popupTect: 'Образ колючего жителя лесов\
-		 и степей всем хорошо известен. Происхождение \
-		 названия ежа имеет латинские корни и переводится\
-		  как "колючий барьер". Ежи населяют только 2 \
-		  континента: Евразию и северные районы Африки. \
-		  Ёж миролюбим но врагов в природе у него много:\
-		  волки, лисицы, харьки, куницы, коршуны, филины, \
-		  гадюки.При встрече с противником, ёж сначала прыгает\
-		  на противника с целью уколоть, а затем клубок иголок\
-	  	становится неприступной крепостью.'
+		centerTxt: 'ёж'
 	},
 	{
 		leftSrc: '0 0',
@@ -535,63 +475,64 @@ var sectionObj3 = [
 		centerTxt: 'Сова'
 	}
 ]
-var indexO3 = 0;
-function changeCount3(event) {
+	}
+]
+
+function changeButtonImage(event, i) {
 	switch(true) {
-		case (event.target.className == 'catsImg') :
-			function changeSideImg(){
-				$('.catsImg').css('background-position', sectionObj3[indexO3].leftSrc);
-				$('.catsImg2').css('background-position', sectionObj3[indexO3].rightSRC);
-				$('.catText p').text(sectionObj3[indexO3].centerTxt);
-				$('#textCatModal p:eq(0)').text(sectionObj3[indexO3].centerTxt);
+		case (event.target.className == (dataArr[i].classLeft.replace('.',''))) :
+			function changeSideImg() {
+				$(dataArr[i].classLeft).css('background-position', dataArr[i].Obj[index].leftSrc);
+				$(dataArr[i].classRight).css('background-position', dataArr[i].Obj[index].rightSRC);
+				$(dataArr[i].classText).text(dataArr[i].Obj[index].centerTxt);
 			}
-			if (indexO3 != sectionObj3.length) {
-				indexO3++;
-				if (indexO3 == sectionObj3.length) {
-					indexO3 = 0;
+ 	    if (index != dataArr[i].Obj.length) {
+				index++;
+				if (index == dataArr[i].Obj.length) {
+					index = 0;
 				}
 				changeSideImg();
 			} else {
-				indexO3 = 1;
+				index = 1;
 				changeSideImg();
 			}
 		break;
-		case (event.target.className == 'catsImg2') :
-			if (indexO3 != 0) {
-				indexO3--;
+		case (event.target.className == (dataArr[i].classRight.replace('.',''))) :
+			if (index != 0) {
+				index--;
 				changeSideImg();
-				if (indexO3 == 0 ) {
-					indexO3 = sectionObj3.length;
+				if (index == 0 ) {
+					index = dataArr[i].Obj.length;
 				}
 			} else { 
-				indexO3 = sectionObj3.length -1
+				index = dataArr[i].Obj.length -1
 				changeSideImg();
 			}
 		break;
 	}
 }
+$(document).ready(function() {
+		$('.duck', '.duck2').on('click', function() {
+			changeButtonImage(event, 0);
+		});
+		$('.ej', '.ej2').on('click', function() {
+			changeButtonImage(event, 1);
+		});
+		$('.catsImg', '.catsImg2').on('click', function() {
+			changeButtonImage(event, 2);
+		});
+});
+		
+			
 
 
 ///////////////////////////////////////////////////////////////////////
-var fl = false;
-var arrNameClass = [
-	'.duck', '.duck2','.ej','.ej2','.catsImg','.catsImg2'
-]
-$(document).ready(function() {
-	for (i = 0; i < arrNameClass.length; i++) {
-		$(arrNameClass[i]).on('click', function(event) {
-			if (fl == false) {
-				changeCount(event);
-				changeCount2(event);
-				changeCount3(event);
-				fl = true;
-				setTimeout(function() {
-					fl = false;
-				},150);
-			}
-		});
-	}
-})
+// var fl = false;
+// var arrNameClass = [
+// 	'.duck', '.duck2', '.ej', '.ej2', '.catsImg', '.catsImg2'
+// ]
+
+
 
 //////////////////////////////////////////////////////////////////////////
 // display param
