@@ -425,8 +425,8 @@ var dataArr = [
 	 	classText: '.catText p',
 	 	Obj : [
 	{
-		leftSrc: '3000px 1120px',
-		rightSRC: '3200px 1120px',
+		leftSrc: '0px 1120px',
+		rightSRC: '200px 1120px',
 		centerTxt: 'ёж'
 	},
 	{
@@ -511,28 +511,28 @@ function changeButtonImage(event, i) {
 		break;
 	}
 }
+
+
 $(document).ready(function() {
-		$('.duck', '.duck2').on('click', function() {
-			changeButtonImage(event, 0);
-		});
-		$('.ej', '.ej2').on('click', function() {
-			changeButtonImage(event, 1);
-		});
-		$('.catsImg', '.catsImg2').on('click', function() {
-			changeButtonImage(event, 2);
-		});
+	$('.duck').on('click', function() {
+		changeButtonImage(event, 0);
+	});
+	$('.duck2').on('click', function() {
+		changeButtonImage(event, 0);
+	});
+	$('.ej').on('click', function() {
+		changeButtonImage(event, 1);
+	});
+	$('.ej2').on('click', function() {
+		changeButtonImage(event, 1);
+	});
+	$('.catsImg').on('click', function() {
+		changeButtonImage(event, 2);
+	});
+	$('.catsImg2').on('click', function() {
+		changeButtonImage(event, 2);
+	});
 });
-		
-			
-
-
-///////////////////////////////////////////////////////////////////////
-// var fl = false;
-// var arrNameClass = [
-// 	'.duck', '.duck2', '.ej', '.ej2', '.catsImg', '.catsImg2'
-// ]
-
-
 
 //////////////////////////////////////////////////////////////////////////
 // display param
@@ -924,7 +924,7 @@ $(document).ready(function() {
 		if (counterImg == 1) {
 			$(dataBtnFunc[i].displayClass).css('background-position', leftMiniDispArr.bearLeft[CountBearL]);
 				CountBearL++;
-				let elemImg = dataBtnFunc[i].btnClass + ' img';
+				var elemImg = dataBtnFunc[i].btnClass + ' img';
 			$(elemImg).attr('src', locationObj.numbers[CountBearL - 1]);
 			if (CountBearL == leftMiniDispArr.bearLeft.length) {
 				CountBearL = 0;
@@ -933,7 +933,7 @@ $(document).ready(function() {
 		if (counterImg == 2) {
 			$(dataBtnFunc[i].displayClass).css('background-position', leftMiniDispArr.eagleLeft[CountEagleL]);
 				CountEagleL++;
-				let elemImg = dataBtnFunc[i].btnClass + ' img';
+				var elemImg = dataBtnFunc[i].btnClass + ' img';
 			$(elemImg).attr('src', locationObj.numbers[CountEagleL - 1]);
 			if (CountEagleL == leftMiniDispArr.eagleLeft.length) {
 				CountEagleL = 0;
@@ -942,7 +942,7 @@ $(document).ready(function() {
 		if (counterImg == 0) {
 			$(dataBtnFunc[i].displayClass).css('background-position', leftMiniDispArr.wolfLeft[CountWolfL]);
 				CountWolfL++;
-				let elemImg = dataBtnFunc[i].btnClass + ' img';
+				var elemImg = dataBtnFunc[i].btnClass + ' img';
 				$(elemImg).attr('src', locationObj.numbers[CountWolfL - 1]);
 			if (CountWolfL == leftMiniDispArr.wolfLeft.length) {
 				CountWolfL = 0;
@@ -1073,9 +1073,9 @@ $(document).ready(function() {
 							 В дальнем Восточном Бали и северном регионе Бали вы найдете несколько мест для дайвинга мирового класса со спокойными заливами.\
 							 Они являются домом для нетронутых коралловых садов, изобилующих красочным морским биоразнообразием.'
 							}
-	]
+	];
 
-		let collectionBeach = $('.wrapItem3 > div > div');
+		var collectionBeach = $('.wrapItem3 > div > div');
 		function commonBeach(i, el) {
 			// remove and add box-shadow
 			var el2 = '.' + el.className.replace('1', '2');
@@ -1185,14 +1185,7 @@ $(document).ready(function() {
 });
 
 //hide angle
-$(document).ready(function() {
-	$(window).on('load resize', function() {
-		hideAngle0();
-		hideAngle1();
-		hideAngle2();
-		hideAngle3();
-	});
-});
+
 // creating the angle3 section
 // function angle3() {
 // var angle3Item = $('.bgImg');
@@ -1289,43 +1282,43 @@ $(document).ready(function() {
 // };
 // angle3();
 //hide 3angle
-var w = $('.w2, .w-3');
-var p = $('#w2').parent();
-function hideAngle0() {
-	if ($(window).outerWidth() <= '1242') {
-    $('.w2, .w-3').fadeOut('slow', function() {
-      w.detach(); 
-    });
-      return this; 
-} else {
-  	p.append(w);
- 		    $('.w2, .w-3').fadeIn('slow');
-}
-}
-function hideAngle1() {
-		if ($(window).outerWidth() <= '1040'){
-      $('.wu2, .wu-2').fadeOut('slow');
-        return this; 
-  } else {
- 		  $('.wu2, .wu-2').fadeIn('slow');
-	}
-}
-function hideAngle2() {
-	if ($(window).outerWidth() <= '840'){
-      $('.w1, .w-2').fadeOut('slow');
-        return this; 
+var arrAngle = [
+	{
+		classesName: '.w2, .w-3',
+		windowWidth: '1242',
+	},
+	{
+		classesName: '.wu2, .wu-2',
+		windowWidth: '1040',
+	},
+	{
+		classesName: '.w1, .w-2',
+		windowWidth: '840',
+	},
+	{
+		classesName: '.wu1, .wu-1',
+		windowWidth: '635',
+	},
+]
+function hideAngle(i) {
+	if ($(window).outerWidth() <= arrAngle[i].windowWidth) {
+	  $(arrAngle[i].classesName).fadeOut('slow');
+	  return this; 
 	} else {
- 		  $('.w1, .w-2').fadeIn('slow');
+ 	  $(arrAngle[i].classesName).fadeIn('slow');
 	}
 }
-function hideAngle3() {
-	if ($(window).outerWidth() <= '635'){
-      $('.wu1, .wu-1').fadeOut('slow');
-        return this;
-	} else {
- 		  $('.wu1, .wu-1').fadeIn('slow');
+// start functions
+function startHideAngle() {
+	for (var i = 0; i < arrAngle.length; i++) {
+    hideAngle(i);
 	}
 }
+$(document).ready(function() {
+	$(window).on('load resize', startHideAngle);
+});
+	
+
 /////////////////////////////////////
 //random balls
 // function changePlaceBalls() {
@@ -1439,9 +1432,9 @@ function hideContacts() {
 					$('.contactSection i').css('color', '#ADD8E6');
 					// on click
 					setTimeout(function() {
-						$('.phone').on("click", {class: "#phone", leftHide: "-110px", thisFlag: "flagPhone"}, movePhoneLeft);
-						$('.skype').on("click", {class: "#skype", leftHide: "-110px", thisFlag: "flagSkype"}, movePhoneLeft);
-						$('.gmail').on("click", {class: "#gmail", leftHide: "-170px", thisFlag: "flagGmail"}, movePhoneLeft);
+						$('.phone').on("click", conArrData[0], movePhoneLeft);
+						$('.skype').on("click", conArrData[1], movePhoneLeft);
+						$('.gmail').on("click", conArrData[2], movePhoneLeft);
 
 					},800);
 				},500);
@@ -1649,9 +1642,13 @@ var frR = 1, frRD = 2;
 function naming() {
 	$(document).ready(function() {
 		// bg site
+		// number pages
 		$('.site01 div.fistDivSite:eq(1) span').text(contentPages[0]);
+		// text pages (this apsent)
 		$('.site01 div.fistDivSite:eq(1) div p').text(textContentBook[0].text);
+		// image pages
 		$('.site01 div.fistDivSite:eq(1) div.wrapPages').css('background-image',textContentBook[0].img);
+
 		$('.site01 div.fistDivSite:eq(2) span').text(contentPages[3]);
 		$('.site01 div.fistDivSite:eq(2) div p').text(textContentBook[3].text);
 		$('.site01 div.fistDivSite:eq(2) div.wrapPages').css('background-image',textContentBook[3].img);
@@ -2120,7 +2117,7 @@ $(document).ready(function() {
 		(function() {
 		  $(window).on("load",function(){
 		    $("a[href*='#']").mPageScroll2id({
-		    	scrollSpeed: 700,
+		    	scrollSpeed: 500,
 		    	// onStart:function(){},
 		    	// onComplete:function(){}
 		    });
