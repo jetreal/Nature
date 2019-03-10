@@ -7,25 +7,8 @@
 
 // start forest function without flicker when reload page
 $(window).on('load', function() {
-	setTimeout(function() {
-		$('.bgImage3').triggerHandler('click');
-		$('#headerLeftSection p').text(dataForest[2].headText).fadeIn(60);
-		var atrLeft = $('#imgContent2').attr('src');
-		var atrRight = $('#imgContent').attr('src');
-		$('#popupLeft').attr('href', atrLeft);
-		$('#popupRight').attr('href', atrRight);
-			index = 0;
-		$('#num').attr('src', locationObj.numbers[index]);
-		anyArr = locationObj.fields;
-		$('.wrapVItem *').css('box-shadow','');
-		$(dataForest[2].classesForBoxshadow)
-		.css('box-shadow', '3px 3px 6px #FFB352 inset, -3px -3px 6px #FFB352 inset');
-		$('.into31 div:first-child')
-		.removeClass(dataForest[2].classAddHilight);
-		$('.bgImage3').addClass(dataForest[2].classRemoveHilight);
-	},100);
+	$('.bgImage3').addClass(dataForest[2].classRemoveHilight);
 });
-
 ////////////////////////////////////////////////////////////////////////
 
 // magnific Popup
@@ -125,7 +108,7 @@ disableMagnific2();
 
 // nice scroll
 $(document).ready(function() {
-  $(".wrapItem3, .theLostRiverText2, .item5")
+  $(".theLostRiverText2, .item5")
     .niceScroll({cursorwidth: '6px',
       autohidemode: true,
       zindex: 998,
@@ -135,33 +118,38 @@ $(document).ready(function() {
       scrollspeed: 150,
       mousescrollstep: 30
   });
+  if ($(window).outerWidth() > 600) {
+   	$(".wrapItem3")
+    	.niceScroll({cursorwidth: '6px',
+      autohidemode: true,
+      zindex: 998,
+      cursorcolor: 'aqua',
+      cursorborder: '2px solid grey',
+      horizrailenabled: false,
+      scrollspeed: 130,
+      mousescrollstep: 30
+  	});
+  }
 });
 ////////////////////////////////////////////////////////////
-
 // header bottom text scale function
 function film() {
-	var lDivDataObj = {
-		wind:{img:'url(/img/images/sky2.webp)', text:'Ветер'},
-		fire:{img:'url(/img/images/fireHeaderDisp.webp)', text: 'Огонь'},
-		water:{img:'url(/img/images/waterHeaderDisp.webp)', text: 'Вода'},
-		earth:{img:'url(/img/images/earth.webp)', text: 'Земля'}
-	}
+	var lDivDataObj = [
+		{timer: 0, img: 'url(/img/images/sky2.webp)', txt: 'Ветер', time: 0},
+		{timer: 0, img: 'url(/img/images/fireHeaderDisp.webp)', txt: 'Огонь', time: 8000},
+		{timer: 0, img: 'url(/img/images/waterHeaderDisp.webp)', txt: 'Вода', time: 16000},
+		{timer: 0, img: 'url(/img/images/earth.webp)', txt: 'Земля', time: 24000}
+	]
 	var flagi = false;
 	var timerHeader1, timerHeader2, timerHeader3, timerHeader4, timerHeader5;
 	function headerAnime(iDivDataObj) {
 		// change the state
-		timerHeader1 = setTimeout(function() {
-			wind(lDivDataObj.wind.text, lDivDataObj.wind.img);
-		},0);
-		timerHeader2 = setTimeout(function() {
-			wind(lDivDataObj.fire.text, lDivDataObj.fire.img);
-		},8000);
-		timerHeader3 = setTimeout(function() {
-			wind(lDivDataObj.water.text, lDivDataObj.water.img);
-		},16000);
-		timerHeader4 = setTimeout(function() {
-			wind(lDivDataObj.earth.text, lDivDataObj.earth.img);
-		},24000);
+		for (var i = 0; i < lDivDataObj.length; i++) {
+			lDivDataObj[i].timer = setTimeout(function(txt, img) {
+				wind(txt, img);
+			}, lDivDataObj[i].time, lDivDataObj[i].txt, lDivDataObj[i].img);
+		}
+
 		timerHeader5 = setTimeout(function() {
 			// off button
 				// css
@@ -177,10 +165,9 @@ function film() {
 		},32000);
 	}
 	function offTimerHeader() {
-		clearTimeout(timerHeader1);
-		clearTimeout(timerHeader2);
-		clearTimeout(timerHeader3);
-		clearTimeout(timerHeader4);
+		for ( i = 0; i < lDivDataObj.length; i++) {
+      clearTimeout(lDivDataObj[i].timer)
+		}
 		clearTimeout(timerHeader5);
 	}
 	function wind(txt,img) {
@@ -200,7 +187,7 @@ function film() {
 	function mDown() {
 		switch (true) {
 			case (flagi == false ) :
-				$('.circleImg').off('click').one('click', lDivDataObj, headerAnime);
+				$('.circleImg').off('click').one('click', headerAnime);
 				$('.circleImg').css({width:'140px',height:'140px',
 					'box-shadow': '3px 3px 6px #19B9F5, -3px -3px 6px #19B9F5,\
 					-3px 3px 6px #19B9F5, 3px -3px 6px #19B9F5'});
@@ -273,8 +260,6 @@ function film() {
 }
 film();
 
-	
-	
 ///////////////////////////////////////////////////////////
  
 
@@ -677,10 +662,10 @@ var dataForest = [
 		]
 	}
 ]
-var anyArr = [];
 	// img Obj path for imgs
 var collectionForestThumb = $('.into30 > div > div');
 var index = 0;
+var anyArr = [];
 
 	function commonForest(i, el) {
 // change display
@@ -706,7 +691,7 @@ var index = 0;
 // change hilight border
 		$('.wrapVItem *').css('box-shadow','');
 		$(dataForest[i].classesForBoxshadow)
-		.css('box-shadow', '3px 3px 6px #FFB352 inset, -3px -3px 6px #FFB352 inset');
+		.css('box-shadow', '3px 3px #FFB352 inset, -3px -3px #FFB352 inset');
 
 // off before
 		$('.into31 div:first-child')
@@ -1083,6 +1068,7 @@ $(document).ready(function() {
 	];
 
 		var collectionBeach = $('.wrapItem3 > div > div');
+		var collectionBeachMin600 = $('.item6 > div > div');
 		function commonBeach(i, el) {
 			// remove and add box-shadow
 			var el2 = '.' + el.className.replace('1', '2');
@@ -1114,13 +1100,21 @@ $(document).ready(function() {
 					});
 				});
 			}
+			// start function for large
 			$.each((collectionBeach), function(i, el) {
 				$(el).on('click', function() {
 					commonBeach(i, el);
 				});
 			});
+			// start function < 600 px 
+			$.each((collectionBeachMin600), function(i, el) {
+				i += 3;
+				$(el).on('click', function() {
+					commonBeach(i, el);
+				});
+			});
 		});
-
+		$('.bgImage3').triggerHandler('click');
 // test slide right
 function menuF() {
 	// show menu btn and img
@@ -1187,9 +1181,9 @@ function offonNiceScroll() {
 
 $(document).ready(function() {
 	$(window).on('load resize', function() {
+		offonNiceScroll();
 		menuF();
 		hideItem3();
-		offonNiceScroll();
 	});
 });
 
@@ -1327,7 +1321,6 @@ function startHideAngle() {
 $(document).ready(function() {
 	$(window).on('load resize', startHideAngle);
 });
-	
 /////////////////////////////////////
 //random balls
 // function changePlaceBalls() {
@@ -2126,3 +2119,55 @@ window.addEventListener('scroll', function() {
     body.classList.remove('disable-hover')
   },100);
 }, false);
+
+// lazy load
+// $(document).ready(function() {
+// 	$("img.lazy").lazyload({
+// 	threshold : 400
+// 	// event : "click"
+// 	// effect : "fadeIn"
+// 	});
+// });
+
+// boofer images function
+jQuery.preloadImages = function()	{
+ 	for(var i = 0; i < arguments.length; i++) {
+  	jQuery("<img>").attr("src", arguments[ i ]);
+  }
+};
+setTimeout(function() {
+	$.preloadImages(
+	"/img/images/fields/2.webp",
+	"/img/images/fields/3.webp",
+	"/img/images/fields/4.webp",
+	"/img/images/fields/5.webp",
+
+	"/img/images/deserts/1.webp",
+	"/img/images/deserts/6.webp",
+
+	"/img/images/forest/1.webp",
+	"/img/images/forest/6.webp",
+
+	"/img/images/jungles/1.webp",
+	"/img/images/jungles/6.webp",
+
+	"/img/images/mountain/6.webp",
+	"/img/images/mountain/6.webp",
+
+	"/img/images/rivers/1.webp",
+	"/img/images/rivers/6.webp",
+
+	"/img/images/seas/1.webp",
+	"/img/images/seas/6.webp",
+
+	'/img/images/bali1.webp',
+	'/img/images/bali2.webp',
+	'/img/images/dubay1.webp',
+	'/img/images/dubay2.webp',
+	'/img/images/seysheli1.webp',
+	'/img/images/seysheli2.webp',
+	'/img/images/Gavai1.webp',
+	'/img/images/Gavai2.webp',
+	'/img/images/kanari1.webp')
+}, 2000)
+	

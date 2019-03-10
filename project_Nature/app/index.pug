@@ -1,17 +1,14 @@
 doctype html
 html(lang="en")
 	head
-		title mySite
+		title Site about nature
 		meta(charset='UTF-8')
 		noscript
 			link(rel='stylesheet', href='main.css')
 		meta(name='viewport' content='width=device-width, initial-scale=1.0')
 		link(rel='stylesheet' href='_grid.min.css')
+		link(rel="shortcut icon" href="sun.png" type="image/x-icon")
 		//- link(rel='stylesheet' href='css/headers.css')
-		//- 
-		//- fonts 
-		
-
 		style.
 			.wrapperLoader {
 				transition: opacity .5s;
@@ -49,8 +46,6 @@ html(lang="en")
 		#arrowToBottom
 			a(href='#footer')
 				div
-		
-		// wrapper
 		.wrapper#wrapper
 			//- section.balls
 			//- 	img(src='/img/images/balls/ball1.webp' alt='balls').ball1
@@ -64,7 +59,6 @@ html(lang="en")
 				img.sun(src='img/images/sun.webp' alt='fire-logo' width='130px' height='90px')
 			// header first page
 			section.firstSection
-
 				header.top_header
 					.wr16
 						.into00
@@ -137,7 +131,6 @@ html(lang="en")
 						.bDiv
 							.bDivText
 								p#bDivTextP
-									| Облака
 								.wrapperImg
 							.wr17
 								.into00
@@ -151,6 +144,7 @@ html(lang="en")
 													img.circleImg(src='img/images/button3.webp' alt='button')
 			// end header first page
 			section.afterFirst
+				.borderUp
 				.wrapDuckSec2.container-fluid
 					.row.justify-content-center.rowDuck
 						.wrapDuck.col.col-md-4
@@ -176,7 +170,6 @@ html(lang="en")
 						.galleryDeg1Left
 							.galleryDeg2Left
 								.galleryLeft
-
 									.galleryImgContentLeft
 										a.popup-modal2.mfp-bg(id='popupLeft' href='#imgContent2' data-effect='mfp-zoom-in')
 											img#imgContent2(src='img/images/fields/6.webp' alt='foto Nature')
@@ -235,11 +228,11 @@ html(lang="en")
 										a.popup-modal2(id='popupRight' href='#imgContent1' data-effect='mfp-zoom-in')
 											img#imgContent(src='img/images/fields/1.webp' 	alt='foto Nature')
 				.theLostRiverText
-					| Природные локации
+					p
+						| Природные локации
 				//- .endSectionText
 				//- 	| some text 
 			// end forest section
-
 			section.afterForest
 				.conEj.container-fluid
 					.rowEj.row.justify-content-center
@@ -263,7 +256,7 @@ html(lang="en")
 								.cardShadow.animal.tiger
 									p
 										| Тигр&#x9;
-							.textAnimal.grid.center
+							.textAnimal
 								| Тигр обитает в азии - в Индии, Непале и на Алтае... Тигры - это большие, сильные, крупные и красивые кошки. Тигр самый крупный и тяжёлый представитель семейства кошачих.
 						.col-sm-.m-2.wrapAPanthera
 							a.test-popup-link(id='aPanthera' href='img/images/pantera.webp')
@@ -325,8 +318,6 @@ html(lang="en")
 						| Один из крупнейших ледников
 				.glacierBack
 				.glacierBack2
-				.glacierLogo.grid.center
-					//- img.fireBall(src='img/images/fire_logo_small.webp' alt='fireBall')
 				.wrapPicture
 					.pictureLeft
 					.pictureRight
@@ -433,7 +424,6 @@ html(lang="en")
 							img(src="img/images/maldives1.webp", id="contentImg1" alt="maldives1")
 						.contentImg2
 							img(src="img/images/maldives2.webp", id="contentImg2" alt="maldives2")
-					
 				.item5
 					p#contentText
 						| Если ваше представление о рае - это нетронутый тропический остров с раскачивающимися пальмами
@@ -590,7 +580,6 @@ html(lang="en")
 							p
 								em
 									| Природное многообразие неисчерпаемо. Любая точка пространства на открытом воздухе, будь то равнина, остров, лес или море  имеет своё неповторимое очарование. 
-									
 						.bookCover
 							| фотоАльбом
 						.wrapBook2
@@ -601,46 +590,37 @@ html(lang="en")
 										div.wrapPages
 											p 
 										span 
-											| 1
 									div.fistDivSite
 										div.wrapPages
 											p 
 										span 
-											| 1
 									div.fistDivSite
 										div.wrapPages
 											p 
 										span 
-											| 1
 									div.fistDivSite
 										div.wrapPages
 											p 
 										span 
-											| 1
 									i(id='count' class='icon-cancel-circled-outline')
 								.site02
 									div.fistDivSite
 										div.wrapPages
 											p
 										span 
-											| 1
 									div.fistDivSite
 										div.wrapPages
 											p
 										span 
-											| 1
 									div.fistDivSite
 										div.wrapPages
 											p
 										span 
-											| 1
 									div.fistDivSite
 										div.wrapPages
 											p
 										span 
-											| 1
 							input(type='number' id='numberSite' name='numSite' value='1' min='0' max='' class='')
-							
 							button(id='count2')
 							button#leftSlide
 							button#rightSlide
@@ -656,7 +636,6 @@ html(lang="en")
 							p.ht
 						.f1Content
 							p.bt Я получил настоящее эстетическое наслаждение после прочтения статей этого сайта. Долго любовался пейзажами, так как обожаю природу.
-
 				.intoWr
 					.into45
 						.into46
@@ -698,23 +677,8 @@ html(lang="en")
 				p
 					| national geographic 2019
 			// end footer
-			
-		// end wrapper
 		link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2|Comfortaa|Open+Sans")
 		link(rel='stylesheet' href='fonts/fontello/css/myicon.css')
-		//- link(rel='stylesheet' href='css/main.css')
-
-		//- script.
-		//- 	function loadCSS(hf) {
-		//- 	var ms=document.createElement("link");ms.rel="stylesheet";
-		//- 	ms.href=hf;document.getElementsByTagName("head")[0].appendChild(ms);
-		//- 	}
-			//- loadCSS("libs/animate/animate.css"); //Load Libs CSS: Animate CSS
-			//- loadCSS("_header.css");              //Header Styles (compress & paste to header after release)
-			//- loadCSS("_main.css");                //User Styles: Main
-			//- loadCSS("_media.css");               //User Styles: Media
-			//- loadCSS("css/main.css");      
-		//- // Load CSS compiled without Bootstrap & Header styles (after release)
 		script.
 			var ms=document.createElement("link");ms.rel="stylesheet";
 			ms.href="css/main.css";document.getElementsByTagName("head")[0].appendChild(ms);
@@ -727,4 +691,3 @@ html(lang="en")
 		script(src='libs/Magnific/jquery.magnific-popup.min.js')
 		script(src="libs/scroll2Id/jquery.malihu.PageScroll2id.min.js")
 		script(src='js/common.js' defer)
-	
